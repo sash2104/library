@@ -10,7 +10,8 @@ typedef long long ll;
 
 int main() {
   ll a, b;
-  cin >> a >> b;
-  cout << gcd(a, b) << " " << lcm(a, b) << endl;
+  while (cin >> a >> b) {
+    cout << gcd(a, b) << " " << lcm(a, b) << endl;
+  }
   return 0;
 }
