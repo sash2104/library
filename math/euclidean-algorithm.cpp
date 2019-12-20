@@ -2,10 +2,8 @@
 #include <iostream>
 #include <vector>
 
-#ifndef call_from_test
 using namespace std;
 typedef long long ll;
-#endif
 
 ll gcd(ll a, ll b) {
   if (b == 0) return a;
