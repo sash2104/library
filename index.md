@@ -45,9 +45,18 @@ layout: default
 
 ### math
 
+* :warning: <a href="library/math/divisor.cpp.html">math/divisor.cpp</a>
 * :heavy_check_mark: <a href="library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
+* :warning: <a href="library/math/factorial.cpp.html">math/factorial.cpp</a>
 * :heavy_check_mark: <a href="library/math/modint.cpp.html">math/modint.cpp</a>
 * :heavy_check_mark: <a href="library/math/prime.cpp.html">math/prime.cpp</a>
+
+
+<div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>
+
+### test/aoj
+
+* :warning: <a href="library/test/aoj/notest.1562.cpp.html">test/aoj/notest.1562.cpp</a>
 
 
 ## Verify Files

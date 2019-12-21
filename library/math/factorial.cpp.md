@@ -25,25 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: math/modint.cpp
+# :warning: math/factorial.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
-* <a href="{{ site.github.repository_url }}/blob/master/math/modint.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 20:27:10+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/math/factorial.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-21 21:37:34+09:00
 
 
 
 
-## Required by
+## Depends on
 
-* :warning: <a href="factorial.cpp.html">math/factorial.cpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="modint.cpp.html">math/modint.cpp</a>
 
 
 ## Code
@@ -51,39 +46,25 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#include <iostream>
+#include <vector>
+#include "modint.cpp"
 using namespace std;
-typedef long long ll;
 
-template<int mod>
-struct ModInt {
-  int val;
-  ModInt inv() const{
-    int tmp,a=val,b=mod,x=1,y=0;
-    while(b)tmp=a/b,a-=tmp*b,swap(a,b),x-=tmp*y,swap(x,y);
-    return ModInt(x);
+template <int mod>
+struct Factorial {
+  using mint = ModInt<mod>;
+  vector<modint> Fact, Finv;
+public:
+  Factorial(int _n): Fact(_n+1), Finv(_n+1) {
+      Fact[0]=mint(1); for (int i = 0; i < _n; ++i) Fact[i+1]=Fact[i]*(i+1);
+      Finv[_n]=mint(1)/Fact[_n]; for (int i = _n; i > 0; --i) Finv[i-1]=Finv[i]*i;
   }
-  ModInt():val(0){}
-  ModInt(ll x){if((val=x%mod)<0)val+=mod;}
-  ModInt pow(ll t){ModInt res=1,b=*this; while(t){if(t&1)res*=b;b*=b;t>>=1;}return res;}
-  ModInt& operator+=(const ModInt& x){if((val+=x.val)>=mod)val-=mod;return *this;}
-  ModInt& operator-=(const ModInt& x){if((val+=mod-x.val)>=mod)val-=mod; return *this;}
-  ModInt& operator*=(const ModInt& x){val=(ll)val*x.val%mod; return *this;}
-  ModInt& operator/=(const ModInt& x){return *this*=x.inv();}
-  bool operator==(const ModInt& x) const{return val==x.val;}
-  bool operator!=(const ModInt& x) const{return val!=x.val;}
-  bool operator<(const ModInt& x) const{return val<x.val;}
-  bool operator<=(const ModInt& x) const{return val<=x.val;}
-  bool operator>(const ModInt& x) const{return val>x.val;}
-  bool operator>=(const ModInt& x) const{return val>=x.val;}
-  ModInt operator+(const ModInt& x) const{return ModInt(*this)+=x;}
-  ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
-  ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
-  ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
-  static int get_mod() { return mod; }
+  mint fact(int n,bool inv=0) { if (inv) return Finv[n]; else return Fact[n]; }
+  mint nPr(int n,int r){ if (n<0||n<r||r<0) return mint(0); else return Fact[n]*Finv[n-r]; }
+  mint nCr(int n,int r){ if (n<0||n<r||r<0) return mint(0); else return Fact[n]*Finv[r]*Finv[n-r]; }
 };
 
-using modint = ModInt<1000000007>;
+using factorial = Factorial<1000000007>;
 
 ```
 {% endraw %}
@@ -91,6 +72,8 @@ using modint = ModInt<1000000007>;
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "math/factorial.cpp"
+#include <vector>
 #line 1 "math/modint.cpp"
 #include <iostream>
 using namespace std;
@@ -125,6 +108,24 @@ struct ModInt {
 };
 
 using modint = ModInt<1000000007>;
+#line 3 "math/factorial.cpp"
+using namespace std;
+
+template <int mod>
+struct Factorial {
+  using mint = ModInt<mod>;
+  vector<modint> Fact, Finv;
+public:
+  Factorial(int _n): Fact(_n+1), Finv(_n+1) {
+      Fact[0]=mint(1); for (int i = 0; i < _n; ++i) Fact[i+1]=Fact[i]*(i+1);
+      Finv[_n]=mint(1)/Fact[_n]; for (int i = _n; i > 0; --i) Finv[i-1]=Finv[i]*i;
+  }
+  mint fact(int n,bool inv=0) { if (inv) return Finv[n]; else return Fact[n]; }
+  mint nPr(int n,int r){ if (n<0||n<r||r<0) return mint(0); else return Fact[n]*Finv[n-r]; }
+  mint nCr(int n,int r){ if (n<0||n<r||r<0) return mint(0); else return Fact[n]*Finv[r]*Finv[n-r]; }
+};
+
+using factorial = Factorial<1000000007>;
 
 ```
 {% endraw %}
