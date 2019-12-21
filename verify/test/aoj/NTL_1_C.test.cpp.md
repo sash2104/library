@@ -25,13 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :warning: test/aoj/NTL_1_C.text.cpp
+# :heavy_check_mark: test/aoj/NTL_1_C.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
-* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/NTL_1_C.text.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 20:55:01+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/NTL_1_C.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-21 20:59:25+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C</a>
@@ -39,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :warning: <a href="../../math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
+* :heavy_check_mark: <a href="../../../library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
 
 
 ## Code
@@ -71,7 +70,7 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/NTL_1_C.text.cpp"
+#line 1 "test/aoj/NTL_1_C.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C"
 
 #define call_from_test
@@ -104,7 +103,7 @@ int main() {
   assert(gcd(123456789123456789, 987654321987654321) == 9000000009);
 }
 #endif
-#line 5 "test/aoj/NTL_1_C.text.cpp"
+#line 5 "test/aoj/NTL_1_C.test.cpp"
 #undef call_from_test
 
 int main() {

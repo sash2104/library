@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: math/euclidean-algorithm.cpp
+# :heavy_check_mark: math/euclidean-algorithm.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -36,9 +36,9 @@ layout: default
 
 
 
-## Required by
+## Verified with
 
-* :warning: <a href="../test/aoj/NTL_1_C.text.cpp.html">test/aoj/NTL_1_C.text.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
 
 
 ## Code

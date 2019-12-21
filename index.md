@@ -45,16 +45,9 @@ layout: default
 
 ### math
 
-* :warning: <a href="library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
+* :heavy_check_mark: <a href="library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
 * :heavy_check_mark: <a href="library/math/modint.cpp.html">math/modint.cpp</a>
 * :heavy_check_mark: <a href="library/math/prime.cpp.html">math/prime.cpp</a>
-
-
-<div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>
-
-### test/aoj
-
-* :warning: <a href="library/test/aoj/NTL_1_C.text.cpp.html">test/aoj/NTL_1_C.text.cpp</a>
 
 
 ## Verify Files
@@ -62,6 +55,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/ALDS1_1_C.test.cpp.html">test/aoj/ALDS1_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_3_D.test.cpp.html">test/aoj/DSL_3_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
 
 
