@@ -39,10 +39,12 @@ layout: default
 ### math
 
 * :warning: <a href="library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
+* :heavy_check_mark: <a href="library/math/prime.cpp.html">math/prime.cpp</a>
 
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/test/aoj/ALDS1_1_C.test.cpp.html">test/aoj/ALDS1_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
 
 
