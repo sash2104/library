@@ -34,6 +34,13 @@ layout: default
 
 ## Library Files
 
+<div id="8dc87745f885a4cc532acd7b15b8b5fe"></div>
+
+### datastructure
+
+* :heavy_check_mark: <a href="library/datastructure/slide-min.cpp.html">datastructure/slide-min.cpp</a>
+
+
 <div id="7e676e9e663beb40fd133f5ee24487c2"></div>
 
 ### math
@@ -45,6 +52,7 @@ layout: default
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/aoj/ALDS1_1_C.test.cpp.html">test/aoj/ALDS1_1_C.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/DSL_3_D.test.cpp.html">test/aoj/DSL_3_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
 
 
