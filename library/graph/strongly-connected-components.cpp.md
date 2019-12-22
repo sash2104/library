@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/strongly-connected-components.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 11:13:49+09:00
+    - Last commit date: 2019-12-22 11:37:37+09:00
 
 
 
@@ -146,7 +146,7 @@ struct Edge {
   int from, to;
   T cost;
   Edge() {}
-  Edge(int f, int t) : cost((int)1), from(f), to(t) {}
+  Edge(int f, int t) : from(f), to(t), cost(1) {}
   Edge(int f, int t, T c) : from(f), to(t), cost(c) {}
   friend bool operator < (const Edge& lhs, const Edge& rhs) { return lhs.cost < rhs.cost; };
   friend bool operator > (const Edge& lhs, const Edge& rhs) { return rhs < lhs; };

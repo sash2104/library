@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_3_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 11:13:49+09:00
+    - Last commit date: 2019-12-22 11:37:37+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C</a>
@@ -97,7 +97,7 @@ struct Edge {
   int from, to;
   T cost;
   Edge() {}
-  Edge(int f, int t) : cost((int)1), from(f), to(t) {}
+  Edge(int f, int t) : from(f), to(t), cost(1) {}
   Edge(int f, int t, T c) : from(f), to(t), cost(c) {}
   friend bool operator < (const Edge& lhs, const Edge& rhs) { return lhs.cost < rhs.cost; };
   friend bool operator > (const Edge& lhs, const Edge& rhs) { return rhs < lhs; };
