@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/factorial.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 21:37:34+09:00
+    - Last commit date: 2019-12-22 20:26:17+09:00
 
 
 
@@ -79,7 +79,11 @@ using factorial = Factorial<1000000007>;
 using namespace std;
 typedef long long ll;
 
+#ifdef MUTABLE
+int mod;
+#else
 template<int mod>
+#endif
 struct ModInt {
   int val;
   ModInt inv() const{
@@ -107,7 +111,9 @@ struct ModInt {
   static int get_mod() { return mod; }
 };
 
+#ifndef MUTABLE
 using modint = ModInt<1000000007>;
+#endif
 #line 3 "math/factorial.cpp"
 using namespace std;
 

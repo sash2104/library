@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/NTL_1_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 20:28:54+09:00
+    - Last commit date: 2019-12-22 20:26:17+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B</a>
@@ -70,7 +70,11 @@ int main() {
 using namespace std;
 typedef long long ll;
 
+#ifdef MUTABLE
+int mod;
+#else
 template<int mod>
+#endif
 struct ModInt {
   int val;
   ModInt inv() const{
@@ -98,7 +102,9 @@ struct ModInt {
   static int get_mod() { return mod; }
 };
 
+#ifndef MUTABLE
 using modint = ModInt<1000000007>;
+#endif
 #line 3 "test/aoj/NTL_1_B.test.cpp"
 
 int main() {
