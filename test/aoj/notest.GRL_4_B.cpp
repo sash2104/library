@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B"
+// 複数解候補がある問題で、ACでもoj-verifyのcheckではWAになりうるのでテスト対象から外す
 #include "../../graph/topological-sort.cpp"
 
 #include <iostream>
