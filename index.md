@@ -59,6 +59,7 @@ layout: default
 * :warning: <a href="library/math/divisor.cpp.html">math/divisor.cpp</a>
 * :heavy_check_mark: <a href="library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
 * :warning: <a href="library/math/factorial.cpp.html">math/factorial.cpp</a>
+* :heavy_check_mark: <a href="library/math/matrix.cpp.html">math/matrix.cpp</a>
 * :heavy_check_mark: <a href="library/math/modint.cpp.html">math/modint.cpp</a>
 * :heavy_check_mark: <a href="library/math/prime.cpp.html">math/prime.cpp</a>
 
@@ -78,6 +79,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_3_D.test.cpp.html">test/aoj/DSL_3_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/GRL_3_C.test.cpp.html">test/aoj/GRL_3_C.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/ITP1_7_D.test.cpp.html">test/aoj/ITP1_7_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
