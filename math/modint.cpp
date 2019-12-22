@@ -2,7 +2,11 @@
 using namespace std;
 typedef long long ll;
 
+#ifdef MUTABLE
+int mod;
+#else
 template<int mod>
+#endif
 struct ModInt {
   int val;
   ModInt inv() const{
@@ -30,4 +34,6 @@ struct ModInt {
   static int get_mod() { return mod; }
 };
 
+#ifndef MUTABLE
 using modint = ModInt<1000000007>;
+#endif
