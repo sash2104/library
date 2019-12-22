@@ -36,9 +36,15 @@ layout: default
 
 
 
+## Required by
+
+* :heavy_check_mark: <a href="../graph/mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
+
+
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/aoj/DSL_1_A.test.cpp.html">test/aoj/DSL_1_A.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
 
 
 ## Code

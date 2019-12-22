@@ -25,29 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/template.cpp
+# :heavy_check_mark: graph/mst-kruskal.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
-* <a href="{{ site.github.repository_url }}/blob/master/graph/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 11:37:37+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/graph/mst-kruskal.cpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-22 12:07:03+09:00
 
 
 
 
-## Required by
+## Depends on
 
-* :heavy_check_mark: <a href="mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
-* :heavy_check_mark: <a href="strongly-connected-components.cpp.html">graph/strongly-connected-components.cpp</a>
-* :warning: <a href="topological-sort.cpp.html">graph/topological-sort.cpp</a>
-* :warning: <a href="../test/aoj/notest.GRL_4_B.cpp.html">test/aoj/notest.GRL_4_B.cpp</a>
+* :heavy_check_mark: <a href="../datastructure/union-find-tree.cpp.html">datastructure/union-find-tree.cpp</a>
+* :heavy_check_mark: <a href="template.cpp.html">graph/template.cpp</a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/aoj/GRL_3_C.test.cpp.html">test/aoj/GRL_3_C.test.cpp</a>
 
 
 ## Code
@@ -55,27 +52,25 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#include <algorithm>
+#include <iostream>
 #include <vector>
-
-using namespace std;
-
-template< typename T >
-struct Edge {
-  int from, to;
-  T cost;
-  Edge() {}
-  Edge(int f, int t) : from(f), to(t), cost(1) {}
-  Edge(int f, int t, T c) : from(f), to(t), cost(c) {}
-  friend bool operator < (const Edge& lhs, const Edge& rhs) { return lhs.cost < rhs.cost; };
-  friend bool operator > (const Edge& lhs, const Edge& rhs) { return rhs < lhs; };
-  friend bool operator <= (const Edge& lhs, const Edge& rhs) { return !(lhs > rhs); };
-  friend bool operator >= (const Edge& lhs, const Edge& rhs) { return !(lhs < rhs); };
-};
+#include "template.cpp"
+#include "../datastructure/union-find-tree.cpp"
 
 template< typename T >
-using Edges = vector< Edge< T > >;
-template< typename T >
-using Graph = vector< Edges< T > >;
+T kruscal(int V, Edges< T > &edges) {
+  // 最小全域木の重みを返す
+  UnionFind uf(V);
+  T weight = 0;
+  sort(edges.begin(), edges.end());
+  for (auto e : edges) {
+    if (uf.same(e.from, e.to)) continue;
+    uf.unite(e.from, e.to);
+    weight += e.cost;
+  }
+  return weight;
+}
 
 ```
 {% endraw %}
@@ -83,6 +78,10 @@ using Graph = vector< Edges< T > >;
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "graph/mst-kruskal.cpp"
+#include <algorithm>
+#include <iostream>
+#include <vector>
 #line 1 "graph/template.cpp"
 #include <vector>
 
@@ -105,6 +104,54 @@ template< typename T >
 using Edges = vector< Edge< T > >;
 template< typename T >
 using Graph = vector< Edges< T > >;
+#line 1 "graph/../datastructure/union-find-tree.cpp"
+#include <iostream>
+#include <utility>
+#include <vector>
+
+using namespace std;
+
+class UnionFind {
+public:
+  vector<int> data; // sizeとparを同時に管理する
+  UnionFind(int size) : data(size, -1) {}
+
+  int find(int x) {
+    return data[x] < 0 ? x : data[x] = find(data[x]);
+  }
+
+  void unite(int x, int y) {
+    int px = find(x);
+    int py = find(y);
+    if (px != py) {
+      if (data[py] < data[px]) swap(px, py);
+      data[px] += data[py]; data[py] = px;
+    }
+  }
+
+  bool same(int x, int y) {
+    return find(x) == find(y);
+  }
+
+  int size(int x) {
+    return -data[find(x)];
+  }
+};
+#line 6 "graph/mst-kruskal.cpp"
+
+template< typename T >
+T kruscal(int V, Edges< T > &edges) {
+  // 最小全域木の重みを返す
+  UnionFind uf(V);
+  T weight = 0;
+  sort(edges.begin(), edges.end());
+  for (auto e : edges) {
+    if (uf.same(e.from, e.to)) continue;
+    uf.unite(e.from, e.to);
+    weight += e.cost;
+  }
+  return weight;
+}
 
 ```
 {% endraw %}
