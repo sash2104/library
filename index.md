@@ -61,7 +61,7 @@ layout: default
 * :warning: <a href="library/math/factorial.cpp.html">math/factorial.cpp</a>
 * :heavy_check_mark: <a href="library/math/matrix.cpp.html">math/matrix.cpp</a>
 * :heavy_check_mark: <a href="library/math/modint.cpp.html">math/modint.cpp</a>
-* :x: <a href="library/math/prime.cpp.html">math/prime.cpp</a>
+* :heavy_check_mark: <a href="library/math/prime.cpp.html">math/prime.cpp</a>
 
 
 <div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>
@@ -82,7 +82,7 @@ layout: default
 ## Verify Files
 
 * :x: <a href="verify/example/fail.test.cpp.html">example/fail.test.cpp</a>
-* :x: <a href="verify/test/aoj/ALDS1_1_C.test.cpp.html">test/aoj/ALDS1_1_C.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/ALDS1_1_C.test.cpp.html">test/aoj/ALDS1_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_1_A.test.cpp.html">test/aoj/DSL_1_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_3_D.test.cpp.html">test/aoj/DSL_3_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
