@@ -18,5 +18,5 @@ int main() {
     auto it = factors.begin();
     if (it->second == 1) ++ans;
   }
-  cout << ans << endl;
+  cout << ans+1 << endl;
 }
