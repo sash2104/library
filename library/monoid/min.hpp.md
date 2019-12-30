@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: example/fail.test.cpp
+# :heavy_check_mark: monoid/min.hpp
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/example/fail.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 11:33:55+09:00
+* category: <a href="../../index.html#c3437aaac8e99d51d51e80f390e49b05">monoid</a>
+* <a href="{{ site.github.repository_url }}/blob/master/monoid/min.hpp">View this file on GitHub</a>
+    - Last commit date: 2019-12-30 19:47:50+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A">https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_A.test.cpp.html">test/aoj/DSL_2_A.test.cpp</a>
 
 
 ## Code
@@ -41,31 +46,36 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-// 失敗するテストのファイル
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A"
-#include <iostream>
+#pragma once
+#include <algorithm>
+#include <limits>
 
-int main() {
-  std::cout << "Wrong Answer" << std::endl;
-  return 0;
-}
-
+namespace monoid {
+template <class T>
+struct min {
+  typedef T value_t;
+  T identity() const { return std::numeric_limits<T>::max();}
+  T merge(T a, T b) const { return std::min(a, b); }
+};
+} // namespace monoid
 ```
 {% endraw %}
 
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "example/fail.test.cpp"
-// 失敗するテストのファイル
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A"
-#include <iostream>
+#line 2 "monoid/min.hpp"
+#include <algorithm>
+#include <limits>
 
-int main() {
-  std::cout << "Wrong Answer" << std::endl;
-  return 0;
-}
-
+namespace monoid {
+template <class T>
+struct min {
+  typedef T value_t;
+  T identity() const { return std::numeric_limits<T>::max();}
+  T merge(T a, T b) const { return std::min(a, b); }
+};
+} // namespace monoid
 ```
 {% endraw %}
 
