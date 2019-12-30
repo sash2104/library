@@ -19,7 +19,6 @@ struct SegmentTree {
   // k番目の値(0-indexed)をaに変更
   void update(int k, int a) { // 0-indexed
     assert(0 <= k && k < n);
-    cerr << k << " " << a << endl;
     // 葉の節点
     data[k+n-1] = a;
     // 登りながら更新
