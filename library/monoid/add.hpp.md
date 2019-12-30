@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c3437aaac8e99d51d51e80f390e49b05">monoid</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoid/add.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:24:06+09:00
+    - Last commit date: 2019-12-30 23:30:41+09:00
 
 
 
@@ -52,7 +52,7 @@ layout: default
 
 namespace monoid {
 template <class T>
-struct sum {
+struct add {
   typedef T value_t;
   T identity() const { return 0; }
   T merge(T a, T b) const { return a+b; }
@@ -70,7 +70,7 @@ struct sum {
 
 namespace monoid {
 template <class T>
-struct sum {
+struct add {
   typedef T value_t;
   T identity() const { return 0; }
   T merge(T a, T b) const { return a+b; }

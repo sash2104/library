@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 22:24:06+09:00
+    - Last commit date: 2019-12-30 23:30:41+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -57,7 +57,7 @@ using namespace std;
 
 int main() {
   int n, q; cin >> n >> q;
-  SegmentTree<monoid::sum<int>> st(n);
+  SegmentTree<monoid::add<int>> st(n);
   for (int i = 0; i < q; ++i) {
     int c, x, y; cin >> c >> x >> y; --x;
     if (c == 0) st.update(x, st.query(x, x+1)+y);
@@ -80,7 +80,7 @@ int main() {
 
 namespace monoid {
 template <class T>
-struct sum {
+struct add {
   typedef T value_t;
   T identity() const { return 0; }
   T merge(T a, T b) const { return a+b; }
@@ -134,7 +134,7 @@ using namespace std;
 
 int main() {
   int n, q; cin >> n >> q;
-  SegmentTree<monoid::sum<int>> st(n);
+  SegmentTree<monoid::add<int>> st(n);
   for (int i = 0; i < q; ++i) {
     int c, x, y; cin >> c >> x >> y; --x;
     if (c == 0) st.update(x, st.query(x, x+1)+y);
