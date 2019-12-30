@@ -6,14 +6,16 @@
 
 using namespace std;
 
-// FIXME: 現状はRMQしか捌けないので汎用的に使えるよう修正する
+template <class Monoid>
 struct SegmentTree {
+  typedef typename Monoid::value_t value_t;
+  const Monoid monoid;
   int n; // n_以上の最小の2冪
   vector<int> data;
-  SegmentTree(int n_) {
+  SegmentTree(int n_): monoid() {
     n = 1;
     while (n < n_) n *= 2;
-    data.assign(2*n-1, INT_MAX);
+    data.assign(2*n-1, monoid.identity());
   }
 
   // k番目の値(0-indexed)をaに変更
@@ -23,17 +25,17 @@ struct SegmentTree {
     data[k+n-1] = a;
     // 登りながら更新
     for (k = (k+n)/2; k > 0; k /= 2) {  // 1-indexed
-      data[k-1] = min(data[2*k-1], data[2*k]);
+      data[k-1] = monoid.merge(data[2*k-1], data[2*k]);
     }
   }
 
-  int query(int l, int r) {  // 0-indexed, [l, r)
+  value_t query(int l, int r) {  // 0-indexed, [l, r)
     assert(0 <= l && l <= r && r <= n);
-    int vl = INT_MAX, vr = INT_MAX;
+    value_t vl = monoid.identity(), vr = monoid.identity();
     for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-indexed
-      if (l % 2 == 1) vl = min(vl, data[(l++)-1]);
-      if (r % 2 == 1) vr = min(data[(--r)-1],vr);
+      if (l % 2 == 1) vl = monoid.merge(vl, data[(l++)-1]);
+      if (r % 2 == 1) vr = monoid.merge(data[(--r)-1],vr);
     }
-    return min(vl, vr);
+    return monoid.merge(vl, vr);
   }
 };
