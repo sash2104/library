@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c3437aaac8e99d51d51e80f390e49b05">monoid</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoid/add.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 23:30:41+09:00
+    - Last commit date: 2020-01-01 01:17:01+09:00
 
 
 
@@ -40,6 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_B.test.cpp.html">test/aoj/DSL_2_B.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_E.test.cpp.html">test/aoj/DSL_2_E.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_G.test.cpp.html">test/aoj/DSL_2_G.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_H.test.cpp.html">test/aoj/DSL_2_H.test.cpp</a>
 
 
@@ -60,6 +61,7 @@ struct add {
   T merge(T a, T b) const { return a+b; }
 };
 } // namespace monoid
+
 ```
 {% endraw %}
 
@@ -78,6 +80,7 @@ struct add {
   T merge(T a, T b) const { return a+b; }
 };
 } // namespace monoid
+
 ```
 {% endraw %}
 

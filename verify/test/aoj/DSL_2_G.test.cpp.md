@@ -25,22 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/aoj/DSL_2_H.test.cpp
+# :heavy_check_mark: test/aoj/DSL_2_G.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_H.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_G.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 01:17:01+09:00
 
 
-* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G</a>
 
 
 ## Depends on
 
 * :heavy_check_mark: <a href="../../../library/datastructure/lazy-segment-tree.cpp.html">datastructure/lazy-segment-tree.cpp</a>
 * :heavy_check_mark: <a href="../../../library/monoid/add.hpp.html">monoid/add.hpp</a>
-* :heavy_check_mark: <a href="../../../library/monoid/min.hpp.html">monoid/min.hpp</a>
+* :heavy_check_mark: <a href="../../../library/monoid/add_count.hpp.html">monoid/add_count.hpp</a>
 
 
 ## Code
@@ -48,29 +48,33 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G"
 
+#include "../../monoid/add_count.hpp"
 #include "../../monoid/add.hpp"
-#include "../../monoid/min.hpp"
 #include "../../datastructure/lazy-segment-tree.cpp"
 
 #include <iostream>
+#include <vector>
 using namespace std;
+
+typedef long long ll;
+using P = pair<ll, ll>;
 
 int main() {
   int n, q; cin >> n >> q;
-  auto g=[](int a,int b){return a+b;};
-  LazySegmentTree<monoid::min<int>, monoid::add<int>> st(g);
-  st.build(vector<int>(n,0));
+  auto g=[](P a,ll b) -> P {return P(a.first+b*a.second, a.second);};
+  LazySegmentTree<monoid::add_count<ll>, monoid::add<ll>> st(g);
+  st.build(vector<P>(n,P(0,1)));
   for (int i = 0; i < q; ++i) {
     int c; cin >> c;
     if (c == 0) {
       int s, t, x; cin >> s >> t >> x;
-      st.update(s, t+1, x);
+      st.update(s-1, t, x);
     }
     else {
       int s, t; cin >> s >> t;
-      cout << st.query(s, t+1) << endl;
+      cout << st.query(s-1, t).first << endl;
     }
   }
 }
@@ -81,9 +85,22 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/DSL_2_H.test.cpp"
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H"
+#line 1 "test/aoj/DSL_2_G.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G"
 
+#line 2 "test/aoj/../../monoid/add_count.hpp"
+#include <algorithm>
+#include <utility>
+#include <limits>
+
+namespace monoid {
+template <class T>
+struct add_count {
+  typedef std::pair<T,T> value_t;
+  value_t identity() const { return std::make_pair(T(),T()); }
+  value_t merge(value_t a, value_t b) const { return std::make_pair(a.first+b.first, a.second+b.second); }
+};
+} // namespace monoid
 #line 2 "test/aoj/../../monoid/add.hpp"
 #include <algorithm>
 #include <limits>
@@ -94,18 +111,6 @@ struct add {
   typedef T value_t;
   T identity() const { return 0; }
   T merge(T a, T b) const { return a+b; }
-};
-} // namespace monoid
-#line 2 "test/aoj/../../monoid/min.hpp"
-#include <algorithm>
-#include <limits>
-
-namespace monoid {
-template <class T>
-struct min {
-  typedef T value_t;
-  T identity() const { return std::numeric_limits<T>::max();}
-  T merge(T a, T b) const { return std::min(a, b); }
 };
 } // namespace monoid
 #line 1 "test/aoj/../../datastructure/lazy-segment-tree.cpp"
@@ -199,25 +204,29 @@ struct LazySegmentTree {
     return query(k, k + 1);
   }
 };
-#line 6 "test/aoj/DSL_2_H.test.cpp"
+#line 6 "test/aoj/DSL_2_G.test.cpp"
 
 #include <iostream>
+#include <vector>
 using namespace std;
+
+typedef long long ll;
+using P = pair<ll, ll>;
 
 int main() {
   int n, q; cin >> n >> q;
-  auto g=[](int a,int b){return a+b;};
-  LazySegmentTree<monoid::min<int>, monoid::add<int>> st(g);
-  st.build(vector<int>(n,0));
+  auto g=[](P a,ll b) -> P {return P(a.first+b*a.second, a.second);};
+  LazySegmentTree<monoid::add_count<ll>, monoid::add<ll>> st(g);
+  st.build(vector<P>(n,P(0,1)));
   for (int i = 0; i < q; ++i) {
     int c; cin >> c;
     if (c == 0) {
       int s, t, x; cin >> s >> t >> x;
-      st.update(s, t+1, x);
+      st.update(s-1, t, x);
     }
     else {
       int s, t; cin >> s >> t;
-      cout << st.query(s, t+1) << endl;
+      cout << st.query(s-1, t).first << endl;
     }
   }
 }

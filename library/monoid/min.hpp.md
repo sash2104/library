@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#c3437aaac8e99d51d51e80f390e49b05">monoid</a>
 * <a href="{{ site.github.repository_url }}/blob/master/monoid/min.hpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 19:47:50+09:00
+    - Last commit date: 2020-01-01 01:17:01+09:00
 
 
 
@@ -60,6 +60,7 @@ struct min {
   T merge(T a, T b) const { return std::min(a, b); }
 };
 } // namespace monoid
+
 ```
 {% endraw %}
 
@@ -78,6 +79,7 @@ struct min {
   T merge(T a, T b) const { return std::min(a, b); }
 };
 } // namespace monoid
+
 ```
 {% endraw %}
 

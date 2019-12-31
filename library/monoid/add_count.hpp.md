@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: monoid/fill.hpp
+# :heavy_check_mark: monoid/add_count.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#c3437aaac8e99d51d51e80f390e49b05">monoid</a>
-* <a href="{{ site.github.repository_url }}/blob/master/monoid/fill.hpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/monoid/add_count.hpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 01:17:01+09:00
 
 
@@ -38,8 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_D.test.cpp.html">test/aoj/DSL_2_D.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_F.test.cpp.html">test/aoj/DSL_2_F.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/DSL_2_G.test.cpp.html">test/aoj/DSL_2_G.test.cpp</a>
 
 
 ## Code
@@ -48,14 +47,16 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
+#include <algorithm>
 #include <utility>
+#include <limits>
 
 namespace monoid {
 template <class T>
-struct fill {
-  typedef std::pair<bool, T> value_t;
-  value_t identity() const { return std::make_pair(false, T()); }
-  value_t merge(value_t a, value_t b) const { return b.first ? b : a; }
+struct add_count {
+  typedef std::pair<T,T> value_t;
+  value_t identity() const { return std::make_pair(T(),T()); }
+  value_t merge(value_t a, value_t b) const { return std::make_pair(a.first+b.first, a.second+b.second); }
 };
 } // namespace monoid
 
@@ -65,15 +66,17 @@ struct fill {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "monoid/fill.hpp"
+#line 2 "monoid/add_count.hpp"
+#include <algorithm>
 #include <utility>
+#include <limits>
 
 namespace monoid {
 template <class T>
-struct fill {
-  typedef std::pair<bool, T> value_t;
-  value_t identity() const { return std::make_pair(false, T()); }
-  value_t merge(value_t a, value_t b) const { return b.first ? b : a; }
+struct add_count {
+  typedef std::pair<T,T> value_t;
+  value_t identity() const { return std::make_pair(T(),T()); }
+  value_t merge(value_t a, value_t b) const { return std::make_pair(a.first+b.first, a.second+b.second); }
 };
 } // namespace monoid
 

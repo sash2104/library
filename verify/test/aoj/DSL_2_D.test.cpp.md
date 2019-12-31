@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 00:08:06+09:00
+    - Last commit date: 2020-01-01 01:17:01+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D</a>
@@ -94,7 +94,8 @@ struct fill {
   value_t identity() const { return std::make_pair(false, T()); }
   value_t merge(value_t a, value_t b) const { return b.first ? b : a; }
 };
-} // namespace monoid#line 1 "test/aoj/../../datastructure/dual-segment-tree.cpp"
+} // namespace monoid
+#line 1 "test/aoj/../../datastructure/dual-segment-tree.cpp"
 #include <cassert>
 #line 1 "test/aoj/../../datastructure/lazy-segment-tree.cpp"
 #include <cassert>
