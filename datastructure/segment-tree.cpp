@@ -11,7 +11,7 @@ struct SegmentTree {
   typedef typename Monoid::value_t value_t;
   const Monoid monoid;
   int n; // n_以上の最小の2冪
-  vector<int> data;
+  vector<value_t> data;
   SegmentTree(int n_): monoid() {
     n = 1;
     while (n < n_) n *= 2;
@@ -33,8 +33,8 @@ struct SegmentTree {
     assert(0 <= l && l <= r && r <= n);
     value_t vl = monoid.identity(), vr = monoid.identity();
     for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-indexed
-      if (l % 2 == 1) vl = monoid.merge(vl, data[(l++)-1]);
-      if (r % 2 == 1) vr = monoid.merge(data[(--r)-1],vr);
+      if (l & 1) vl = monoid.merge(vl, data[(l++)-1]);
+      if (r & 1) vr = monoid.merge(data[(--r)-1],vr);
     }
     return monoid.merge(vl, vr);
   }
