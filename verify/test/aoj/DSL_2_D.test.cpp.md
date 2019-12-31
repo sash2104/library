@@ -25,22 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/aoj/DSL_2_F.test.cpp
+# :heavy_check_mark: test/aoj/DSL_2_D.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_F.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_D.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 00:08:06+09:00
 
 
-* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D</a>
 
 
 ## Depends on
 
+* :heavy_check_mark: <a href="../../../library/datastructure/dual-segment-tree.cpp.html">datastructure/dual-segment-tree.cpp</a>
 * :heavy_check_mark: <a href="../../../library/datastructure/lazy-segment-tree.cpp.html">datastructure/lazy-segment-tree.cpp</a>
 * :heavy_check_mark: <a href="../../../library/monoid/fill.hpp.html">monoid/fill.hpp</a>
-* :heavy_check_mark: <a href="../../../library/monoid/min.hpp.html">monoid/min.hpp</a>
 
 
 ## Code
@@ -48,12 +48,10 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D"
 
-#include "../../monoid/min.hpp"
 #include "../../monoid/fill.hpp"
-#include "../../datastructure/lazy-segment-tree.cpp"
-
+#include "../../datastructure/dual-segment-tree.cpp"
 #include <iostream>
 #include <climits>
 using namespace std;
@@ -62,9 +60,8 @@ using p_bi = pair<bool, int>;
 
 int main() {
   int n, q; cin >> n >> q;
-  auto g=[](int a, p_bi b) -> int { return b.first ? b.second : a; };
-  LazySegmentTree<monoid::min<int>, monoid::fill<int>> st(g);
-  st.build(vector<int>(n, INT_MAX));
+  DualSegmentTree<monoid::fill<int>> st;
+  st.build(vector<p_bi>(n, {true, INT_MAX}));
   for (int i = 0; i < q; ++i) {
     int c; cin >> c;
     if (c == 0) {
@@ -72,8 +69,8 @@ int main() {
       st.update(s, t+1, {true, x});
     }
     else {
-      int s, t; cin >> s >> t;
-      cout << st.query(s, t+1) << endl;
+      int s; cin >> s;
+      cout << st[s].second << endl;
     }
   }
 }
@@ -84,21 +81,10 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/DSL_2_F.test.cpp"
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
+#line 1 "test/aoj/DSL_2_D.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D"
 
-#line 2 "test/aoj/../../monoid/min.hpp"
-#include <algorithm>
-#include <limits>
-
-namespace monoid {
-template <class T>
-struct min {
-  typedef T value_t;
-  T identity() const { return std::numeric_limits<T>::max();}
-  T merge(T a, T b) const { return std::min(a, b); }
-};
-} // namespace monoid#line 2 "test/aoj/../../monoid/fill.hpp"
+#line 2 "test/aoj/../../monoid/fill.hpp"
 #include <utility>
 
 namespace monoid {
@@ -108,7 +94,9 @@ struct fill {
   value_t identity() const { return std::make_pair(false, T()); }
   value_t merge(value_t a, value_t b) const { return b.first ? b : a; }
 };
-} // namespace monoid#line 1 "test/aoj/../../datastructure/lazy-segment-tree.cpp"
+} // namespace monoid#line 1 "test/aoj/../../datastructure/dual-segment-tree.cpp"
+#include <cassert>
+#line 1 "test/aoj/../../datastructure/lazy-segment-tree.cpp"
 #include <cassert>
 #include <functional>
 #include <utility>
@@ -199,8 +187,24 @@ struct LazySegmentTree {
     return query(k, k + 1);
   }
 };
-#line 6 "test/aoj/DSL_2_F.test.cpp"
+#line 3 "test/aoj/../../datastructure/dual-segment-tree.cpp"
 
+// 区間更新、一点取得がO(logN)でできるやつ
+// 定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
+template <class OperatorMonoid>
+struct DualSegmentTree {
+  typedef typename OperatorMonoid::value_t operator_t;
+  LazySegmentTree<OperatorMonoid, OperatorMonoid> lst;
+  DualSegmentTree() : lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b); }) {}
+  void build(const vector<operator_t> &v) { lst.build(v); }
+  void update(int a, int b, operator_t x) { lst.update(a, b, x); }
+  operator_t query(int a, int b) {
+    assert(a+1 == b); // 一点取得のみを認める
+    return lst.query(a, b);
+  }
+  operator_t operator[](const int &k) { return lst[k]; }
+};
+#line 5 "test/aoj/DSL_2_D.test.cpp"
 #include <iostream>
 #include <climits>
 using namespace std;
@@ -209,9 +213,8 @@ using p_bi = pair<bool, int>;
 
 int main() {
   int n, q; cin >> n >> q;
-  auto g=[](int a, p_bi b) -> int { return b.first ? b.second : a; };
-  LazySegmentTree<monoid::min<int>, monoid::fill<int>> st(g);
-  st.build(vector<int>(n, INT_MAX));
+  DualSegmentTree<monoid::fill<int>> st;
+  st.build(vector<p_bi>(n, {true, INT_MAX}));
   for (int i = 0; i < q; ++i) {
     int c; cin >> c;
     if (c == 0) {
@@ -219,8 +222,8 @@ int main() {
       st.update(s, t+1, {true, x});
     }
     else {
-      int s, t; cin >> s >> t;
-      cout << st.query(s, t+1) << endl;
+      int s; cin >> s;
+      cout << st[s].second << endl;
     }
   }
 }

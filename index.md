@@ -38,6 +38,7 @@ layout: default
 
 ### datastructure
 
+* :heavy_check_mark: <a href="library/datastructure/dual-segment-tree.cpp.html">datastructure/dual-segment-tree.cpp</a>
 * :heavy_check_mark: <a href="library/datastructure/lazy-segment-tree.cpp.html">datastructure/lazy-segment-tree.cpp</a>
 * :heavy_check_mark: <a href="library/datastructure/segment-tree.cpp.html">datastructure/segment-tree.cpp</a>
 * :heavy_check_mark: <a href="library/datastructure/slide-min.cpp.html">datastructure/slide-min.cpp</a>
@@ -98,6 +99,8 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_1_A.test.cpp.html">test/aoj/DSL_1_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_2_A.test.cpp.html">test/aoj/DSL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_2_B.test.cpp.html">test/aoj/DSL_2_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_D.test.cpp.html">test/aoj/DSL_2_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_E.test.cpp.html">test/aoj/DSL_2_E.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_2_F.test.cpp.html">test/aoj/DSL_2_F.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_2_H.test.cpp.html">test/aoj/DSL_2_H.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_3_D.test.cpp.html">test/aoj/DSL_3_D.test.cpp</a>

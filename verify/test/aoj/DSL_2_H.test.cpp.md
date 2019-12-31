@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_H.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 21:45:44+09:00
+    - Last commit date: 2020-01-01 00:08:06+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
@@ -116,7 +116,6 @@ using namespace std;
 
 // FIXME: coding styleを統一する
 // FIXME: 要素に作用素を適用する関数であるGをclass化する
-// FIXME: 0-indexedに変えたい
 template <class Monoid, class OperatorMonoid>
 struct LazySegmentTree {
   typedef typename Monoid::value_t value_t;
@@ -186,12 +185,12 @@ struct LazySegmentTree {
   value_t query(int a, int b) { // 0-indexed, [a, b)
     thrust(a += n);
     thrust(b += n - 1);
-    value_t L = monoid.identity(), R = monoid.identity();
+    value_t vl = monoid.identity(), vr = monoid.identity();
     for(int l = a, r = b + 1; l < r; l >>= 1, r >>= 1) {
-      if(l & 1) L = monoid.merge(L, reflect(l++));
-      if(r & 1) R = monoid.merge(reflect(--r), R);
+      if(l & 1) vl = monoid.merge(vl, reflect(l++));
+      if(r & 1) vr = monoid.merge(reflect(--r), vr);
     }
-    return monoid.merge(L, R);
+    return monoid.merge(vl, vr);
   }
 
   value_t operator[](const int &k) {
