@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-30 23:30:41+09:00
+    - Last commit date: 2019-12-31 21:45:44+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -99,7 +99,7 @@ struct SegmentTree {
   typedef typename Monoid::value_t value_t;
   const Monoid monoid;
   int n; // n_以上の最小の2冪
-  vector<int> data;
+  vector<value_t> data;
   SegmentTree(int n_): monoid() {
     n = 1;
     while (n < n_) n *= 2;
@@ -121,8 +121,8 @@ struct SegmentTree {
     assert(0 <= l && l <= r && r <= n);
     value_t vl = monoid.identity(), vr = monoid.identity();
     for (l += n, r += n; l < r; l /= 2, r /= 2) {  // 1-indexed
-      if (l % 2 == 1) vl = monoid.merge(vl, data[(l++)-1]);
-      if (r % 2 == 1) vr = monoid.merge(data[(--r)-1],vr);
+      if (l & 1) vl = monoid.merge(vl, data[(l++)-1]);
+      if (r & 1) vr = monoid.merge(data[(--r)-1],vr);
     }
     return monoid.merge(vl, vr);
   }

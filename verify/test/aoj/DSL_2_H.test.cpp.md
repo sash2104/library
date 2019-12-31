@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_H.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 17:37:57+09:00
+    - Last commit date: 2019-12-31 21:45:44+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H</a>
@@ -59,8 +59,8 @@ using namespace std;
 
 int main() {
   int n, q; cin >> n >> q;
-  auto h=[](int a,int b){return a+b;};
-  LazySegmentTree<monoid::min<int>, monoid::add<int>> st(h);
+  auto g=[](int a,int b){return a+b;};
+  LazySegmentTree<monoid::min<int>, monoid::add<int>> st(g);
   st.build(vector<int>(n,0));
   for (int i = 0; i < q; ++i) {
     int c; cin >> c;
@@ -115,19 +115,21 @@ struct min {
 using namespace std;
 
 // FIXME: coding styleを統一する
-// FIXME: 作用素同士を結合する関数であるHをclass化する
+// FIXME: 要素に作用素を適用する関数であるGをclass化する
+// FIXME: 0-indexedに変えたい
 template <class Monoid, class OperatorMonoid>
 struct LazySegmentTree {
   typedef typename Monoid::value_t value_t;
   typedef typename OperatorMonoid::value_t operator_t;
   const Monoid monoid;
   const OperatorMonoid op_monoid;
-  using H = function< operator_t(operator_t, operator_t) >;
-  const H h;
+  using G = function< value_t(value_t, operator_t) >;
+  const G g;
   int n; // n_以上の最小の2冪
   int height; // 木の深さ. n == pow(2, height)
-  vector<int> data, lazy;
-  LazySegmentTree(const H h): monoid(), op_monoid(), h(h) {}
+  vector<value_t> data;
+  vector<operator_t> lazy;
+  LazySegmentTree(const G g): monoid(), op_monoid(), g(g) {}
 
   void init(int n_) {
     n = 1;
@@ -151,15 +153,15 @@ struct LazySegmentTree {
 
   inline void propagate(int k) {
     if(lazy[k] != op_monoid.identity()) {
-      lazy[2 * k + 0] = h(lazy[2 * k + 0], lazy[k]);
-      lazy[2 * k + 1] = h(lazy[2 * k + 1], lazy[k]);
+      lazy[2 * k + 0] = op_monoid.merge(lazy[2 * k + 0], lazy[k]);
+      lazy[2 * k + 1] = op_monoid.merge(lazy[2 * k + 1], lazy[k]);
       data[k] = reflect(k);
       lazy[k] = op_monoid.identity();
     }
   }
 
   inline value_t reflect(int k) {
-    return lazy[k] == op_monoid.identity() ? data[k] : op_monoid.merge(data[k], lazy[k]);
+    return lazy[k] == op_monoid.identity() ? data[k] : g(data[k], lazy[k]);
   }
 
   inline void recalc(int k) {
@@ -174,8 +176,8 @@ struct LazySegmentTree {
     thrust(a += n);
     thrust(b += n - 1);
     for(int l = a, r = b + 1; l < r; l >>= 1, r >>= 1) {
-      if(l & 1) lazy[l] = h(lazy[l], x), ++l;
-      if(r & 1) --r, lazy[r] = h(lazy[r], x);
+      if(l & 1) lazy[l] = op_monoid.merge(lazy[l], x), ++l;
+      if(r & 1) --r, lazy[r] = op_monoid.merge(lazy[r], x);
     }
     recalc(a);
     recalc(b);
@@ -203,8 +205,8 @@ using namespace std;
 
 int main() {
   int n, q; cin >> n >> q;
-  auto h=[](int a,int b){return a+b;};
-  LazySegmentTree<monoid::min<int>, monoid::add<int>> st(h);
+  auto g=[](int a,int b){return a+b;};
+  LazySegmentTree<monoid::min<int>, monoid::add<int>> st(g);
   st.build(vector<int>(n,0));
   for (int i = 0; i < q; ++i) {
     int c; cin >> c;
