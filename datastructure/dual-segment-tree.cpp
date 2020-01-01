@@ -8,7 +8,7 @@ struct DualSegmentTree {
   typedef typename OperatorMonoid::value_t operator_t;
   LazySegmentTree<OperatorMonoid, OperatorMonoid> lst;
   DualSegmentTree() : lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b); }) {}
-  void build(const vector<operator_t> &v) { lst.build(v); }
+  void build(const std::vector<operator_t> &v) { lst.build(v); }
   void update(int a, int b, operator_t x) { lst.update(a, b, x); }
   operator_t query(int a, int b) {
     assert(a+1 == b); // 一点取得のみを認める

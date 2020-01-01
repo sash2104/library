@@ -14,11 +14,11 @@ int main() {
     int c; cin >> c;
     if (c == 0) {
       int s, t, x; cin >> s >> t >> x;
-      st.update(s, t+1, x);
+      st.update(s-1, t, x);
     }
     else {
       int s; cin >> s;
-      cout << st[s] << endl;
+      cout << st[s-1] << endl;
     }
   }
 }
