@@ -1,6 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
 #include "../../datastructure/union-find-tree.cpp"
 
+#include <iostream>
+using namespace std;
 int main() {
   int n, q; cin >> n >> q;
   UnionFind uf(n);
