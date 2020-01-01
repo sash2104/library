@@ -1,3 +1,7 @@
+/*!
+ * original: https://www.creativ.xyz/fast-fourier-transform/
+ * terms of use: https://www.creativ.xyz/about/
+ */
 #include <complex>
 #include <iostream>
 #include <vector>
