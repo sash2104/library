@@ -1,17 +1,12 @@
 #include <cassert>
-#include <climits>
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 template <class Monoid>
 struct SegmentTree {
   typedef typename Monoid::value_t value_t;
   const Monoid monoid;
   int n; // n_以上の最小の2冪
-  vector<value_t> data;
+  std::vector<value_t> data;
   SegmentTree(int n_): monoid() {
     n = 1;
     while (n < n_) n *= 2;
@@ -37,5 +32,9 @@ struct SegmentTree {
       if (r & 1) vr = monoid.merge(data[(--r)-1],vr);
     }
     return monoid.merge(vl, vr);
+  }
+
+  value_t operator[](const int &k) {
+    return query(k, k + 1);
   }
 };

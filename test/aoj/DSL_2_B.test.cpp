@@ -11,7 +11,7 @@ int main() {
   SegmentTree<monoid::add<int>> st(n);
   for (int i = 0; i < q; ++i) {
     int c, x, y; cin >> c >> x >> y; --x;
-    if (c == 0) st.update(x, st.query(x, x+1)+y);
+    if (c == 0) st.update(x, st[x]+y);
     else cout << st.query(x, y) << endl;
   }
 }
