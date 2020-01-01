@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#8dc87745f885a4cc532acd7b15b8b5fe">datastructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/datastructure/segment-tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-31 21:45:44+09:00
+    - Last commit date: 2020-01-01 14:13:16+09:00
 
 
 
@@ -48,19 +48,14 @@ layout: default
 {% raw %}
 ```cpp
 #include <cassert>
-#include <climits>
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 template <class Monoid>
 struct SegmentTree {
   typedef typename Monoid::value_t value_t;
   const Monoid monoid;
   int n; // n_以上の最小の2冪
-  vector<value_t> data;
+  std::vector<value_t> data;
   SegmentTree(int n_): monoid() {
     n = 1;
     while (n < n_) n *= 2;
@@ -86,6 +81,10 @@ struct SegmentTree {
       if (r & 1) vr = monoid.merge(data[(--r)-1],vr);
     }
     return monoid.merge(vl, vr);
+  }
+
+  value_t operator[](const int &k) {
+    return query(k, k + 1);
   }
 };
 
@@ -97,19 +96,14 @@ struct SegmentTree {
 ```cpp
 #line 1 "datastructure/segment-tree.cpp"
 #include <cassert>
-#include <climits>
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 template <class Monoid>
 struct SegmentTree {
   typedef typename Monoid::value_t value_t;
   const Monoid monoid;
   int n; // n_以上の最小の2冪
-  vector<value_t> data;
+  std::vector<value_t> data;
   SegmentTree(int n_): monoid() {
     n = 1;
     while (n < n_) n *= 2;
@@ -135,6 +129,10 @@ struct SegmentTree {
       if (r & 1) vr = monoid.merge(data[(--r)-1],vr);
     }
     return monoid.merge(vl, vr);
+  }
+
+  value_t operator[](const int &k) {
+    return query(k, k + 1);
   }
 };
 

@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_G.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 01:17:01+09:00
+    - Last commit date: 2020-01-01 14:13:16+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G</a>
@@ -102,24 +102,19 @@ struct add_count {
 };
 } // namespace monoid
 #line 2 "test/aoj/../../monoid/add.hpp"
-#include <algorithm>
-#include <limits>
 
 namespace monoid {
 template <class T>
 struct add {
   typedef T value_t;
-  T identity() const { return 0; }
+  T identity() const { return T(); }
   T merge(T a, T b) const { return a+b; }
 };
 } // namespace monoid
 #line 1 "test/aoj/../../datastructure/lazy-segment-tree.cpp"
 #include <cassert>
 #include <functional>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 // FIXME: coding styleを統一する
 // FIXME: 要素に作用素を適用する関数であるGをclass化する
@@ -129,12 +124,12 @@ struct LazySegmentTree {
   typedef typename OperatorMonoid::value_t operator_t;
   const Monoid monoid;
   const OperatorMonoid op_monoid;
-  using G = function< value_t(value_t, operator_t) >;
+  using G = std::function< value_t(value_t, operator_t) >;
   const G g;
   int n; // n_以上の最小の2冪
   int height; // 木の深さ. n == pow(2, height)
-  vector<value_t> data;
-  vector<operator_t> lazy;
+  std::vector<value_t> data;
+  std::vector<operator_t> lazy;
   LazySegmentTree(const G g): monoid(), op_monoid(), g(g) {}
 
   void init(int n_) {
@@ -149,7 +144,7 @@ struct LazySegmentTree {
     data[k + n] = x;
   }
 
-  void build(const vector<value_t> &v) {
+  void build(const std::vector<value_t> &v) {
     int n_=v.size();
     init(n_);
     for(int i=0;i<n_;i++) data[n+i]=v[i];
@@ -179,6 +174,7 @@ struct LazySegmentTree {
   }
 
   void update(int a, int b, operator_t x) { // 0-indexed, [a, b)
+    assert(0 <= a && a <= b && b <= n);
     thrust(a += n);
     thrust(b += n - 1);
     for(int l = a, r = b + 1; l < r; l >>= 1, r >>= 1) {
@@ -190,6 +186,7 @@ struct LazySegmentTree {
   }
 
   value_t query(int a, int b) { // 0-indexed, [a, b)
+    assert(0 <= a && a <= b && b <= n);
     thrust(a += n);
     thrust(b += n - 1);
     value_t vl = monoid.identity(), vr = monoid.identity();

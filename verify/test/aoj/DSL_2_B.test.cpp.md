@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 01:17:01+09:00
+    - Last commit date: 2020-01-01 14:13:16+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -60,7 +60,7 @@ int main() {
   SegmentTree<monoid::add<int>> st(n);
   for (int i = 0; i < q; ++i) {
     int c, x, y; cin >> c >> x >> y; --x;
-    if (c == 0) st.update(x, st.query(x, x+1)+y);
+    if (c == 0) st.update(x, st[x]+y);
     else cout << st.query(x, y) << endl;
   }
 }
@@ -75,32 +75,25 @@ int main() {
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 
 #line 2 "test/aoj/../../monoid/add.hpp"
-#include <algorithm>
-#include <limits>
 
 namespace monoid {
 template <class T>
 struct add {
   typedef T value_t;
-  T identity() const { return 0; }
+  T identity() const { return T(); }
   T merge(T a, T b) const { return a+b; }
 };
 } // namespace monoid
 #line 1 "test/aoj/../../datastructure/segment-tree.cpp"
 #include <cassert>
-#include <climits>
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 template <class Monoid>
 struct SegmentTree {
   typedef typename Monoid::value_t value_t;
   const Monoid monoid;
   int n; // n_以上の最小の2冪
-  vector<value_t> data;
+  std::vector<value_t> data;
   SegmentTree(int n_): monoid() {
     n = 1;
     while (n < n_) n *= 2;
@@ -127,6 +120,10 @@ struct SegmentTree {
     }
     return monoid.merge(vl, vr);
   }
+
+  value_t operator[](const int &k) {
+    return query(k, k + 1);
+  }
 };
 #line 5 "test/aoj/DSL_2_B.test.cpp"
 
@@ -138,7 +135,7 @@ int main() {
   SegmentTree<monoid::add<int>> st(n);
   for (int i = 0; i < q; ++i) {
     int c, x, y; cin >> c >> x >> y; --x;
-    if (c == 0) st.update(x, st.query(x, x+1)+y);
+    if (c == 0) st.update(x, st[x]+y);
     else cout << st.query(x, y) << endl;
   }
 }
