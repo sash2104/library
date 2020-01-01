@@ -1,6 +1,5 @@
 #include <cassert>
 #include <algorithm>
-#include <iostream>
 #include <vector>
 
 #include "template.cpp"
