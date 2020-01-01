@@ -1,12 +1,8 @@
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 class UnionFind {
 public:
-  vector<int> data; // sizeとparを同時に管理する
+  std::vector<int> data; // sizeとparを同時に管理する
   UnionFind(int size) : data(size, -1) {}
 
   int find(int x) {
@@ -17,7 +13,7 @@ public:
     int px = find(x);
     int py = find(y);
     if (px != py) {
-      if (data[py] < data[px]) swap(px, py);
+      if (data[py] < data[px]) std::swap(px, py);
       data[px] += data[py]; data[py] = px;
     }
   }

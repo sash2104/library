@@ -1,7 +1,5 @@
 #include <vector>
 
-using namespace std;
-
 template< typename T >
 struct Edge {
   int from, to;
@@ -16,6 +14,6 @@ struct Edge {
 };
 
 template< typename T >
-using Edges = vector< Edge< T > >;
+using Edges = std::vector< Edge< T > >;
 template< typename T >
-using Graph = vector< Edges< T > >;
+using Graph = std::vector< Edges< T > >;
