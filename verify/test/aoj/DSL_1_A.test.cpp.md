@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_1_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 21:45:15+09:00
+    - Last commit date: 2020-01-01 21:11:06+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A</a>
@@ -49,6 +49,8 @@ layout: default
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
 #include "../../datastructure/union-find-tree.cpp"
 
+#include <iostream>
+using namespace std;
 int main() {
   int n, q; cin >> n >> q;
   UnionFind uf(n);
@@ -71,15 +73,11 @@ int main() {
 #line 1 "test/aoj/DSL_1_A.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
 #line 1 "test/aoj/../../datastructure/union-find-tree.cpp"
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 class UnionFind {
 public:
-  vector<int> data; // sizeとparを同時に管理する
+  std::vector<int> data; // sizeとparを同時に管理する
   UnionFind(int size) : data(size, -1) {}
 
   int find(int x) {
@@ -90,7 +88,7 @@ public:
     int px = find(x);
     int py = find(y);
     if (px != py) {
-      if (data[py] < data[px]) swap(px, py);
+      if (data[py] < data[px]) std::swap(px, py);
       data[px] += data[py]; data[py] = px;
     }
   }
@@ -105,6 +103,8 @@ public:
 };
 #line 3 "test/aoj/DSL_1_A.test.cpp"
 
+#include <iostream>
+using namespace std;
 int main() {
   int n, q; cin >> n >> q;
   UnionFind uf(n);

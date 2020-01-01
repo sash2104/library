@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/mst-kruskal.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 12:07:03+09:00
+    - Last commit date: 2020-01-01 21:05:07+09:00
 
 
 
@@ -53,8 +53,6 @@ layout: default
 {% raw %}
 ```cpp
 #include <algorithm>
-#include <iostream>
-#include <vector>
 #include "template.cpp"
 #include "../datastructure/union-find-tree.cpp"
 
@@ -63,7 +61,7 @@ T kruscal(int V, Edges< T > &edges) {
   // 最小全域木の重みを返す
   UnionFind uf(V);
   T weight = 0;
-  sort(edges.begin(), edges.end());
+  std::sort(edges.begin(), edges.end());
   for (auto e : edges) {
     if (uf.same(e.from, e.to)) continue;
     uf.unite(e.from, e.to);
@@ -80,12 +78,8 @@ T kruscal(int V, Edges< T > &edges) {
 ```cpp
 #line 1 "graph/mst-kruskal.cpp"
 #include <algorithm>
-#include <iostream>
-#include <vector>
 #line 1 "graph/template.cpp"
 #include <vector>
-
-using namespace std;
 
 template< typename T >
 struct Edge {
@@ -101,19 +95,15 @@ struct Edge {
 };
 
 template< typename T >
-using Edges = vector< Edge< T > >;
+using Edges = std::vector< Edge< T > >;
 template< typename T >
-using Graph = vector< Edges< T > >;
+using Graph = std::vector< Edges< T > >;
 #line 1 "graph/../datastructure/union-find-tree.cpp"
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 class UnionFind {
 public:
-  vector<int> data; // sizeとparを同時に管理する
+  std::vector<int> data; // sizeとparを同時に管理する
   UnionFind(int size) : data(size, -1) {}
 
   int find(int x) {
@@ -124,7 +114,7 @@ public:
     int px = find(x);
     int py = find(y);
     if (px != py) {
-      if (data[py] < data[px]) swap(px, py);
+      if (data[py] < data[px]) std::swap(px, py);
       data[px] += data[py]; data[py] = px;
     }
   }
@@ -137,14 +127,14 @@ public:
     return -data[find(x)];
   }
 };
-#line 6 "graph/mst-kruskal.cpp"
+#line 4 "graph/mst-kruskal.cpp"
 
 template< typename T >
 T kruscal(int V, Edges< T > &edges) {
   // 最小全域木の重みを返す
   UnionFind uf(V);
   T weight = 0;
-  sort(edges.begin(), edges.end());
+  std::sort(edges.begin(), edges.end());
   for (auto e : edges) {
     if (uf.same(e.from, e.to)) continue;
     uf.unite(e.from, e.to);

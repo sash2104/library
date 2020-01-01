@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_3_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 11:37:37+09:00
+    - Last commit date: 2020-01-01 21:05:07+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C</a>
@@ -50,6 +50,8 @@ layout: default
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
 
 #include "../../graph/strongly-connected-components.cpp"
+#include <iostream>
+using namespace std;
 
 int main() {
   int V, E;
@@ -84,13 +86,10 @@ int main() {
 #line 1 "test/aoj/../../graph/strongly-connected-components.cpp"
 #include <cassert>
 #include <algorithm>
-#include <iostream>
 #include <vector>
 
 #line 1 "test/aoj/../../graph/template.cpp"
 #include <vector>
-
-using namespace std;
 
 template< typename T >
 struct Edge {
@@ -106,10 +105,10 @@ struct Edge {
 };
 
 template< typename T >
-using Edges = vector< Edge< T > >;
+using Edges = std::vector< Edge< T > >;
 template< typename T >
-using Graph = vector< Edges< T > >;
-#line 7 "test/aoj/../../graph/strongly-connected-components.cpp"
+using Graph = std::vector< Edges< T > >;
+#line 6 "test/aoj/../../graph/strongly-connected-components.cpp"
 using namespace std;
 
 template< typename T >
@@ -177,6 +176,8 @@ struct stronglyConnectedComponents {
   }
 };
 #line 4 "test/aoj/GRL_3_C.test.cpp"
+#include <iostream>
+using namespace std;
 
 int main() {
   int V, E;

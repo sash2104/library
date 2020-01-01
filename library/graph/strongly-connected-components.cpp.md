@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/strongly-connected-components.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 11:37:37+09:00
+    - Last commit date: 2020-01-01 21:05:07+09:00
 
 
 
@@ -53,7 +53,6 @@ layout: default
 ```cpp
 #include <cassert>
 #include <algorithm>
-#include <iostream>
 #include <vector>
 
 #include "template.cpp"
@@ -133,13 +132,10 @@ struct stronglyConnectedComponents {
 #line 1 "graph/strongly-connected-components.cpp"
 #include <cassert>
 #include <algorithm>
-#include <iostream>
 #include <vector>
 
 #line 1 "graph/template.cpp"
 #include <vector>
-
-using namespace std;
 
 template< typename T >
 struct Edge {
@@ -155,10 +151,10 @@ struct Edge {
 };
 
 template< typename T >
-using Edges = vector< Edge< T > >;
+using Edges = std::vector< Edge< T > >;
 template< typename T >
-using Graph = vector< Edges< T > >;
-#line 7 "graph/strongly-connected-components.cpp"
+using Graph = std::vector< Edges< T > >;
+#line 6 "graph/strongly-connected-components.cpp"
 using namespace std;
 
 template< typename T >

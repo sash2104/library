@@ -31,13 +31,14 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 11:37:37+09:00
+    - Last commit date: 2020-01-01 21:05:07+09:00
 
 
 
 
 ## Required by
 
+* :heavy_check_mark: <a href="lca.cpp.html">graph/lca.cpp</a>
 * :heavy_check_mark: <a href="mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
 * :heavy_check_mark: <a href="strongly-connected-components.cpp.html">graph/strongly-connected-components.cpp</a>
 * :warning: <a href="topological-sort.cpp.html">graph/topological-sort.cpp</a>
@@ -48,6 +49,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_3_C.test.cpp.html">test/aoj/GRL_3_C.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/GRL_5_C.test.cpp.html">test/aoj/GRL_5_C.test.cpp</a>
 
 
 ## Code
@@ -56,8 +58,6 @@ layout: default
 {% raw %}
 ```cpp
 #include <vector>
-
-using namespace std;
 
 template< typename T >
 struct Edge {
@@ -73,9 +73,9 @@ struct Edge {
 };
 
 template< typename T >
-using Edges = vector< Edge< T > >;
+using Edges = std::vector< Edge< T > >;
 template< typename T >
-using Graph = vector< Edges< T > >;
+using Graph = std::vector< Edges< T > >;
 
 ```
 {% endraw %}
@@ -86,8 +86,6 @@ using Graph = vector< Edges< T > >;
 #line 1 "graph/template.cpp"
 #include <vector>
 
-using namespace std;
-
 template< typename T >
 struct Edge {
   int from, to;
@@ -102,9 +100,9 @@ struct Edge {
 };
 
 template< typename T >
-using Edges = vector< Edge< T > >;
+using Edges = std::vector< Edge< T > >;
 template< typename T >
-using Graph = vector< Edges< T > >;
+using Graph = std::vector< Edges< T > >;
 
 ```
 {% endraw %}

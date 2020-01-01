@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/topological-sort.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 11:37:37+09:00
+    - Last commit date: 2020-01-01 21:05:07+09:00
 
 
 
@@ -54,25 +54,24 @@ layout: default
 #include <vector>
 #include <stack>
 #include "template.cpp"
-using namespace std;
 
 template< typename G >
-vector<int> topologicalSort(const G &g) {
+std::vector<int> topologicalSort(const G &g) {
   // トポロジカルソートした結果を返す
   const int V = g.size();
-  vector<int> indegree(V); // 200000とかだと遅い？ 厳しそうならグローバル変数にする
+  std::vector<int> indegree(V); // 200000とかだと遅い？ 厳しそうならグローバル変数にする
   // 入次数の初期化. ほんとは読み込み時にやったほうが効率が良いけど許容する
   for (int v = 0; v < V; ++v) {
     for (auto& e: g[v]) ++indegree[e.to];
   }
 
-  stack<int> st;
+  std::stack<int> st;
   for (int v = 0; v < V; ++v) {
     // 入次数0の点をstackにいれる
     if (indegree[v] == 0) st.push(v);
   }
 
-  vector<int> order;
+  std::vector<int> order;
   while (!st.empty()) {
     int v = st.top(); st.pop();
     order.push_back(v);
@@ -97,8 +96,6 @@ vector<int> topologicalSort(const G &g) {
 #line 1 "graph/template.cpp"
 #include <vector>
 
-using namespace std;
-
 template< typename T >
 struct Edge {
   int from, to;
@@ -113,29 +110,28 @@ struct Edge {
 };
 
 template< typename T >
-using Edges = vector< Edge< T > >;
+using Edges = std::vector< Edge< T > >;
 template< typename T >
-using Graph = vector< Edges< T > >;
+using Graph = std::vector< Edges< T > >;
 #line 4 "graph/topological-sort.cpp"
-using namespace std;
 
 template< typename G >
-vector<int> topologicalSort(const G &g) {
+std::vector<int> topologicalSort(const G &g) {
   // トポロジカルソートした結果を返す
   const int V = g.size();
-  vector<int> indegree(V); // 200000とかだと遅い？ 厳しそうならグローバル変数にする
+  std::vector<int> indegree(V); // 200000とかだと遅い？ 厳しそうならグローバル変数にする
   // 入次数の初期化. ほんとは読み込み時にやったほうが効率が良いけど許容する
   for (int v = 0; v < V; ++v) {
     for (auto& e: g[v]) ++indegree[e.to];
   }
 
-  stack<int> st;
+  std::stack<int> st;
   for (int v = 0; v < V; ++v) {
     // 入次数0の点をstackにいれる
     if (indegree[v] == 0) st.push(v);
   }
 
-  vector<int> order;
+  std::vector<int> order;
   while (!st.empty()) {
     int v = st.top(); st.pop();
     order.push_back(v);

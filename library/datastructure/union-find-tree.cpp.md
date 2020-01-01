@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#8dc87745f885a4cc532acd7b15b8b5fe">datastructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/datastructure/union-find-tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 21:45:15+09:00
+    - Last commit date: 2020-01-01 21:05:07+09:00
 
 
 
@@ -52,15 +52,11 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 class UnionFind {
 public:
-  vector<int> data; // sizeとparを同時に管理する
+  std::vector<int> data; // sizeとparを同時に管理する
   UnionFind(int size) : data(size, -1) {}
 
   int find(int x) {
@@ -71,7 +67,7 @@ public:
     int px = find(x);
     int py = find(y);
     if (px != py) {
-      if (data[py] < data[px]) swap(px, py);
+      if (data[py] < data[px]) std::swap(px, py);
       data[px] += data[py]; data[py] = px;
     }
   }
@@ -92,15 +88,11 @@ public:
 {% raw %}
 ```cpp
 #line 1 "datastructure/union-find-tree.cpp"
-#include <iostream>
-#include <utility>
 #include <vector>
-
-using namespace std;
 
 class UnionFind {
 public:
-  vector<int> data; // sizeとparを同時に管理する
+  std::vector<int> data; // sizeとparを同時に管理する
   UnionFind(int size) : data(size, -1) {}
 
   int find(int x) {
@@ -111,7 +103,7 @@ public:
     int px = find(x);
     int py = find(y);
     if (px != py) {
-      if (data[py] < data[px]) swap(px, py);
+      if (data[py] < data[px]) std::swap(px, py);
       data[px] += data[py]; data[py] = px;
     }
   }
