@@ -20,5 +20,4 @@ C++14 or lator
 - :shirt: when removing linter warnings or fixing style guides
 - :rocket: when improving performance
 - :up: when upgrading dependencies
-- :down: when downgrading dependencies
 - :cop: when dealing with security
