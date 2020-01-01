@@ -19,6 +19,6 @@ C++14 or lator
 - :green_heart: when updating tests
 - :shirt: when removing linter warnings or fixing style guides
 - :rocket: when improving performance
-- :arrow_up: when upgrading dependencies
-- :arrow_down: when downgrading dependencies
-- :lock: when dealing with security
+- :up: when upgrading dependencies
+- :down: when downgrading dependencies
+- :cop: when dealing with security
