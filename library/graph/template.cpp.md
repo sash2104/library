@@ -43,12 +43,14 @@ layout: default
 * :heavy_check_mark: <a href="mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
 * :heavy_check_mark: <a href="strongly-connected-components.cpp.html">graph/strongly-connected-components.cpp</a>
 * :warning: <a href="topological-sort.cpp.html">graph/topological-sort.cpp</a>
+* :heavy_check_mark: <a href="warshall-floyd.cpp.html">graph/warshall-floyd.cpp</a>
 * :warning: <a href="../test/aoj/notest.GRL_4_B.cpp.html">test/aoj/notest.GRL_4_B.cpp</a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_1_A.test.cpp.html">test/aoj/GRL_1_A.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/GRL_1_C.test.cpp.html">test/aoj/GRL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_3_C.test.cpp.html">test/aoj/GRL_3_C.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_5_C.test.cpp.html">test/aoj/GRL_5_C.test.cpp</a>
