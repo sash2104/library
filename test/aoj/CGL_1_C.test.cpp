@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_1_C"
+#define ERROR "0.00000001"
 #include "../../geometry/template.hpp"
 
 #include <cassert>

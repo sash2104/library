@@ -328,7 +328,7 @@ enum {
 
 int contains(const Polygon &Q, const Point &p) {
   bool in = false;
-  for(int i = 0; i < Q.size(); i++) {
+  for(int i = 0; i < (int)Q.size(); i++) {
     Point a = Q[i] - p, b = Q[(i + 1) % Q.size()] - p;
     if(a.Y > b.Y) swap(a, b);
     if(a.Y <= 0 && 0 < b.Y && cross(a, b) < 0) in = !in;
@@ -350,11 +350,11 @@ void merge_segments(vector< Segment > &segs) {
     return true;
   };
 
-  for(int i = 0; i < segs.size(); i++) {
+  for(int i = 0; i < (int)segs.size(); i++) {
     if(segs[i].b < segs[i].a) swap(segs[i].a, segs[i].b);
   }
-  for(int i = 0; i < segs.size(); i++) {
-    for(int j = i + 1; j < segs.size(); j++) {
+  for(int i = 0; i < (int)segs.size(); i++) {
+    for(int j = i + 1; j < (int)segs.size(); j++) {
       if(merge_if_able(segs[i], segs[j])) {
         segs[j--] = segs.back(), segs.pop_back();
       }
@@ -391,7 +391,7 @@ vector< vector< int > > segment_arrangement(vector< Segment > &segs, vector< Poi
         vec.emplace_back(j);
       }
     }
-    for(int j = 1; j < vec.size(); j++) {
+    for(int j = 1; j < (int)vec.size(); j++) {
       g[vec[j - 1]].push_back(vec[j]);
       g[vec[j]].push_back(vec[j - 1]);
     }
