@@ -45,6 +45,14 @@ layout: default
 * :heavy_check_mark: <a href="library/datastructure/union-find-tree.cpp.html">datastructure/union-find-tree.cpp</a>
 
 
+<div id="ed7daeb157cd9b31e53896ad3c771a26"></div>
+
+### geometry
+
+* :heavy_check_mark: <a href="library/geometry/template.hpp.html">geometry/template.hpp</a>
+* :warning: <a href="library/geometry/triangle.hpp.html">geometry/triangle.hpp</a>
+
+
 <div id="f8b0b924ebd7046dbfa85a856e4682c8"></div>
 
 ### graph
@@ -85,6 +93,7 @@ layout: default
 
 ### test/aoj
 
+* :warning: <a href="library/test/aoj/notest.0010.cpp.html">test/aoj/notest.0010.cpp</a>
 * :warning: <a href="library/test/aoj/notest.1562.cpp.html">test/aoj/notest.1562.cpp</a>
 * :warning: <a href="library/test/aoj/notest.GRL_4_B.cpp.html">test/aoj/notest.GRL_4_B.cpp</a>
 
@@ -100,6 +109,9 @@ layout: default
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/aoj/ALDS1_1_C.test.cpp.html">test/aoj/ALDS1_1_C.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_A.test.cpp.html">test/aoj/CGL_1_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_B.test.cpp.html">test/aoj/CGL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_C.test.cpp.html">test/aoj/CGL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_1_A.test.cpp.html">test/aoj/DSL_1_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_2_A.test.cpp.html">test/aoj/DSL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/DSL_2_B.test.cpp.html">test/aoj/DSL_2_B.test.cpp</a>
