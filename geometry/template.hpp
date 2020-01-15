@@ -112,12 +112,13 @@ Real dot(const Point &a, const Point &b) {
 }
 
 // http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_1_C
-int ccw(const Point &a, Point b, Point c) {
-  b = b - a, c = c - a;
-  if(cross(b, c) > EPS) return +1;  // "COUNTER_CLOCKWISE"
-  if(cross(b, c) < -EPS) return -1; // "CLOCKWISE"
-  if(dot(b, c) < 0) return +2;      // "ONLINE_BACK" c-a-b
-  if(norm(b) < norm(c)) return -2;  // "ONLINE_FRONT" a-b-c
+int ccw(const Point &a, const Point &b, const Point &c) {
+  Point b2 = b-a;
+  Point c2 = c-a;
+  if(cross(b2, c2) > EPS) return +1;  // "COUNTER_CLOCKWISE"
+  if(cross(b2, c2) < -EPS) return -1; // "CLOCKWISE"
+  if(dot(b2, c2) < 0) return +2;      // "ONLINE_BACK" c-a-b
+  if(norm(b2) < norm(c2)) return -2;  // "ONLINE_FRONT" a-b-c
   return 0;                         // "ON_SEGMENT" a-c-b
 }
 
@@ -182,7 +183,7 @@ int intersect(const Circle &c, const Segment &l) {
   if(norm(projection(l, c.p) - c.p) - c.r * c.r > EPS) return 0;
   auto d1 = abs(c.p - l.a), d2 = abs(c.p - l.b);
   if(d1 < c.r + EPS && d2 < c.r + EPS) return 0;
-  if(d1 < c.r - EPS && d2 > c.r + EPS || d1 > c.r + EPS && d2 < c.r - EPS) return 1;
+  if((d1 < c.r - EPS && d2 > c.r + EPS) || (d1 > c.r + EPS && d2 < c.r - EPS)) return 1;
   const Point h = projection(l, c.p);
   if(dot(l.a - h, l.b - h) < 0) return 2;
   return 0;
@@ -403,7 +404,7 @@ vector< vector< int > > segment_arrangement(vector< Segment > &segs, vector< Poi
 // cut with a straight line l and return a convex polygon on the left
 Polygon convex_cut(const Polygon &U, Line l) {
   Polygon ret;
-  for(int i = 0; i < U.size(); i++) {
+  for(int i = 0; i < (int)U.size(); i++) {
     Point now = U[i], nxt = U[(i + 1) % U.size()];
     if(ccw(l.a, l.b, now) != -1) ret.push_back(now);
     if(ccw(l.a, l.b, now) * ccw(l.a, l.b, nxt) < 0) {
@@ -416,7 +417,7 @@ Polygon convex_cut(const Polygon &U, Line l) {
 // http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_3_A
 Real area(const Polygon &p) {
   Real A = 0;
-  for(int i = 0; i < p.size(); ++i) {
+  for(int i = 0; i < (int)p.size(); ++i) {
     A += cross(p[i], p[(i + 1) % p.size()]);
   }
   return A * 0.5;
@@ -433,13 +434,13 @@ Real area(const Polygon &p, const Circle &c) {
     if(distance(Segment(a, b), c.p) > c.r - EPS) return c.r * c.r * arg(vb * conj(va));
     auto u = crosspoint(c, Segment(a, b));
     vector< Point > tot{a, u.first, u.second, b};
-    for(int i = 0; i + 1 < tot.size(); i++) {
+    for(int i = 0; i + 1 < (int)tot.size(); i++) {
       ret += cross_area(c, tot[i], tot[i + 1]);
     }
     return ret;
   };
   Real A = 0;
-  for(int i = 0; i < p.size(); i++) {
+  for(int i = 0; i < (int)p.size(); i++) {
     A += cross_area(c, p[i], p[(i + 1) % p.size()]);
   }
   return A;
