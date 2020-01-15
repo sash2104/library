@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#e8ba03245cc911ba95395348d53122a0">test/atcoder</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/atcoder/abc036-c.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-15 22:52:23+09:00
+    - Last commit date: 2020-01-15 22:55:53+09:00
 
 
 
@@ -54,8 +54,6 @@ using namespace std;
 
 int main() {
   int n; cin >> n;
-
-  // ld[i]に、i桁の要素数を格納する
   vector<int> la(n);
   for (int &a: la) cin >> a;
   Compress<int> comp(la);
@@ -112,8 +110,6 @@ using namespace std;
 
 int main() {
   int n; cin >> n;
-
-  // ld[i]に、i桁の要素数を格納する
   vector<int> la(n);
   for (int &a: la) cin >> a;
   Compress<int> comp(la);
