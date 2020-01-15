@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/aoj/DSL_2_B.test.cpp
+# :heavy_check_mark: test/aoj/DSL_2_B.segtree.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 14:13:16+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.segtree.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-01-15 21:59:48+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -71,7 +71,7 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/DSL_2_B.test.cpp"
+#line 1 "test/aoj/DSL_2_B.segtree.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 
 #line 2 "test/aoj/../../monoid/add.hpp"
@@ -125,7 +125,7 @@ struct SegmentTree {
     return query(k, k + 1);
   }
 };
-#line 5 "test/aoj/DSL_2_B.test.cpp"
+#line 5 "test/aoj/DSL_2_B.segtree.test.cpp"
 
 #include <iostream>
 using namespace std;
