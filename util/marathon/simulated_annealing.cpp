@@ -53,7 +53,7 @@ struct SASolver {
   }
 };
 
-#ifdef 0
+#if 0
 int main() {
   State state; // 開始状態
   SASolver s;
@@ -61,4 +61,3 @@ int main() {
   s.best.write();
 }
 #endif
-
