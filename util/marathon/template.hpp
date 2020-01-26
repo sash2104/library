@@ -3,9 +3,10 @@
 
 struct Timer {
   static constexpr int64_t CYCLES_PER_SEC = 2800000000;
-  static constexpr double LIMIT = 2.95; // FIXME: 時間制限(s)
+  const double LIMIT; // FIXME: 時間制限(s)
   int64_t start;
-  Timer() { reset(); }
+  Timer() : LIMIT(0.95) { reset(); }
+  Timer(double limit) : LIMIT(limit) { reset(); }
   void reset() { start = getCycle(); }
   void plus(double a) { start -= (a * CYCLES_PER_SEC); }
   inline double get() { return (double)(getCycle() - start) / CYCLES_PER_SEC; }
@@ -38,14 +39,14 @@ XorShift rnd;
 
 #if 0
 int main() { 
-  Timer timer;
+  Timer timer(0.45);
   while (true) {
     double t = timer.get(); // elapsed seconds
-    if (Timer::LIMIT < t) break;
+    if (timer.LIMIT < t) break;
     double diff = 1; // SAのdiff. 仮で1としているが実際は計算する
     double startTemp = 30;
     double endTemp = 10;
-    double T = startTemp + (endTemp-startTemp)*(t/Timer::LIMIT);
+    double T = startTemp + (endTemp-startTemp)*(t/timer.LIMIT);
     if (diff >= T * rnd.nextLog()) {
       // FIXME: 更新
     }
