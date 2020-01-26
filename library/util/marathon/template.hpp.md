@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#6cc910c4eb495362d5e64f63c07ca62e">util/marathon</a>
 * <a href="{{ site.github.repository_url }}/blob/master/util/marathon/template.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-26 13:05:59+09:00
+    - Last commit date: 2020-01-26 13:44:09+09:00
 
 
 
@@ -83,13 +83,12 @@ XorShift rnd;
 int main() { 
   Timer timer;
   while (true) {
-    double ti = timer.get(); // elapsed seconds
-    if (Timer::LIMIT < ti) break;
+    double t = timer.get(); // elapsed seconds
+    if (Timer::LIMIT < t) break;
     double diff = 1; // SAのdiff. 仮で1としているが実際は計算する
-    double startTemp = 10;
-    double endTemp = 30;
-    double rem = (Timer::LIMIT - ti) / Timer::LIMIT; // remain time rate
-    double T = startTemp + (endTemp-startTemp)*rem;
+    double startTemp = 30;
+    double endTemp = 10;
+    double T = startTemp + (endTemp-startTemp)*(t/Timer::LIMIT);
     if (diff >= T * rnd.nextLog()) {
       // FIXME: 更新
     }
@@ -145,13 +144,12 @@ XorShift rnd;
 int main() { 
   Timer timer;
   while (true) {
-    double ti = timer.get(); // elapsed seconds
-    if (Timer::LIMIT < ti) break;
+    double t = timer.get(); // elapsed seconds
+    if (Timer::LIMIT < t) break;
     double diff = 1; // SAのdiff. 仮で1としているが実際は計算する
-    double startTemp = 10;
-    double endTemp = 30;
-    double rem = (Timer::LIMIT - ti) / Timer::LIMIT; // remain time rate
-    double T = startTemp + (endTemp-startTemp)*rem;
+    double startTemp = 30;
+    double endTemp = 10;
+    double T = startTemp + (endTemp-startTemp)*(t/Timer::LIMIT);
     if (diff >= T * rnd.nextLog()) {
       // FIXME: 更新
     }
