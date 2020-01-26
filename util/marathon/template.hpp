@@ -40,13 +40,12 @@ XorShift rnd;
 int main() { 
   Timer timer;
   while (true) {
-    double ti = timer.get(); // elapsed seconds
-    if (Timer::LIMIT < ti) break;
+    double t = timer.get(); // elapsed seconds
+    if (Timer::LIMIT < t) break;
     double diff = 1; // SAのdiff. 仮で1としているが実際は計算する
-    double startTemp = 10;
-    double endTemp = 30;
-    double rem = (Timer::LIMIT - ti) / Timer::LIMIT; // remain time rate
-    double T = startTemp + (endTemp-startTemp)*rem;
+    double startTemp = 30;
+    double endTemp = 10;
+    double T = startTemp + (endTemp-startTemp)*(t/Timer::LIMIT);
     if (diff >= T * rnd.nextLog()) {
       // FIXME: 更新
     }
