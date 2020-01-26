@@ -119,6 +119,7 @@ layout: default
 
 ### util/marathon
 
+* :warning: <a href="library/util/marathon/simulated_annealing.cpp.html">util/marathon/simulated_annealing.cpp</a>
 * :warning: <a href="library/util/marathon/template.hpp.html">util/marathon/template.hpp</a>
 
 
