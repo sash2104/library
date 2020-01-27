@@ -4,7 +4,7 @@ import sys
 import os
 PWD = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(PWD + '/../../py/example')
-from hello_world import *
+from hello_world import * # path: py/example/
 
 if __name__ == "__main__":
     print(hello_world())
