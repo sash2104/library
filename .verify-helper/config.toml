@@ -1,0 +1,6 @@
+[languages.py]
+compile = "python3 -mpy_compile {path}"
+execute = "python3 {path}"
+bundle = "false"
+list_attributes = "sed 's/^# verify-helper: // ; t ; d' {path}"
+list_dependencies = "sed 's/^import \\(.*\\)$/\\1/ ; t ; d' {path}"
