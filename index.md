@@ -90,6 +90,13 @@ layout: default
 * :heavy_check_mark: <a href="library/monoid/min.hpp.html">monoid/min.hpp</a>
 
 
+<div id="d601974b58d83b1da82640f444e93bfe"></div>
+
+### py/example
+
+* :warning: <a href="library/py/example/hello_world.py.html">py/example/hello_world.py</a>
+
+
 <div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>
 
 ### test/aoj
@@ -148,5 +155,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/example/example.test.py.html">test/example/example.test.py</a>
 
 
