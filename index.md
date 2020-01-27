@@ -94,7 +94,7 @@ layout: default
 
 ### py/example
 
-* :warning: <a href="library/py/example/hello_world.py.html">py/example/hello_world.py</a>
+* :heavy_check_mark: <a href="library/py/example/hello_world.py.html">py/example/hello_world.py</a>
 
 
 <div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>

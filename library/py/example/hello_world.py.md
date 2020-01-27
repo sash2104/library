@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :warning: py/example/hello_world.py
+# :heavy_check_mark: py/example/hello_world.py
 
 <a href="../../../index.html">Back to top page</a>
 
@@ -34,6 +34,11 @@ layout: default
     - Last commit date: 2020-01-27 23:27:27+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../../verify/test/example/example.test.py.html">test/example/example.test.py</a>
 
 
 ## Code

@@ -30,9 +30,14 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/example/example.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-01-27 23:27:27+09:00
+    - Last commit date: 2020-01-28 00:50:42+09:00
 
 
+
+
+## Depends on
+
+* :heavy_check_mark: <a href="../../../library/py/example/hello_world.py.html">py/example/hello_world.py</a>
 
 
 ## Code
@@ -46,7 +51,7 @@ import sys
 import os
 PWD = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(PWD + '/../../py/example')
-from hello_world import *
+from hello_world import * # path: py/example/
 
 if __name__ == "__main__":
     print(hello_world())
@@ -63,7 +68,7 @@ import sys
 import os
 PWD = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(PWD + '/../../py/example')
-from hello_world import *
+from hello_world import * # path: py/example/
 
 if __name__ == "__main__":
     print(hello_world())
