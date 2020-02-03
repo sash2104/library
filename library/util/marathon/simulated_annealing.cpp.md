@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#6cc910c4eb495362d5e64f63c07ca62e">util/marathon</a>
 * <a href="{{ site.github.repository_url }}/blob/master/util/marathon/simulated_annealing.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-26 16:28:48+09:00
+    - Last commit date: 2020-02-03 21:31:14+09:00
 
 
 
@@ -120,6 +120,30 @@ int main() {
 // 利用例:  https://atcoder.jp/contests/chokudai004/submissions/9724794
 #line 2 "util/marathon/template.hpp"
 #include <cmath>
+#include <iostream>
+
+// #define DEBUG
+
+namespace logger {
+inline void json_() {}
+template<typename Key, typename Value, typename... Rest>
+void json_(const Key& key, const Value& value, const Rest&... rest)
+{
+  std::cerr << "\"" << key << "\":\"" << value << "\"";
+  if (sizeof...(Rest) > 0) std::cerr << ",";
+  json_(rest...);
+}
+
+// example : json("key1", "foo", "key2", 3, "key", 4.0);
+// {"key1":"foo","key2":"3","key":"4"}
+template<typename... Args>
+void json(const Args&... args)
+{
+#ifdef DEBUG
+  std::cerr << "{"; json_(args...); std::cerr << "}" << std::endl;
+#endif
+}
+} // namespace logger
 
 struct Timer {
   static constexpr int64_t CYCLES_PER_SEC = 2800000000;
@@ -159,6 +183,9 @@ XorShift rnd;
 
 #if 0
 int main() { 
+  // `#define DEGUB` が必要
+  json("key1", "foo", "key2", 1, "key3", 3.14);
+
   Timer timer(0.45);
   while (true) {
     double t = timer.get(); // elapsed seconds

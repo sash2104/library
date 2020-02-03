@@ -608,6 +608,7 @@ int main() {
     cout << fixed << setprecision(3) << cc.p.X << " " << cc.p.Y << " " << cc.r << endl;
   }
 }
+
 ```
 {% endraw %}
 
