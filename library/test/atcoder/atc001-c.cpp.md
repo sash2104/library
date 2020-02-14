@@ -31,14 +31,14 @@ layout: default
 
 * category: <a href="../../../index.html#e8ba03245cc911ba95395348d53122a0">test/atcoder</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/atcoder/atc001-c.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 23:34:21+09:00
+    - Last commit date: 2020-02-14 21:19:20+09:00
 
 
 
 
 ## Depends on
 
-* :warning: <a href="../../math/fft.cpp.html">math/fft.cpp</a>
+* :warning: <a href="../../external/fft.cpp.html">external/fft.cpp</a>
 
 
 ## Code
@@ -47,7 +47,7 @@ layout: default
 {% raw %}
 ```cpp
 #include <vector>
-#include "../../math/fft.cpp"
+#include "../../external/fft.cpp"
 
 using namespace std;
 
@@ -71,7 +71,7 @@ int main() {
 ```cpp
 #line 1 "test/atcoder/atc001-c.cpp"
 #include <vector>
-#line 1 "test/atcoder/../../math/fft.cpp"
+#line 1 "test/atcoder/../../external/fft.cpp"
 /*!
  * original: https://www.creativ.xyz/fast-fourier-transform/
  * terms of use: https://www.creativ.xyz/about/

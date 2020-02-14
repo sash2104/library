@@ -46,6 +46,13 @@ layout: default
 * :heavy_check_mark: <a href="library/datastructure/union-find-tree.cpp.html">datastructure/union-find-tree.cpp</a>
 
 
+<div id="6a21b6995a068148bbb65c8f949b3fb2"></div>
+
+### external
+
+* :warning: <a href="library/external/fft.cpp.html">external/fft.cpp</a>
+
+
 <div id="ed7daeb157cd9b31e53896ad3c771a26"></div>
 
 ### geometry
@@ -74,7 +81,6 @@ layout: default
 * :warning: <a href="library/math/divisor.cpp.html">math/divisor.cpp</a>
 * :heavy_check_mark: <a href="library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
 * :warning: <a href="library/math/factorial.cpp.html">math/factorial.cpp</a>
-* :warning: <a href="library/math/fft.cpp.html">math/fft.cpp</a>
 * :heavy_check_mark: <a href="library/math/matrix.cpp.html">math/matrix.cpp</a>
 * :heavy_check_mark: <a href="library/math/modint.cpp.html">math/modint.cpp</a>
 * :heavy_check_mark: <a href="library/math/prime.cpp.html">math/prime.cpp</a>

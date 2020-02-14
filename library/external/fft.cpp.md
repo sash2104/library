@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: math/fft.cpp
+# :warning: external/fft.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
-* <a href="{{ site.github.repository_url }}/blob/master/math/fft.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 23:34:21+09:00
+* category: <a href="../../index.html#6a21b6995a068148bbb65c8f949b3fb2">external</a>
+* <a href="{{ site.github.repository_url }}/blob/master/external/fft.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-02-14 21:19:20+09:00
 
 
 
@@ -121,7 +121,7 @@ vector<double> convolve(vector<double> a, vector<double> b) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "math/fft.cpp"
+#line 1 "external/fft.cpp"
 /*!
  * original: https://www.creativ.xyz/fast-fourier-transform/
  * terms of use: https://www.creativ.xyz/about/
