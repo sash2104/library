@@ -1,5 +1,5 @@
 #include <vector>
-#include "../../math/fft.cpp"
+#include "../../external/fft.cpp"
 
 using namespace std;
 

@@ -8,6 +8,10 @@
 # Version
 C++14 or lator
 
+# License
+Unlicense  
+ただし、externalディレクトリ以下にあるファイルはファイル冒頭のコメントの指示に従ってください
+
 # Emoji-prefix
 - :memo: when writing docs
 - :bug: when fixing a bug
