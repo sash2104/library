@@ -6,4 +6,4 @@ docs:
   toc: false
 plugins:
 - jemoji
-theme: jekyll-theme-primer
+theme: jekyll-theme-minimal
