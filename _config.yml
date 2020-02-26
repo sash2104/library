@@ -6,4 +6,4 @@ docs:
   toc: false
 plugins:
 - jemoji
-theme: jekyll-theme-minimal
+theme: jekyll-theme-time-machine
