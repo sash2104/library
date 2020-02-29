@@ -68,6 +68,7 @@ layout: default
 * :heavy_check_mark: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
 * :heavy_check_mark: <a href="library/graph/lca.cpp.html">graph/lca.cpp</a>
 * :heavy_check_mark: <a href="library/graph/max-flow-dinic.hpp.html">graph/max-flow-dinic.hpp</a>
+* :heavy_check_mark: <a href="library/graph/min-cost-flow.hpp.html">graph/min-cost-flow.hpp</a>
 * :heavy_check_mark: <a href="library/graph/mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
 * :heavy_check_mark: <a href="library/graph/strongly-connected-components.cpp.html">graph/strongly-connected-components.cpp</a>
 * :heavy_check_mark: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
@@ -159,6 +160,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/GRL_3_C.test.cpp.html">test/aoj/GRL_3_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/GRL_5_C.test.cpp.html">test/aoj/GRL_5_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/GRL_6_A.test.cpp.html">test/aoj/GRL_6_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/GRL_6_B.test.cpp.html">test/aoj/GRL_6_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/ITP1_7_D.test.cpp.html">test/aoj/ITP1_7_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
