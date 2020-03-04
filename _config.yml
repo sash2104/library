@@ -7,5 +7,5 @@ docs:
 plugins:
 - jekyll-remote-theme
 - jemoji
-remote_theme: poole/lanyon
+remote_theme: amitmerchant1990/reverie
 theme: jekyll-theme-minimal
