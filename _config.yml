@@ -4,6 +4,7 @@ docs:
   categorize_verify: false
   html: false
   toc: false
+footer_description: testtest
 plugins:
 - jemoji
 theme: jekyll-theme-minimal
