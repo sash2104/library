@@ -12,8 +12,6 @@ C++14 or lator
 Unlicense  
 ただし、externalディレクトリ以下にあるファイルはファイル冒頭のコメントの指示に従ってください
 
-# docsのlayoutの更新
-gh-pagesブランチの`_layouts/default.html`をいじる
 # Emoji-prefix
 - :memo: when writing docs
 - :bug: when fixing a bug
