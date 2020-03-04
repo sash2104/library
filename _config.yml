@@ -4,7 +4,8 @@ docs:
   categorize_verify: false
   html: false
   toc: false
-footer_description: testtest
 plugins:
+- jekyll-remote-theme
 - jemoji
+remote_theme: poole/lanyon
 theme: jekyll-theme-minimal
