@@ -5,7 +5,5 @@ docs:
   html: false
   toc: false
 plugins:
-- jekyll-remote-theme
 - jemoji
-remote_theme: amitmerchant1990/reverie
-theme: jekyll-theme-minimal
+theme: jekyll-theme-primer
