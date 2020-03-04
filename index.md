@@ -57,6 +57,7 @@ layout: default
 
 ### geometry
 
+* :warning: <a href="library/geometry/template.circle.hpp.html">geometry/template.circle.hpp</a>
 * :heavy_check_mark: <a href="library/geometry/template.hpp.html">geometry/template.hpp</a>
 * :warning: <a href="library/geometry/triangle.hpp.html">geometry/triangle.hpp</a>
 
