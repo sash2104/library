@@ -31,6 +31,7 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
+  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 
