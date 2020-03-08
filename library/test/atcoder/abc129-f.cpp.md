@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#e8ba03245cc911ba95395348d53122a0">test/atcoder</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/atcoder/abc129-f.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-15 22:52:23+09:00
+    - Last commit date: 2020-03-08 10:49:15+09:00
 
 
 
@@ -144,6 +144,7 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
+  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 

@@ -96,6 +96,7 @@ layout: default
 * :heavy_check_mark: <a href="library/monoid/add.hpp.html">monoid/add.hpp</a>
 * :heavy_check_mark: <a href="library/monoid/add_count.hpp.html">monoid/add_count.hpp</a>
 * :heavy_check_mark: <a href="library/monoid/fill.hpp.html">monoid/fill.hpp</a>
+* :warning: <a href="library/monoid/max.hpp.html">monoid/max.hpp</a>
 * :heavy_check_mark: <a href="library/monoid/min.hpp.html">monoid/min.hpp</a>
 
 

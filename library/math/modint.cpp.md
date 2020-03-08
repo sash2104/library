@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/modint.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 20:26:17+09:00
+    - Last commit date: 2020-03-08 10:49:15+09:00
 
 
 
@@ -85,6 +85,7 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
+  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 
@@ -132,6 +133,7 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
+  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 
