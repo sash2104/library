@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_F.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 14:13:16+09:00
 
@@ -87,7 +88,7 @@ int main() {
 #line 1 "test/aoj/DSL_2_F.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
 
-#line 2 "test/aoj/../../monoid/min.hpp"
+#line 2 "monoid/min.hpp"
 #include <algorithm>
 #include <limits>
 
@@ -99,7 +100,7 @@ struct min {
   T merge(T a, T b) const { return std::min(a, b); }
 };
 } // namespace monoid
-#line 2 "test/aoj/../../monoid/fill.hpp"
+#line 2 "monoid/fill.hpp"
 #include <utility>
 
 namespace monoid {
@@ -110,7 +111,7 @@ struct fill {
   value_t merge(value_t a, value_t b) const { return b.first ? b : a; }
 };
 } // namespace monoid
-#line 1 "test/aoj/../../datastructure/lazy-segment-tree.cpp"
+#line 1 "datastructure/lazy-segment-tree.cpp"
 #include <cassert>
 #include <functional>
 #include <vector>

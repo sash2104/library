@@ -70,7 +70,7 @@ int main() {
 #line 1 "test/atcoder/abc036-c.cpp"
 #include <iostream>
 
-#line 2 "test/atcoder/../../util/compress.hpp"
+#line 2 "util/compress.hpp"
 #include <algorithm>
 #include <vector>
 

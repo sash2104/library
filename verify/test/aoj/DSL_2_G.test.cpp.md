@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_G.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 14:13:16+09:00
 
@@ -88,7 +89,7 @@ int main() {
 #line 1 "test/aoj/DSL_2_G.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G"
 
-#line 2 "test/aoj/../../monoid/add_count.hpp"
+#line 2 "monoid/add_count.hpp"
 #include <algorithm>
 #include <utility>
 #include <limits>
@@ -101,7 +102,7 @@ struct add_count {
   value_t merge(value_t a, value_t b) const { return std::make_pair(a.first+b.first, a.second+b.second); }
 };
 } // namespace monoid
-#line 2 "test/aoj/../../monoid/add.hpp"
+#line 2 "monoid/add.hpp"
 
 namespace monoid {
 template <class T>
@@ -111,7 +112,7 @@ struct add {
   T merge(T a, T b) const { return a+b; }
 };
 } // namespace monoid
-#line 1 "test/aoj/../../datastructure/lazy-segment-tree.cpp"
+#line 1 "datastructure/lazy-segment-tree.cpp"
 #include <cassert>
 #include <functional>
 #include <vector>
@@ -204,7 +205,7 @@ struct LazySegmentTree {
 #line 6 "test/aoj/DSL_2_G.test.cpp"
 
 #include <iostream>
-#include <vector>
+#line 9 "test/aoj/DSL_2_G.test.cpp"
 using namespace std;
 
 typedef long long ll;

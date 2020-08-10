@@ -98,8 +98,7 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 1 "graph/../datastructure/union-find-tree.cpp"
-#include <vector>
+#line 2 "datastructure/union-find-tree.cpp"
 
 class UnionFind {
 public:

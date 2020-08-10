@@ -125,7 +125,7 @@ using Graph = std::vector< Edges< T > >;
 #include <limits>
 #include <queue>
 #include <utility>
-#include <vector>
+#line 9 "graph/dijkstra.cpp"
 
 template < typename T >
 struct Dijkstra {

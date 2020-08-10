@@ -110,8 +110,7 @@ int main() {
 // modを可変にする
 #define MUTABLE
 
-#line 1 "test/atcoder/../../math/modint.cpp"
-#include <iostream>
+#line 2 "math/modint.cpp"
 using namespace std;
 typedef long long ll;
 
@@ -151,10 +150,7 @@ struct ModInt {
 #ifndef MUTABLE
 using modint = ModInt<1000000007>;
 #endif
-#line 1 "test/atcoder/../../math/matrix.cpp"
-#include <cassert>
-#include <iostream>
-#include <vector>
+#line 4 "math/matrix.cpp"
 using namespace std;
 
 template< class T >

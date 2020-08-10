@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_3_C.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 21:05:07+09:00
 
@@ -83,13 +84,12 @@ int main() {
 #line 1 "test/aoj/GRL_3_C.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
 
-#line 1 "test/aoj/../../graph/strongly-connected-components.cpp"
+#line 1 "graph/strongly-connected-components.cpp"
 #include <cassert>
 #include <algorithm>
 #include <vector>
 
-#line 1 "test/aoj/../../graph/template.cpp"
-#include <vector>
+#line 2 "graph/template.cpp"
 
 template< typename T >
 struct Edge {
@@ -108,7 +108,7 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 6 "test/aoj/../../graph/strongly-connected-components.cpp"
+#line 6 "graph/strongly-connected-components.cpp"
 using namespace std;
 
 template< typename T >

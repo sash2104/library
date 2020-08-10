@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/ITP1_7_D.test.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-22 14:49:56+09:00
 
@@ -80,7 +81,7 @@ int main() {
 ```cpp
 #line 1 "test/aoj/ITP1_7_D.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_D"
-#line 1 "test/aoj/../../math/matrix.cpp"
+#line 1 "math/matrix.cpp"
 #include <cassert>
 #include <iostream>
 #include <vector>
@@ -155,8 +156,7 @@ struct Matrix {
     return (os);
   }
 };
-#line 3 "test/aoj/ITP1_7_D.test.cpp"
-#include <iostream>
+#line 4 "test/aoj/ITP1_7_D.test.cpp"
 using namespace std;
 
 using matrix = Matrix<long long>;

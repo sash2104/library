@@ -93,8 +93,7 @@ std::vector<int> topologicalSort(const G &g) {
 #line 1 "graph/topological-sort.cpp"
 #include <vector>
 #include <stack>
-#line 1 "graph/template.cpp"
-#include <vector>
+#line 2 "graph/template.cpp"
 
 template< typename T >
 struct Edge {

@@ -147,7 +147,7 @@ using Graph = std::vector< Edges< T > >;
 
 #include <cassert>
 #include <cmath>
-#include <vector>
+#line 6 "graph/lca.cpp"
 
 using namespace std;
 

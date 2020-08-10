@@ -70,7 +70,7 @@ int main() {
 ```cpp
 #line 1 "test/aoj/notest.1562.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562"
-#line 1 "test/aoj/../../math/divisor.cpp"
+#line 1 "math/divisor.cpp"
 #include <algorithm>
 #include <iostream>
 #include <vector>

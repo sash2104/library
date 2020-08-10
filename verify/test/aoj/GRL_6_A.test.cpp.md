@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_6_A.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-02-26 23:15:40+09:00
 
@@ -74,7 +75,7 @@ int main() {
 ```cpp
 #line 1 "test/aoj/GRL_6_A.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_6_A"
-#line 2 "test/aoj/../../graph/max-flow-dinic.hpp"
+#line 2 "graph/max-flow-dinic.hpp"
 // 蟻本 p.194
 #include <vector>
 #include <queue>

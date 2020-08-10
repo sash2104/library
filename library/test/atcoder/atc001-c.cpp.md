@@ -71,14 +71,14 @@ int main() {
 ```cpp
 #line 1 "test/atcoder/atc001-c.cpp"
 #include <vector>
-#line 1 "test/atcoder/../../external/fft.cpp"
+#line 1 "external/fft.cpp"
 /*!
  * original: https://www.creativ.xyz/fast-fourier-transform/
  * terms of use: https://www.creativ.xyz/about/
  */
 #include <complex>
 #include <iostream>
-#include <vector>
+#line 8 "external/fft.cpp"
 
 using namespace std;
 

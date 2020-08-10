@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.segtree.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-15 21:59:48+09:00
 
@@ -74,7 +75,7 @@ int main() {
 #line 1 "test/aoj/DSL_2_B.segtree.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 
-#line 2 "test/aoj/../../monoid/add.hpp"
+#line 2 "monoid/add.hpp"
 
 namespace monoid {
 template <class T>
@@ -84,7 +85,7 @@ struct add {
   T merge(T a, T b) const { return a+b; }
 };
 } // namespace monoid
-#line 1 "test/aoj/../../datastructure/segment-tree.cpp"
+#line 1 "datastructure/segment-tree.cpp"
 #include <cassert>
 #include <vector>
 

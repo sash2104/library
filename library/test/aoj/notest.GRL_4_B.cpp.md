@@ -76,11 +76,10 @@ int main() {
 #line 1 "test/aoj/notest.GRL_4_B.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B"
 // 複数解候補がある問題で、ACでもoj-verifyのcheckではWAになりうるのでテスト対象から外す
-#line 1 "test/aoj/../../graph/topological-sort.cpp"
+#line 1 "graph/topological-sort.cpp"
 #include <vector>
 #include <stack>
-#line 1 "test/aoj/../../graph/template.cpp"
-#include <vector>
+#line 2 "graph/template.cpp"
 
 template< typename T >
 struct Edge {
@@ -99,7 +98,7 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 4 "test/aoj/../../graph/topological-sort.cpp"
+#line 4 "graph/topological-sort.cpp"
 
 template< typename G >
 std::vector<int> topologicalSort(const G &g) {

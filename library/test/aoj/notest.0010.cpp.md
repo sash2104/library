@@ -70,7 +70,7 @@ int main() {
 ```cpp
 #line 1 "test/aoj/notest.0010.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0010"
-#line 2 "test/aoj/../../geometry/template.hpp"
+#line 2 "geometry/template.hpp"
 #include <cmath>
 #include <algorithm>
 #include <complex>
@@ -460,7 +460,7 @@ Real closest_pair(Points ps) {
   };
   return rec(0, (int) ps.size());
 }
-#line 3 "test/aoj/../../geometry/triangle.hpp"
+#line 3 "geometry/triangle.hpp"
 
 // 外接円
 Circle circumcircle(const Point &a, const Point &b, const Point &c) {
@@ -479,7 +479,7 @@ Circle circumcircle(const Point &a, const Point &b, const Point &c) {
 }
 #line 3 "test/aoj/notest.0010.cpp"
 
-#include <iostream>
+#line 5 "test/aoj/notest.0010.cpp"
 using namespace std;
 int main() {
   int n; cin >> n;

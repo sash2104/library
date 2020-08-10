@@ -79,8 +79,7 @@ struct DualSegmentTree {
 ```cpp
 #line 1 "datastructure/dual-segment-tree.cpp"
 #include <cassert>
-#line 1 "datastructure/lazy-segment-tree.cpp"
-#include <cassert>
+#line 2 "datastructure/lazy-segment-tree.cpp"
 #include <functional>
 #include <vector>
 

@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_5_C.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 21:05:07+09:00
 
@@ -82,7 +83,7 @@ int main() {
 #line 1 "test/aoj/GRL_5_C.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C"
 
-#line 1 "test/aoj/../../graph/template.cpp"
+#line 1 "graph/template.cpp"
 #include <vector>
 
 template< typename T >
@@ -102,11 +103,11 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 2 "test/aoj/../../graph/lca.cpp"
+#line 2 "graph/lca.cpp"
 
 #include <cassert>
 #include <cmath>
-#include <vector>
+#line 6 "graph/lca.cpp"
 
 using namespace std;
 

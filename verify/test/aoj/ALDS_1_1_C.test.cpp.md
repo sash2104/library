@@ -25,12 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/aoj/ALDS1_1_C.test.cpp
+# :heavy_check_mark: test/aoj/ALDS_1_1_C.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/ALDS1_1_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-29 11:47:33+09:00
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/ALDS_1_1_C.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-08-10 14:52:41+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C</a>
@@ -75,11 +76,11 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/ALDS1_1_C.test.cpp"
+#line 1 "test/aoj/ALDS_1_1_C.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C"
 
 #define call_from_test
-#line 1 "test/aoj/../../math/prime.cpp"
+#line 1 "math/prime.cpp"
 #include <iostream>
 #include <vector>
 #include <map>
@@ -157,10 +158,10 @@ int main() {
   }
 }
 #endif
-#line 5 "test/aoj/ALDS1_1_C.test.cpp"
+#line 5 "test/aoj/ALDS_1_1_C.test.cpp"
 #undef call_from_test
 
-#include <iostream>
+#line 8 "test/aoj/ALDS_1_1_C.test.cpp"
 using namespace std;
 
 int main() {

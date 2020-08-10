@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.bit.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-15 21:59:48+09:00
 
@@ -72,7 +73,7 @@ int main() {
 #line 1 "test/aoj/DSL_2_B.bit.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 
-#line 1 "test/aoj/../../datastructure/binary-indexed-tree.cpp"
+#line 1 "datastructure/binary-indexed-tree.cpp"
 // original: http://hos.ac/slides/20140319_bit.pdf
 #include <cassert>
 #include <vector>

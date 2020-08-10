@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_1_A.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-01-01 21:11:06+09:00
 
@@ -72,7 +73,7 @@ int main() {
 ```cpp
 #line 1 "test/aoj/DSL_1_A.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
-#line 1 "test/aoj/../../datastructure/union-find-tree.cpp"
+#line 1 "datastructure/union-find-tree.cpp"
 #include <vector>
 
 class UnionFind {

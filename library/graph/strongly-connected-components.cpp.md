@@ -134,8 +134,7 @@ struct stronglyConnectedComponents {
 #include <algorithm>
 #include <vector>
 
-#line 1 "graph/template.cpp"
-#include <vector>
+#line 2 "graph/template.cpp"
 
 template< typename T >
 struct Edge {

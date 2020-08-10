@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_3_D.test.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-21 12:27:41+09:00
 
@@ -79,7 +80,7 @@ int main() {
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_3_D"
 
 #define call_from_test
-#line 1 "test/aoj/../../datastructure/slide-min.cpp"
+#line 1 "datastructure/slide-min.cpp"
 #include <iostream>
 #include <deque>
 #include <vector>
@@ -119,8 +120,7 @@ int main() {
 #line 5 "test/aoj/DSL_3_D.test.cpp"
 #undef call_from_test
 
-#include <iostream>
-#include <vector>
+#line 9 "test/aoj/DSL_3_D.test.cpp"
 using namespace std;
 
 int main() {

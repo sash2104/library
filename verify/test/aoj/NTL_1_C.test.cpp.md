@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/NTL_1_C.test.cpp">View this file on GitHub</a>
     - Last commit date: 2019-12-21 20:59:25+09:00
 
@@ -74,7 +75,7 @@ int main() {
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C"
 
 #define call_from_test
-#line 1 "test/aoj/../../math/euclidean-algorithm.cpp"
+#line 1 "math/euclidean-algorithm.cpp"
 #include <cassert>
 #include <iostream>
 #include <vector>

@@ -116,7 +116,7 @@ using Graph = std::vector< Edges< T > >;
 #line 2 "graph/warshall-floyd.cpp"
 
 #include <limits>
-#include <vector>
+#line 5 "graph/warshall-floyd.cpp"
 
 template < typename T >
 struct WarshallFloyd {
