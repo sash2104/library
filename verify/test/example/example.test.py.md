@@ -25,21 +25,15 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/example/example.test.py
+# :x: test/example/example.test.py
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#6e960e7cc692a917cd5882e779b205ff">test/example</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/example/example.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-01-28 00:50:42+09:00
+    - Last commit date: 1970-01-01 00:00:00+00:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A">https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A</a>
-
-
-## Depends on
-
-* :heavy_check_mark: <a href="../../../library/py/example/hello_world.py.html">py/example/hello_world.py</a>
 
 
 ## Code
@@ -66,13 +60,9 @@ if __name__ == "__main__":
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/docs.py", line 349, in write_contents
     bundled_code = language.bundle(self.file_class.file_path, basedir=pathlib.Path.cwd())
-  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/other.py", line 64, in bundle
-    return subprocess.check_output(shlex.split(command))
-  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/subprocess.py", line 411, in check_output
-    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
-  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/subprocess.py", line 512, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command '['false']' returned non-zero exit status 1.
+  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/python.py", line 84, in bundle
+    raise NotImplementedError
+NotImplementedError
 
 ```
 {% endraw %}

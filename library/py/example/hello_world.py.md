@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: py/example/hello_world.py
+# :warning: py/example/hello_world.py
 
 <a href="../../../index.html">Back to top page</a>
 
@@ -34,11 +34,6 @@ layout: default
     - Last commit date: 2020-01-27 23:27:27+09:00
 
 
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../../verify/test/example/example.test.py.html">test/example/example.test.py</a>
 
 
 ## Code
@@ -57,13 +52,9 @@ def hello_world():
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/docs.py", line 349, in write_contents
     bundled_code = language.bundle(self.file_class.file_path, basedir=pathlib.Path.cwd())
-  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/other.py", line 64, in bundle
-    return subprocess.check_output(shlex.split(command))
-  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/subprocess.py", line 411, in check_output
-    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
-  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/subprocess.py", line 512, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command '['false']' returned non-zero exit status 1.
+  File "/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/python.py", line 84, in bundle
+    raise NotImplementedError
+NotImplementedError
 
 ```
 {% endraw %}

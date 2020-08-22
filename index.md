@@ -66,6 +66,7 @@ layout: default
 
 ### graph
 
+* :heavy_check_mark: <a href="library/graph/bin-bfs.cpp.html">01-BFS</a>
 * :heavy_check_mark: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
 * :heavy_check_mark: <a href="library/graph/lca.cpp.html">graph/lca.cpp</a>
 * :heavy_check_mark: <a href="library/graph/max-flow-dinic.hpp.html">graph/max-flow-dinic.hpp</a>
@@ -104,7 +105,7 @@ layout: default
 
 ### py/example
 
-* :heavy_check_mark: <a href="library/py/example/hello_world.py.html">py/example/hello_world.py</a>
+* :warning: <a href="library/py/example/hello_world.py.html">py/example/hello_world.py</a>
 
 
 <div id="b45cffe084dd3d20d928bee85e7b0f21"></div>
@@ -149,6 +150,7 @@ layout: default
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/test/aoj/ALDS_1_11_C.test.cpp.html">test/aoj/ALDS_1_11_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/ALDS_1_14_B.test.cpp.html">test/aoj/ALDS_1_14_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/ALDS_1_1_C.test.cpp.html">test/aoj/ALDS_1_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/CGL_1_A.test.cpp.html">test/aoj/CGL_1_A.test.cpp</a>
@@ -175,6 +177,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/example/example.test.py.html">test/example/example.test.py</a>
+* :x: <a href="verify/test/example/example.test.py.html">test/example/example.test.py</a>
 
 

@@ -38,6 +38,7 @@ layout: default
 
 ## Required by
 
+* :heavy_check_mark: <a href="bin-bfs.cpp.html">01-BFS</a>
 * :heavy_check_mark: <a href="dijkstra.cpp.html">graph/dijkstra.cpp</a>
 * :heavy_check_mark: <a href="lca.cpp.html">graph/lca.cpp</a>
 * :heavy_check_mark: <a href="mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
@@ -49,6 +50,7 @@ layout: default
 
 ## Verified with
 
+* :heavy_check_mark: <a href="../../verify/test/aoj/ALDS_1_11_C.test.cpp.html">test/aoj/ALDS_1_11_C.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_1_A.test.cpp.html">test/aoj/GRL_1_A.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_1_C.test.cpp.html">test/aoj/GRL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
