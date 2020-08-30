@@ -87,7 +87,7 @@ layout: default
 * :warning: <a href="library/math/factorial.cpp.html">math/factorial.cpp</a>
 * :heavy_check_mark: <a href="library/math/matrix.cpp.html">math/matrix.cpp</a>
 * :heavy_check_mark: <a href="library/math/modint.cpp.html">math/modint.cpp</a>
-* :heavy_check_mark: <a href="library/math/prime.cpp.html">math/prime.cpp</a>
+* :heavy_check_mark: <a href="library/math/prime.cpp.html">素数判定、素因数分解</a>
 
 
 <div id="c3437aaac8e99d51d51e80f390e49b05"></div>

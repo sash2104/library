@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/ALDS_1_1_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-10 14:52:41+09:00
+    - Last commit date: 2020-08-30 09:05:46+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/math/prime.cpp.html">math/prime.cpp</a>
+* :heavy_check_mark: <a href="../../../library/math/prime.cpp.html">素数判定、素因数分解</a>
 
 
 ## Code
@@ -81,20 +81,20 @@ int main() {
 
 #define call_from_test
 #line 1 "math/prime.cpp"
+// @title 素数判定、素因数分解
+#include <cassert>
 #include <iostream>
 #include <vector>
 #include <map>
 
-using namespace std;
-
-typedef long long ll;
+using ll = long long;
 
 class Prime {
 // n以下の素数を列挙する
 public:
   const int n;
-  vector<bool> is_prime;
-  vector<int> primes;
+  std::vector<bool> is_prime;
+  std::vector<int> primes;
   Prime(int size) : n(size), is_prime(n+1, true) {
     is_prime[0] = false;
     is_prime[1] = false;
@@ -118,8 +118,8 @@ struct PrimeFactorization {
   Prime p;
   PrimeFactorization(int n) : n(n), p(n) {}
 
-  map<ll, int> calc(ll a) {
-    map<ll, int> ret;
+  std::map<ll, int> calc(ll a) {
+    std::map<ll, int> ret;
     ll tmp = a;
     for (int i: p.primes) {
       if (i > tmp) break;
@@ -135,10 +135,68 @@ struct PrimeFactorization {
   }
 };
 
-#ifndef call_from_test
+struct FastPrimeFactorization {
+  /**
+   * @brief n以下の数について高速で、n*n以下の数で普通に素因数分解を行う
+   * 
+   */
+  int n;
+  std::vector<int> divides; // その数を割り切る最小の素因数
+  std::vector<int> primes; // n以下の素数
+  FastPrimeFactorization(int n) : n(n), divides(n+1) {
+    assert(n <= 2000000);
+    // エラトステネスの篩にかけ、最小の素因数をdividesに書き込んでいく
+    for (int i = 2; i <= n; ++i) {
+      if (divides[i] > 0) continue;
+      primes.push_back(i);
+      int j = i;
+      while (j <= n) {
+        if (divides[j] == 0) {
+          divides[j] = i;
+        }
+        j += i;
+      }
+    }
+    // for (int i = 0; i <= n; ++i) { 
+    //   cout << i << " " << divides[i] << endl;
+    // }
+  }
+
+  std::map<ll, int> calc(ll a) {
+    std::map<ll, int> ret;
+    {
+      // 高速に計算できない部分は愚直にやる
+      ll tmp = a;
+      while (tmp > n) {
+        for (int i: primes) {
+          if (i > tmp) break;
+          int count = 0;
+          while (tmp % i == 0) { 
+            ++count;
+            tmp /= i;
+          }
+          if (count > 0) ret[i] = count;
+        }
+      }
+    }
+    {
+      int tmp = a;
+      while (tmp > 1) {
+        int d = divides[tmp];
+        ++ret[d];
+        tmp /= d;
+      }
+    }
+    return ret;
+  }
+};
+
+#if 0
+using namespace std;
 int main() {
-  PrimeFactorization pf(1000000);
-  map<ll, int> factors;
+  FastPrimeFactorization pf(1000000);
+  // PrimeFactorization pf(1000000);
+  std::map<ll, int> factors;
 
 
   ll a = (ll)2*2*5*7*7*41;
