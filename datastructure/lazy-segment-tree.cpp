@@ -1,3 +1,7 @@
+/**
+ * @title 遅延セグメント木 (区間更新、区間取得がO(logN))
+ *  
+ */ 
 #include <cassert>
 #include <functional>
 #include <vector>

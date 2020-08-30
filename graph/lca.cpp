@@ -1,3 +1,6 @@
+/**
+ * @title LCA (最小共通祖先)
+ */
 #include "template.cpp"
 
 #include <cassert>

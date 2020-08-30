@@ -1,3 +1,6 @@
+/**
+ * @title 座標圧縮
+ */
 #pragma once
 #include <algorithm>
 #include <vector>

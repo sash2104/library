@@ -1,9 +1,7 @@
+// @title 最大公約数・最小公倍数
 #include <cassert>
-#include <iostream>
-#include <vector>
 
-using namespace std;
-typedef long long ll;
+using ll = long long;
 
 ll gcd(ll a, ll b) {
   if (b == 0) return a;
@@ -14,7 +12,7 @@ ll lcm(ll a, ll b) {
   return a*b / gcd(a, b);
 }
 
-#ifndef call_from_test
+#if 0
 int main() {
   assert(gcd(18, 24) == 6);
   assert(lcm(18, 24) == 72);

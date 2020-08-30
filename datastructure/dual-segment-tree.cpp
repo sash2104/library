@@ -1,8 +1,12 @@
+/**
+ * @title 双対セグメント木 (区間更新、一点取得がO(logN))
+ * @brief 区間更新、一点取得がO(logN)でできるやつ
+ *   定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
+ *  
+ */ 
 #include <cassert>
 #include "lazy-segment-tree.cpp"
 
-// 区間更新、一点取得がO(logN)でできるやつ
-// 定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
 template <class OperatorMonoid>
 struct DualSegmentTree {
   typedef typename OperatorMonoid::value_t operator_t;

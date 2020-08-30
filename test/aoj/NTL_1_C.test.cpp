@@ -1,8 +1,9 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C"
 
-#define call_from_test
 #include "../../math/euclidean-algorithm.cpp"
-#undef call_from_test
+#include <iostream>
+
+using namespace std;
 
 int main() {
   int n;

@@ -1,8 +1,9 @@
+/**
+ * @title スライド最小値
+ */
 #include <iostream>
 #include <deque>
 #include <vector>
-
-using namespace std;
 
 template <class T>
 std::vector<int> slideMin(const std::vector<T>& v, int k) {
@@ -21,13 +22,13 @@ std::vector<int> slideMin(const std::vector<T>& v, int k) {
   return ret;
 }
 
-#ifndef call_from_test
+#if 0
 #include <cassert>
 int main() {
-  vector<int> v = {1, 3, 5, 4, 2};
+  std::vector<int> v = {1, 3, 5, 4, 2};
 
   int k = 3;
-  vector<int> ret = slideMin(v, k);
+  std::vector<int> ret = slideMin(v, k);
   assert(ret.size() == 3);
   assert(ret[0] == 0);
   assert(ret[1] == 1);
