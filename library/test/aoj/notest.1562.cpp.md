@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/notest.1562.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 21:37:34+09:00
+    - Last commit date: 2020-08-30 21:16:58+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :warning: <a href="../../math/divisor.cpp.html">math/divisor.cpp</a>
+* :warning: <a href="../../math/divisor.cpp.html">約数列挙</a>
 
 
 ## Code
@@ -71,24 +71,21 @@ int main() {
 #line 1 "test/aoj/notest.1562.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562"
 #line 1 "math/divisor.cpp"
+// @title 約数列挙
 #include <algorithm>
-#include <iostream>
 #include <vector>
-#include <map>
 
-using namespace std;
+using ll = long long;
 
-typedef long long ll;
-
-vector<ll> divisor(ll n) { 
-  vector<ll> ret;
+std::vector<ll> divisor(ll n) { 
+  std::vector<ll> ret;
   for (ll i = 1; (ll)i*i <= n; ++i) { 
     if (n % i == 0) {
       ret.push_back(i);
       if (i*i != n) { ret.push_back(n/i); }
     }
   }
-  sort(ret.begin(), ret.end());
+  std::sort(ret.begin(), ret.end());
   return ret;
 };
 #line 3 "test/aoj/notest.1562.cpp"

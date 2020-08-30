@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_G.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 14:13:16+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/datastructure/lazy-segment-tree.cpp.html">datastructure/lazy-segment-tree.cpp</a>
+* :heavy_check_mark: <a href="../../../library/datastructure/lazy-segment-tree.cpp.html">遅延セグメント木 (区間更新、区間取得がO(logN))</a>
 * :heavy_check_mark: <a href="../../../library/monoid/add.hpp.html">monoid/add.hpp</a>
 * :heavy_check_mark: <a href="../../../library/monoid/add_count.hpp.html">monoid/add_count.hpp</a>
 
@@ -113,6 +113,10 @@ struct add {
 };
 } // namespace monoid
 #line 1 "datastructure/lazy-segment-tree.cpp"
+/**
+ * @title 遅延セグメント木 (区間更新、区間取得がO(logN))
+ *  
+ */ 
 #include <cassert>
 #include <functional>
 #include <vector>

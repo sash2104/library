@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: math/modint.cpp
+# :heavy_check_mark: mod int
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/modint.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-08 10:49:15+09:00
+    - Last commit date: 2020-08-30 22:26:59+09:00
 
 
 
 
 ## Required by
 
-* :warning: <a href="factorial.cpp.html">math/factorial.cpp</a>
+* :warning: <a href="factorial.cpp.html">階乗、nPr、nCr</a>
 * :warning: <a href="../test/atcoder/abc129-f.cpp.html">test/atcoder/abc129-f.cpp</a>
 
 
@@ -52,9 +52,9 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+// @title mod int
 #include <iostream>
-using namespace std;
-typedef long long ll;
+using ll = long long;
 
 #ifdef MUTABLE
 int mod;
@@ -65,7 +65,7 @@ struct ModInt {
   int val;
   ModInt inv() const{
     int tmp,a=val,b=mod,x=1,y=0;
-    while(b)tmp=a/b,a-=tmp*b,swap(a,b),x-=tmp*y,swap(x,y);
+    while(b)tmp=a/b,a-=tmp*b,std::swap(a,b),x-=tmp*y,std::swap(x,y);
     return ModInt(x);
   }
   ModInt():val(0){}
@@ -85,7 +85,7 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
-  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
+  friend std::ostream& operator<<(std::ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 
@@ -100,9 +100,9 @@ using modint = ModInt<1000000007>;
 {% raw %}
 ```cpp
 #line 1 "math/modint.cpp"
+// @title mod int
 #include <iostream>
-using namespace std;
-typedef long long ll;
+using ll = long long;
 
 #ifdef MUTABLE
 int mod;
@@ -113,7 +113,7 @@ struct ModInt {
   int val;
   ModInt inv() const{
     int tmp,a=val,b=mod,x=1,y=0;
-    while(b)tmp=a/b,a-=tmp*b,swap(a,b),x-=tmp*y,swap(x,y);
+    while(b)tmp=a/b,a-=tmp*b,std::swap(a,b),x-=tmp*y,std::swap(x,y);
     return ModInt(x);
   }
   ModInt():val(0){}
@@ -133,7 +133,7 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
-  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
+  friend std::ostream& operator<<(std::ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 

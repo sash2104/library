@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: math/euclidean-algorithm.cpp
+# :heavy_check_mark: 最大公約数・最小公倍数
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/euclidean-algorithm.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 20:55:01+09:00
+    - Last commit date: 2020-08-30 21:18:06+09:00
 
 
 
@@ -46,12 +46,10 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+// @title 最大公約数・最小公倍数
 #include <cassert>
-#include <iostream>
-#include <vector>
 
-using namespace std;
-typedef long long ll;
+using ll = long long;
 
 ll gcd(ll a, ll b) {
   if (b == 0) return a;
@@ -62,7 +60,7 @@ ll lcm(ll a, ll b) {
   return a*b / gcd(a, b);
 }
 
-#ifndef call_from_test
+#if 0
 int main() {
   assert(gcd(18, 24) == 6);
   assert(lcm(18, 24) == 72);
@@ -82,12 +80,10 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "math/euclidean-algorithm.cpp"
+// @title 最大公約数・最小公倍数
 #include <cassert>
-#include <iostream>
-#include <vector>
 
-using namespace std;
-typedef long long ll;
+using ll = long long;
 
 ll gcd(ll a, ll b) {
   if (b == 0) return a;
@@ -98,7 +94,7 @@ ll lcm(ll a, ll b) {
   return a*b / gcd(a, b);
 }
 
-#ifndef call_from_test
+#if 0
 int main() {
   assert(gcd(18, 24) == 6);
   assert(lcm(18, 24) == 72);

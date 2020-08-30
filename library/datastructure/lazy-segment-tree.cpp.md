@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: datastructure/lazy-segment-tree.cpp
+# :heavy_check_mark: 遅延セグメント木 (区間更新、区間取得がO(logN))
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#8dc87745f885a4cc532acd7b15b8b5fe">datastructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/datastructure/lazy-segment-tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 14:13:16+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
 
 
 ## Required by
 
-* :heavy_check_mark: <a href="dual-segment-tree.cpp.html">datastructure/dual-segment-tree.cpp</a>
+* :heavy_check_mark: <a href="dual-segment-tree.cpp.html">双対セグメント木 (区間更新、一点取得がO(logN))</a>
 
 
 ## Verified with
@@ -55,6 +55,10 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title 遅延セグメント木 (区間更新、区間取得がO(logN))
+ *  
+ */ 
 #include <cassert>
 #include <functional>
 #include <vector>
@@ -152,6 +156,10 @@ struct LazySegmentTree {
 {% raw %}
 ```cpp
 #line 1 "datastructure/lazy-segment-tree.cpp"
+/**
+ * @title 遅延セグメント木 (区間更新、区間取得がO(logN))
+ *  
+ */ 
 #include <cassert>
 #include <functional>
 #include <vector>

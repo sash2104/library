@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/mst-kruskal.cpp
+# :heavy_check_mark: 最小全域木 (クラスカル法)
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/mst-kruskal.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 21:05:07+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../datastructure/union-find-tree.cpp.html">datastructure/union-find-tree.cpp</a>
+* :heavy_check_mark: <a href="../datastructure/union-find-tree.cpp.html">Union-Find</a>
 * :heavy_check_mark: <a href="template.cpp.html">graph/template.cpp</a>
 
 
@@ -52,6 +52,9 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title 最小全域木 (クラスカル法)
+ */
 #include <algorithm>
 #include "template.cpp"
 #include "../datastructure/union-find-tree.cpp"
@@ -77,6 +80,9 @@ T kruscal(int V, Edges< T > &edges) {
 {% raw %}
 ```cpp
 #line 1 "graph/mst-kruskal.cpp"
+/**
+ * @title 最小全域木 (クラスカル法)
+ */
 #include <algorithm>
 #line 1 "graph/template.cpp"
 #include <vector>
@@ -98,17 +104,17 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 2 "datastructure/union-find-tree.cpp"
+#line 1 "datastructure/union-find-tree.cpp"
+/**
+ * @title Union-Find
+ */
+#line 5 "datastructure/union-find-tree.cpp"
 
 class UnionFind {
 public:
   std::vector<int> data; // sizeとparを同時に管理する
   UnionFind(int size) : data(size, -1) {}
-
-  int find(int x) {
-    return data[x] < 0 ? x : data[x] = find(data[x]);
-  }
-
+  int find(int x) { return data[x] < 0 ? x : data[x] = find(data[x]); }
   void unite(int x, int y) {
     int px = find(x);
     int py = find(y);
@@ -117,16 +123,10 @@ public:
       data[px] += data[py]; data[py] = px;
     }
   }
-
-  bool same(int x, int y) {
-    return find(x) == find(y);
-  }
-
-  int size(int x) {
-    return -data[find(x)];
-  }
+  bool same(int x, int y) { return find(x) == find(y); }
+  int size(int x) { return -data[find(x)]; }
 };
-#line 4 "graph/mst-kruskal.cpp"
+#line 7 "graph/mst-kruskal.cpp"
 
 template< typename T >
 T kruscal(int V, Edges< T > &edges) {

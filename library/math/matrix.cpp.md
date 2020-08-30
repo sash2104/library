@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: math/matrix.cpp
+# :heavy_check_mark: 行列
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/matrix.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 14:49:56+09:00
+    - Last commit date: 2020-08-30 21:21:32+09:00
 
 
 
@@ -51,6 +51,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+// @title 行列
 #include <cassert>
 #include <iostream>
 #include <vector>
@@ -133,6 +134,7 @@ struct Matrix {
 {% raw %}
 ```cpp
 #line 1 "math/matrix.cpp"
+// @title 行列
 #include <cassert>
 #include <iostream>
 #include <vector>

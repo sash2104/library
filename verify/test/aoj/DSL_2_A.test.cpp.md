@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 14:13:16+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/datastructure/segment-tree.cpp.html">datastructure/segment-tree.cpp</a>
+* :heavy_check_mark: <a href="../../../library/datastructure/segment-tree.cpp.html">セグメント木 (一点更新、区間取得がO(logN))</a>
 * :heavy_check_mark: <a href="../../../library/monoid/min.hpp.html">monoid/min.hpp</a>
 
 
@@ -88,6 +88,10 @@ struct min {
 };
 } // namespace monoid
 #line 1 "datastructure/segment-tree.cpp"
+/**
+ * @title セグメント木 (一点更新、区間取得がO(logN))
+ * 
+ */
 #include <cassert>
 #include <vector>
 

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_1_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-06 01:00:35+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C</a>
@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../../library/graph/template.cpp.html">graph/template.cpp</a>
-* :heavy_check_mark: <a href="../../../library/graph/warshall-floyd.cpp.html">graph/warshall-floyd.cpp</a>
+* :heavy_check_mark: <a href="../../../library/graph/warshall-floyd.cpp.html">warshall-floyd</a>
 
 
 ## Code
@@ -88,6 +88,10 @@ int main() {
 ```cpp
 #line 1 "test/aoj/GRL_1_C.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
+#line 1 "graph/warshall-floyd.cpp"
+/**
+ * @title warshall-floyd
+ */
 #line 1 "graph/template.cpp"
 #include <vector>
 
@@ -108,10 +112,10 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 2 "graph/warshall-floyd.cpp"
+#line 5 "graph/warshall-floyd.cpp"
 
 #include <limits>
-#line 5 "graph/warshall-floyd.cpp"
+#line 8 "graph/warshall-floyd.cpp"
 
 template < typename T >
 struct WarshallFloyd {

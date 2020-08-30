@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: datastructure/dual-segment-tree.cpp
+# :heavy_check_mark: 双対セグメント木 (区間更新、一点取得がO(logN))
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#8dc87745f885a4cc532acd7b15b8b5fe">datastructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/datastructure/dual-segment-tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 14:13:16+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="lazy-segment-tree.cpp.html">datastructure/lazy-segment-tree.cpp</a>
+* :heavy_check_mark: <a href="lazy-segment-tree.cpp.html">遅延セグメント木 (区間更新、区間取得がO(logN))</a>
 
 
 ## Verified with
@@ -52,11 +52,15 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title 双対セグメント木 (区間更新、一点取得がO(logN))
+ * @brief 区間更新、一点取得がO(logN)でできるやつ
+ *   定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
+ *  
+ */ 
 #include <cassert>
 #include "lazy-segment-tree.cpp"
 
-// 区間更新、一点取得がO(logN)でできるやつ
-// 定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
 template <class OperatorMonoid>
 struct DualSegmentTree {
   typedef typename OperatorMonoid::value_t operator_t;
@@ -78,8 +82,19 @@ struct DualSegmentTree {
 {% raw %}
 ```cpp
 #line 1 "datastructure/dual-segment-tree.cpp"
+/**
+ * @title 双対セグメント木 (区間更新、一点取得がO(logN))
+ * @brief 区間更新、一点取得がO(logN)でできるやつ
+ *   定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
+ *  
+ */ 
 #include <cassert>
-#line 2 "datastructure/lazy-segment-tree.cpp"
+#line 1 "datastructure/lazy-segment-tree.cpp"
+/**
+ * @title 遅延セグメント木 (区間更新、区間取得がO(logN))
+ *  
+ */ 
+#line 6 "datastructure/lazy-segment-tree.cpp"
 #include <functional>
 #include <vector>
 
@@ -168,10 +183,8 @@ struct LazySegmentTree {
     return query(k, k + 1);
   }
 };
-#line 3 "datastructure/dual-segment-tree.cpp"
+#line 9 "datastructure/dual-segment-tree.cpp"
 
-// 区間更新、一点取得がO(logN)でできるやつ
-// 定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
 template <class OperatorMonoid>
 struct DualSegmentTree {
   typedef typename OperatorMonoid::value_t operator_t;

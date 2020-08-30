@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_3_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 21:05:07+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/graph/strongly-connected-components.cpp.html">graph/strongly-connected-components.cpp</a>
+* :heavy_check_mark: <a href="../../../library/graph/strongly-connected-components.cpp.html">強連結成分分解</a>
 * :heavy_check_mark: <a href="../../../library/graph/template.cpp.html">graph/template.cpp</a>
 
 
@@ -85,6 +85,9 @@ int main() {
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
 
 #line 1 "graph/strongly-connected-components.cpp"
+/**
+ * @title 強連結成分分解
+ */
 #include <cassert>
 #include <algorithm>
 #include <vector>
@@ -108,7 +111,7 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 6 "graph/strongly-connected-components.cpp"
+#line 9 "graph/strongly-connected-components.cpp"
 using namespace std;
 
 template< typename T >

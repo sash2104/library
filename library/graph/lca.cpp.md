@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/lca.cpp
+# :heavy_check_mark: LCA (最小共通祖先)
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/lca.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 21:05:07+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 
@@ -51,6 +51,9 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title LCA (最小共通祖先)
+ */
 #include "template.cpp"
 
 #include <cassert>
@@ -123,6 +126,10 @@ struct LCA {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "graph/lca.cpp"
+/**
+ * @title LCA (最小共通祖先)
+ */
 #line 1 "graph/template.cpp"
 #include <vector>
 
@@ -143,11 +150,11 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 2 "graph/lca.cpp"
+#line 5 "graph/lca.cpp"
 
 #include <cassert>
 #include <cmath>
-#line 6 "graph/lca.cpp"
+#line 9 "graph/lca.cpp"
 
 using namespace std;
 

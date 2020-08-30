@@ -25,15 +25,16 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: datastructure/binary-indexed-tree.cpp
+# :heavy_check_mark: BIT (Binary-Indexed-Tree)
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#8dc87745f885a4cc532acd7b15b8b5fe">datastructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/datastructure/binary-indexed-tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-15 21:59:48+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
+* see: <a href="http://hos.ac/slides/20140319_bit.pdf">http://hos.ac/slides/20140319_bit.pdf</a>
 
 
 ## Verified with
@@ -46,7 +47,10 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-// original: http://hos.ac/slides/20140319_bit.pdf
+/**
+ * @title BIT (Binary-Indexed-Tree)
+ * @see http://hos.ac/slides/20140319_bit.pdf
+ */
 #include <cassert>
 #include <vector>
 
@@ -83,7 +87,10 @@ struct BinaryIndexedTree {
 {% raw %}
 ```cpp
 #line 1 "datastructure/binary-indexed-tree.cpp"
-// original: http://hos.ac/slides/20140319_bit.pdf
+/**
+ * @title BIT (Binary-Indexed-Tree)
+ * @see http://hos.ac/slides/20140319_bit.pdf
+ */
 #include <cassert>
 #include <vector>
 

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 14:13:16+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/datastructure/dual-segment-tree.cpp.html">datastructure/dual-segment-tree.cpp</a>
-* :heavy_check_mark: <a href="../../../library/datastructure/lazy-segment-tree.cpp.html">datastructure/lazy-segment-tree.cpp</a>
+* :heavy_check_mark: <a href="../../../library/datastructure/dual-segment-tree.cpp.html">双対セグメント木 (区間更新、一点取得がO(logN))</a>
+* :heavy_check_mark: <a href="../../../library/datastructure/lazy-segment-tree.cpp.html">遅延セグメント木 (区間更新、区間取得がO(logN))</a>
 * :heavy_check_mark: <a href="../../../library/monoid/fill.hpp.html">monoid/fill.hpp</a>
 
 
@@ -97,8 +97,19 @@ struct fill {
 };
 } // namespace monoid
 #line 1 "datastructure/dual-segment-tree.cpp"
+/**
+ * @title 双対セグメント木 (区間更新、一点取得がO(logN))
+ * @brief 区間更新、一点取得がO(logN)でできるやつ
+ *   定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
+ *  
+ */ 
 #include <cassert>
-#line 2 "datastructure/lazy-segment-tree.cpp"
+#line 1 "datastructure/lazy-segment-tree.cpp"
+/**
+ * @title 遅延セグメント木 (区間更新、区間取得がO(logN))
+ *  
+ */ 
+#line 6 "datastructure/lazy-segment-tree.cpp"
 #include <functional>
 #include <vector>
 
@@ -187,10 +198,8 @@ struct LazySegmentTree {
     return query(k, k + 1);
   }
 };
-#line 3 "datastructure/dual-segment-tree.cpp"
+#line 9 "datastructure/dual-segment-tree.cpp"
 
-// 区間更新、一点取得がO(logN)でできるやつ
-// 定数倍は悪そうだが、似たコードをたくさん管理したくないのでLazySegmentTreeを使い回す
 template <class OperatorMonoid>
 struct DualSegmentTree {
   typedef typename OperatorMonoid::value_t operator_t;

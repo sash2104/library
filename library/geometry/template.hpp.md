@@ -38,8 +38,8 @@ layout: default
 
 ## Required by
 
-* :warning: <a href="template.circle.hpp.html">geometry/template.circle.hpp</a>
-* :warning: <a href="triangle.hpp.html">geometry/triangle.hpp</a>
+* :warning: <a href="template.circle.hpp.html">円</a>
+* :warning: <a href="triangle.hpp.html">三角形の五心の座標</a>
 * :warning: <a href="../test/aoj/notest.0010.cpp.html">test/aoj/notest.0010.cpp</a>
 
 

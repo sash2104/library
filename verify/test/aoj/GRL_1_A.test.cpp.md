@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_1_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-02 01:18:54+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :heavy_check_mark: <a href="../../../library/graph/dijkstra.cpp.html">Dijkstra</a>
 * :heavy_check_mark: <a href="../../../library/graph/template.cpp.html">graph/template.cpp</a>
 
 
@@ -82,6 +82,10 @@ int main() {
 ```cpp
 #line 1 "test/aoj/GRL_1_A.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A"
+#line 1 "graph/dijkstra.cpp"
+/**
+ * @title Dijkstra
+ */
 #line 1 "graph/template.cpp"
 #include <vector>
 
@@ -102,14 +106,14 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 2 "graph/dijkstra.cpp"
+#line 5 "graph/dijkstra.cpp"
 
 #include <algorithm>
 #include <functional>
 #include <limits>
 #include <queue>
 #include <utility>
-#line 9 "graph/dijkstra.cpp"
+#line 12 "graph/dijkstra.cpp"
 
 template < typename T >
 struct Dijkstra {

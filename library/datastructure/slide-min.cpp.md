@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: datastructure/slide-min.cpp
+# :heavy_check_mark: スライド最小値
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#8dc87745f885a4cc532acd7b15b8b5fe">datastructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/datastructure/slide-min.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 12:27:41+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
 
@@ -46,11 +46,12 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title スライド最小値
+ */
 #include <iostream>
 #include <deque>
 #include <vector>
-
-using namespace std;
 
 template <class T>
 std::vector<int> slideMin(const std::vector<T>& v, int k) {
@@ -69,13 +70,13 @@ std::vector<int> slideMin(const std::vector<T>& v, int k) {
   return ret;
 }
 
-#ifndef call_from_test
+#if 0
 #include <cassert>
 int main() {
-  vector<int> v = {1, 3, 5, 4, 2};
+  std::vector<int> v = {1, 3, 5, 4, 2};
 
   int k = 3;
-  vector<int> ret = slideMin(v, k);
+  std::vector<int> ret = slideMin(v, k);
   assert(ret.size() == 3);
   assert(ret[0] == 0);
   assert(ret[1] == 1);
@@ -90,11 +91,12 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "datastructure/slide-min.cpp"
+/**
+ * @title スライド最小値
+ */
 #include <iostream>
 #include <deque>
 #include <vector>
-
-using namespace std;
 
 template <class T>
 std::vector<int> slideMin(const std::vector<T>& v, int k) {
@@ -113,13 +115,13 @@ std::vector<int> slideMin(const std::vector<T>& v, int k) {
   return ret;
 }
 
-#ifndef call_from_test
+#if 0
 #include <cassert>
 int main() {
-  vector<int> v = {1, 3, 5, 4, 2};
+  std::vector<int> v = {1, 3, 5, 4, 2};
 
   int k = 3;
-  vector<int> ret = slideMin(v, k);
+  std::vector<int> ret = slideMin(v, k);
   assert(ret.size() == 3);
   assert(ret[0] == 0);
   assert(ret[1] == 1);

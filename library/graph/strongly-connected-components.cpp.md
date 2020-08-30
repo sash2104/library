@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/strongly-connected-components.cpp
+# :heavy_check_mark: 強連結成分分解
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/strongly-connected-components.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 21:05:07+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 
@@ -51,6 +51,9 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title 強連結成分分解
+ */
 #include <cassert>
 #include <algorithm>
 #include <vector>
@@ -130,6 +133,9 @@ struct stronglyConnectedComponents {
 {% raw %}
 ```cpp
 #line 1 "graph/strongly-connected-components.cpp"
+/**
+ * @title 強連結成分分解
+ */
 #include <cassert>
 #include <algorithm>
 #include <vector>
@@ -153,7 +159,7 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 6 "graph/strongly-connected-components.cpp"
+#line 9 "graph/strongly-connected-components.cpp"
 using namespace std;
 
 template< typename T >

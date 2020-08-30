@@ -31,15 +31,15 @@ layout: default
 
 * category: <a href="../../../index.html#e8ba03245cc911ba95395348d53122a0">test/atcoder</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/atcoder/abc129-f.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-08 10:49:15+09:00
+    - Last commit date: 2020-08-30 22:26:59+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../math/matrix.cpp.html">math/matrix.cpp</a>
-* :heavy_check_mark: <a href="../../math/modint.cpp.html">math/modint.cpp</a>
+* :heavy_check_mark: <a href="../../math/matrix.cpp.html">行列</a>
+* :heavy_check_mark: <a href="../../math/modint.cpp.html">mod int</a>
 
 
 ## Code
@@ -110,9 +110,10 @@ int main() {
 // modを可変にする
 #define MUTABLE
 
-#line 2 "math/modint.cpp"
-using namespace std;
-typedef long long ll;
+#line 1 "math/modint.cpp"
+// @title mod int
+#line 3 "math/modint.cpp"
+using ll = long long;
 
 #ifdef MUTABLE
 int mod;
@@ -123,7 +124,7 @@ struct ModInt {
   int val;
   ModInt inv() const{
     int tmp,a=val,b=mod,x=1,y=0;
-    while(b)tmp=a/b,a-=tmp*b,swap(a,b),x-=tmp*y,swap(x,y);
+    while(b)tmp=a/b,a-=tmp*b,std::swap(a,b),x-=tmp*y,std::swap(x,y);
     return ModInt(x);
   }
   ModInt():val(0){}
@@ -143,14 +144,16 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
-  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
+  friend std::ostream& operator<<(std::ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 
 #ifndef MUTABLE
 using modint = ModInt<1000000007>;
 #endif
-#line 4 "math/matrix.cpp"
+#line 1 "math/matrix.cpp"
+// @title 行列
+#line 5 "math/matrix.cpp"
 using namespace std;
 
 template< class T >

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/notest.GRL_4_B.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 21:05:07+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B</a>
@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../graph/template.cpp.html">graph/template.cpp</a>
-* :warning: <a href="../../graph/topological-sort.cpp.html">graph/topological-sort.cpp</a>
+* :warning: <a href="../../graph/topological-sort.cpp.html">トポロジカルソート</a>
 
 
 ## Code
@@ -77,6 +77,9 @@ int main() {
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B"
 // 複数解候補がある問題で、ACでもoj-verifyのcheckではWAになりうるのでテスト対象から外す
 #line 1 "graph/topological-sort.cpp"
+/**
+ * @title トポロジカルソート 
+ */
 #include <vector>
 #include <stack>
 #line 2 "graph/template.cpp"
@@ -98,7 +101,7 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 4 "graph/topological-sort.cpp"
+#line 7 "graph/topological-sort.cpp"
 
 template< typename G >
 std::vector<int> topologicalSort(const G &g) {

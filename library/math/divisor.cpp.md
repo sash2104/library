@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: math/divisor.cpp
+# :warning: 約数列挙
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/divisor.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 21:37:34+09:00
+    - Last commit date: 2020-08-30 21:16:58+09:00
 
 
 
@@ -46,24 +46,21 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+// @title 約数列挙
 #include <algorithm>
-#include <iostream>
 #include <vector>
-#include <map>
 
-using namespace std;
+using ll = long long;
 
-typedef long long ll;
-
-vector<ll> divisor(ll n) { 
-  vector<ll> ret;
+std::vector<ll> divisor(ll n) { 
+  std::vector<ll> ret;
   for (ll i = 1; (ll)i*i <= n; ++i) { 
     if (n % i == 0) {
       ret.push_back(i);
       if (i*i != n) { ret.push_back(n/i); }
     }
   }
-  sort(ret.begin(), ret.end());
+  std::sort(ret.begin(), ret.end());
   return ret;
 };
 
@@ -74,24 +71,21 @@ vector<ll> divisor(ll n) {
 {% raw %}
 ```cpp
 #line 1 "math/divisor.cpp"
+// @title 約数列挙
 #include <algorithm>
-#include <iostream>
 #include <vector>
-#include <map>
 
-using namespace std;
+using ll = long long;
 
-typedef long long ll;
-
-vector<ll> divisor(ll n) { 
-  vector<ll> ret;
+std::vector<ll> divisor(ll n) { 
+  std::vector<ll> ret;
   for (ll i = 1; (ll)i*i <= n; ++i) { 
     if (n % i == 0) {
       ret.push_back(i);
       if (i*i != n) { ret.push_back(n/i); }
     }
   }
-  sort(ret.begin(), ret.end());
+  std::sort(ret.begin(), ret.end());
   return ret;
 };
 

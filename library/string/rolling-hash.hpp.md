@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: string/rolling-hash.hpp
+# :heavy_check_mark: ローリングハッシュ
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#b45cffe084dd3d20d928bee85e7b0f21">string</a>
 * <a href="{{ site.github.repository_url }}/blob/master/string/rolling-hash.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-10 14:52:41+09:00
+    - Last commit date: 2020-08-30 21:34:36+09:00
 
 
 
@@ -46,6 +46,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+// @title ローリングハッシュ
 #include <vector>
 #include <string>
 #include <iostream>
@@ -105,6 +106,7 @@ struct RollingHash {
 {% raw %}
 ```cpp
 #line 1 "string/rolling-hash.hpp"
+// @title ローリングハッシュ
 #include <vector>
 #include <string>
 #include <iostream>

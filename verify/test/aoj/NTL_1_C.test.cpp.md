@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/NTL_1_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-21 20:59:25+09:00
+    - Last commit date: 2020-08-30 21:43:34+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
+* :heavy_check_mark: <a href="../../../library/math/euclidean-algorithm.cpp.html">最大公約数・最小公倍数</a>
 
 
 ## Code
@@ -49,9 +49,10 @@ layout: default
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C"
 
-#define call_from_test
 #include "../../math/euclidean-algorithm.cpp"
-#undef call_from_test
+#include <iostream>
+
+using namespace std;
 
 int main() {
   int n;
@@ -74,14 +75,11 @@ int main() {
 #line 1 "test/aoj/NTL_1_C.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C"
 
-#define call_from_test
 #line 1 "math/euclidean-algorithm.cpp"
+// @title 最大公約数・最小公倍数
 #include <cassert>
-#include <iostream>
-#include <vector>
 
-using namespace std;
-typedef long long ll;
+using ll = long long;
 
 ll gcd(ll a, ll b) {
   if (b == 0) return a;
@@ -92,7 +90,7 @@ ll lcm(ll a, ll b) {
   return a*b / gcd(a, b);
 }
 
-#ifndef call_from_test
+#if 0
 int main() {
   assert(gcd(18, 24) == 6);
   assert(lcm(18, 24) == 72);
@@ -104,8 +102,10 @@ int main() {
   assert(gcd(123456789123456789, 987654321987654321) == 9000000009);
 }
 #endif
-#line 5 "test/aoj/NTL_1_C.test.cpp"
-#undef call_from_test
+#line 4 "test/aoj/NTL_1_C.test.cpp"
+#include <iostream>
+
+using namespace std;
 
 int main() {
   int n;

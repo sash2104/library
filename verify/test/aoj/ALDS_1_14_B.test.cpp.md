@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/ALDS_1_14_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-10 14:52:41+09:00
+    - Last commit date: 2020-08-30 21:34:36+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_14_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_14_B</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/string/rolling-hash.hpp.html">string/rolling-hash.hpp</a>
+* :heavy_check_mark: <a href="../../../library/string/rolling-hash.hpp.html">ローリングハッシュ</a>
 
 
 ## Code
@@ -80,6 +80,7 @@ int main() {
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_14_B"
 
 #line 1 "string/rolling-hash.hpp"
+// @title ローリングハッシュ
 #include <vector>
 #include <string>
 #include <iostream>

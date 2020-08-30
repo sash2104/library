@@ -39,12 +39,12 @@ layout: default
 ## Required by
 
 * :heavy_check_mark: <a href="bin-bfs.cpp.html">01-BFS</a>
-* :heavy_check_mark: <a href="dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :heavy_check_mark: <a href="lca.cpp.html">graph/lca.cpp</a>
-* :heavy_check_mark: <a href="mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
-* :heavy_check_mark: <a href="strongly-connected-components.cpp.html">graph/strongly-connected-components.cpp</a>
-* :warning: <a href="topological-sort.cpp.html">graph/topological-sort.cpp</a>
-* :heavy_check_mark: <a href="warshall-floyd.cpp.html">graph/warshall-floyd.cpp</a>
+* :heavy_check_mark: <a href="dijkstra.cpp.html">Dijkstra</a>
+* :heavy_check_mark: <a href="lca.cpp.html">LCA (最小共通祖先)</a>
+* :heavy_check_mark: <a href="mst-kruskal.cpp.html">最小全域木 (クラスカル法)</a>
+* :heavy_check_mark: <a href="strongly-connected-components.cpp.html">強連結成分分解</a>
+* :warning: <a href="topological-sort.cpp.html">トポロジカルソート</a>
+* :heavy_check_mark: <a href="warshall-floyd.cpp.html">warshall-floyd</a>
 * :warning: <a href="../test/aoj/notest.GRL_4_B.cpp.html">test/aoj/notest.GRL_4_B.cpp</a>
 
 

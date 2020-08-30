@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/ITP1_7_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-12-22 14:49:56+09:00
+    - Last commit date: 2020-08-30 21:21:32+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_D</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/math/matrix.cpp.html">math/matrix.cpp</a>
+* :heavy_check_mark: <a href="../../../library/math/matrix.cpp.html">行列</a>
 
 
 ## Code
@@ -82,6 +82,7 @@ int main() {
 #line 1 "test/aoj/ITP1_7_D.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_D"
 #line 1 "math/matrix.cpp"
+// @title 行列
 #include <cassert>
 #include <iostream>
 #include <vector>

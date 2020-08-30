@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/topological-sort.cpp
+# :warning: トポロジカルソート
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/topological-sort.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 21:05:07+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 
@@ -51,6 +51,9 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title トポロジカルソート 
+ */
 #include <vector>
 #include <stack>
 #include "template.cpp"
@@ -91,6 +94,9 @@ std::vector<int> topologicalSort(const G &g) {
 {% raw %}
 ```cpp
 #line 1 "graph/topological-sort.cpp"
+/**
+ * @title トポロジカルソート 
+ */
 #include <vector>
 #include <stack>
 #line 2 "graph/template.cpp"
@@ -112,7 +118,7 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 4 "graph/topological-sort.cpp"
+#line 7 "graph/topological-sort.cpp"
 
 template< typename G >
 std::vector<int> topologicalSort(const G &g) {

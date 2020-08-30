@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/GRL_2_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-01 21:05:07+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/datastructure/union-find-tree.cpp.html">datastructure/union-find-tree.cpp</a>
-* :heavy_check_mark: <a href="../../../library/graph/mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
+* :heavy_check_mark: <a href="../../../library/datastructure/union-find-tree.cpp.html">Union-Find</a>
+* :heavy_check_mark: <a href="../../../library/graph/mst-kruskal.cpp.html">最小全域木 (クラスカル法)</a>
 * :heavy_check_mark: <a href="../../../library/graph/template.cpp.html">graph/template.cpp</a>
 
 
@@ -78,6 +78,9 @@ int main() {
 #line 1 "test/aoj/GRL_2_A.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A"
 #line 1 "graph/mst-kruskal.cpp"
+/**
+ * @title 最小全域木 (クラスカル法)
+ */
 #include <algorithm>
 #line 1 "graph/template.cpp"
 #include <vector>
@@ -99,17 +102,17 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 2 "datastructure/union-find-tree.cpp"
+#line 1 "datastructure/union-find-tree.cpp"
+/**
+ * @title Union-Find
+ */
+#line 5 "datastructure/union-find-tree.cpp"
 
 class UnionFind {
 public:
   std::vector<int> data; // sizeとparを同時に管理する
   UnionFind(int size) : data(size, -1) {}
-
-  int find(int x) {
-    return data[x] < 0 ? x : data[x] = find(data[x]);
-  }
-
+  int find(int x) { return data[x] < 0 ? x : data[x] = find(data[x]); }
   void unite(int x, int y) {
     int px = find(x);
     int py = find(y);
@@ -118,16 +121,10 @@ public:
       data[px] += data[py]; data[py] = px;
     }
   }
-
-  bool same(int x, int y) {
-    return find(x) == find(y);
-  }
-
-  int size(int x) {
-    return -data[find(x)];
-  }
+  bool same(int x, int y) { return find(x) == find(y); }
+  int size(int x) { return -data[find(x)]; }
 };
-#line 4 "graph/mst-kruskal.cpp"
+#line 7 "graph/mst-kruskal.cpp"
 
 template< typename T >
 T kruscal(int V, Edges< T > &edges) {

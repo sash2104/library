@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/warshall-floyd.cpp
+# :heavy_check_mark: warshall-floyd
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/warshall-floyd.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-06 01:00:35+09:00
+    - Last commit date: 2020-08-30 21:41:04+09:00
 
 
 
@@ -51,6 +51,9 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+/**
+ * @title warshall-floyd
+ */
 #include "template.cpp"
 
 #include <limits>
@@ -93,6 +96,10 @@ struct WarshallFloyd {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "graph/warshall-floyd.cpp"
+/**
+ * @title warshall-floyd
+ */
 #line 1 "graph/template.cpp"
 #include <vector>
 
@@ -113,10 +120,10 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
-#line 2 "graph/warshall-floyd.cpp"
+#line 5 "graph/warshall-floyd.cpp"
 
 #include <limits>
-#line 5 "graph/warshall-floyd.cpp"
+#line 8 "graph/warshall-floyd.cpp"
 
 template < typename T >
 struct WarshallFloyd {

@@ -38,12 +38,14 @@ layout: default
 
 ### datastructure
 
-* :heavy_check_mark: <a href="library/datastructure/binary-indexed-tree.cpp.html">datastructure/binary-indexed-tree.cpp</a>
-* :heavy_check_mark: <a href="library/datastructure/dual-segment-tree.cpp.html">datastructure/dual-segment-tree.cpp</a>
-* :heavy_check_mark: <a href="library/datastructure/lazy-segment-tree.cpp.html">datastructure/lazy-segment-tree.cpp</a>
-* :heavy_check_mark: <a href="library/datastructure/segment-tree.cpp.html">datastructure/segment-tree.cpp</a>
-* :heavy_check_mark: <a href="library/datastructure/slide-min.cpp.html">datastructure/slide-min.cpp</a>
-* :heavy_check_mark: <a href="library/datastructure/union-find-tree.cpp.html">datastructure/union-find-tree.cpp</a>
+* :heavy_check_mark: <a href="library/datastructure/binary-indexed-tree.cpp.html">BIT (Binary-Indexed-Tree)</a>
+* :heavy_check_mark: <a href="library/datastructure/dual-segment-tree.cpp.html">双対セグメント木 (区間更新、一点取得がO(logN))</a>
+* :heavy_check_mark: <a href="library/datastructure/lazy-segment-tree.cpp.html">遅延セグメント木 (区間更新、区間取得がO(logN))</a>
+* :warning: <a href="library/datastructure/median-list.hpp.html">中央値</a>
+* :warning: <a href="library/datastructure/median-set2.hpp.html">datastructure/median-set2.hpp</a>
+* :heavy_check_mark: <a href="library/datastructure/segment-tree.cpp.html">セグメント木 (一点更新、区間取得がO(logN))</a>
+* :heavy_check_mark: <a href="library/datastructure/slide-min.cpp.html">スライド最小値</a>
+* :heavy_check_mark: <a href="library/datastructure/union-find-tree.cpp.html">Union-Find</a>
 
 
 <div id="6a21b6995a068148bbb65c8f949b3fb2"></div>
@@ -57,9 +59,9 @@ layout: default
 
 ### geometry
 
-* :warning: <a href="library/geometry/template.circle.hpp.html">geometry/template.circle.hpp</a>
+* :warning: <a href="library/geometry/template.circle.hpp.html">円</a>
 * :heavy_check_mark: <a href="library/geometry/template.hpp.html">geometry/template.hpp</a>
-* :warning: <a href="library/geometry/triangle.hpp.html">geometry/triangle.hpp</a>
+* :warning: <a href="library/geometry/triangle.hpp.html">三角形の五心の座標</a>
 
 
 <div id="f8b0b924ebd7046dbfa85a856e4682c8"></div>
@@ -67,26 +69,26 @@ layout: default
 ### graph
 
 * :heavy_check_mark: <a href="library/graph/bin-bfs.cpp.html">01-BFS</a>
-* :heavy_check_mark: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :heavy_check_mark: <a href="library/graph/lca.cpp.html">graph/lca.cpp</a>
-* :heavy_check_mark: <a href="library/graph/max-flow-dinic.hpp.html">graph/max-flow-dinic.hpp</a>
-* :heavy_check_mark: <a href="library/graph/min-cost-flow.hpp.html">graph/min-cost-flow.hpp</a>
-* :heavy_check_mark: <a href="library/graph/mst-kruskal.cpp.html">graph/mst-kruskal.cpp</a>
-* :heavy_check_mark: <a href="library/graph/strongly-connected-components.cpp.html">graph/strongly-connected-components.cpp</a>
+* :heavy_check_mark: <a href="library/graph/dijkstra.cpp.html">Dijkstra</a>
+* :heavy_check_mark: <a href="library/graph/lca.cpp.html">LCA (最小共通祖先)</a>
+* :heavy_check_mark: <a href="library/graph/max-flow-dinic.hpp.html">最大流</a>
+* :heavy_check_mark: <a href="library/graph/min-cost-flow.hpp.html">最小費用流</a>
+* :heavy_check_mark: <a href="library/graph/mst-kruskal.cpp.html">最小全域木 (クラスカル法)</a>
+* :heavy_check_mark: <a href="library/graph/strongly-connected-components.cpp.html">強連結成分分解</a>
 * :heavy_check_mark: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
-* :warning: <a href="library/graph/topological-sort.cpp.html">graph/topological-sort.cpp</a>
-* :heavy_check_mark: <a href="library/graph/warshall-floyd.cpp.html">graph/warshall-floyd.cpp</a>
+* :warning: <a href="library/graph/topological-sort.cpp.html">トポロジカルソート</a>
+* :heavy_check_mark: <a href="library/graph/warshall-floyd.cpp.html">warshall-floyd</a>
 
 
 <div id="7e676e9e663beb40fd133f5ee24487c2"></div>
 
 ### math
 
-* :warning: <a href="library/math/divisor.cpp.html">math/divisor.cpp</a>
-* :heavy_check_mark: <a href="library/math/euclidean-algorithm.cpp.html">math/euclidean-algorithm.cpp</a>
-* :warning: <a href="library/math/factorial.cpp.html">math/factorial.cpp</a>
-* :heavy_check_mark: <a href="library/math/matrix.cpp.html">math/matrix.cpp</a>
-* :heavy_check_mark: <a href="library/math/modint.cpp.html">math/modint.cpp</a>
+* :warning: <a href="library/math/divisor.cpp.html">約数列挙</a>
+* :heavy_check_mark: <a href="library/math/euclidean-algorithm.cpp.html">最大公約数・最小公倍数</a>
+* :warning: <a href="library/math/factorial.cpp.html">階乗、nPr、nCr</a>
+* :heavy_check_mark: <a href="library/math/matrix.cpp.html">行列</a>
+* :heavy_check_mark: <a href="library/math/modint.cpp.html">mod int</a>
 * :heavy_check_mark: <a href="library/math/prime.cpp.html">素数判定、素因数分解</a>
 
 
@@ -101,18 +103,11 @@ layout: default
 * :heavy_check_mark: <a href="library/monoid/min.hpp.html">monoid/min.hpp</a>
 
 
-<div id="d601974b58d83b1da82640f444e93bfe"></div>
-
-### py/example
-
-* :warning: <a href="library/py/example/hello_world.py.html">py/example/hello_world.py</a>
-
-
 <div id="b45cffe084dd3d20d928bee85e7b0f21"></div>
 
 ### string
 
-* :heavy_check_mark: <a href="library/string/rolling-hash.hpp.html">string/rolling-hash.hpp</a>
+* :heavy_check_mark: <a href="library/string/rolling-hash.hpp.html">ローリングハッシュ</a>
 
 
 <div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>
@@ -137,7 +132,7 @@ layout: default
 
 ### util
 
-* :warning: <a href="library/util/compress.hpp.html">util/compress.hpp</a>
+* :warning: <a href="library/util/compress.hpp.html">座標圧縮</a>
 
 
 <div id="6cc910c4eb495362d5e64f63c07ca62e"></div>
@@ -177,6 +172,5 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
-* :x: <a href="verify/test/example/example.test.py.html">test/example/example.test.py</a>
 
 

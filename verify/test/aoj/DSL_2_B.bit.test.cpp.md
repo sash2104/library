@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/DSL_2_B.bit.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-15 21:59:48+09:00
+    - Last commit date: 2020-08-30 21:34:24+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/datastructure/binary-indexed-tree.cpp.html">datastructure/binary-indexed-tree.cpp</a>
+* :heavy_check_mark: <a href="../../../library/datastructure/binary-indexed-tree.cpp.html">BIT (Binary-Indexed-Tree)</a>
 
 
 ## Code
@@ -74,7 +74,10 @@ int main() {
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 
 #line 1 "datastructure/binary-indexed-tree.cpp"
-// original: http://hos.ac/slides/20140319_bit.pdf
+/**
+ * @title BIT (Binary-Indexed-Tree)
+ * @see http://hos.ac/slides/20140319_bit.pdf
+ */
 #include <cassert>
 #include <vector>
 
