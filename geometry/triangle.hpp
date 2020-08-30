@@ -1,5 +1,8 @@
+/**
+ * @title 三角形の五心の座標
+ */
 #pragma once
-#include "template.hpp"
+#include "template.circle.hpp"
 
 // 外接円
 Circle circumcircle(const Point &a, const Point &b, const Point &c) {
