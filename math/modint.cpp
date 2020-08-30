@@ -11,7 +11,7 @@ struct ModInt {
   int val;
   ModInt inv() const{
     int tmp,a=val,b=mod,x=1,y=0;
-    while(b)tmp=a/b,a-=tmp*b,swap(a,b),x-=tmp*y,swap(x,y);
+    while(b)tmp=a/b,a-=tmp*b,std::swap(a,b),x-=tmp*y,std::swap(x,y);
     return ModInt(x);
   }
   ModInt():val(0){}
