@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-  PrimeFactorization pf(100000);
+  FastPrimeFactorization pf(100000);
   int n; cin >> n;
   int ans = 0;
   for (int i = 0; i < n; ++i) {
