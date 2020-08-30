@@ -1,6 +1,6 @@
+// @title mod int
 #include <iostream>
-using namespace std;
-typedef long long ll;
+using ll = long long;
 
 #ifdef MUTABLE
 int mod;
@@ -31,7 +31,7 @@ struct ModInt {
   ModInt operator-(const ModInt& x) const{return ModInt(*this)-=x;}
   ModInt operator*(const ModInt& x) const{return ModInt(*this)*=x;}
   ModInt operator/(const ModInt& x) const{return ModInt(*this)/=x;}
-  friend ostream& operator<<(ostream& os, const ModInt& mi) { os << mi.val; return os; }
+  friend std::ostream& operator<<(std::ostream& os, const ModInt& mi) { os << mi.val; return os; }
   static int get_mod() { return mod; }
 };
 
