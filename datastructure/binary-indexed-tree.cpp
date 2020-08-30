@@ -1,4 +1,7 @@
-// original: http://hos.ac/slides/20140319_bit.pdf
+/**
+ * @title BIT (Binary-Indexed-Tree)
+ * @see http://hos.ac/slides/20140319_bit.pdf
+ */
 #include <cassert>
 #include <vector>
 
