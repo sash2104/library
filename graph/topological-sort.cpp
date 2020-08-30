@@ -1,3 +1,6 @@
+/**
+ * @title トポロジカルソート 
+ */
 #include <vector>
 #include <stack>
 #include "template.cpp"

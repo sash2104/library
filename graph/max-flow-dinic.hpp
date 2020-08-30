@@ -1,5 +1,8 @@
+/**
+ * @title 最大流
+ * @see 蟻本 p.194 
+ */
 #pragma once
-// 蟻本 p.194
 #include <vector>
 #include <queue>
 

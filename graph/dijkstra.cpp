@@ -1,3 +1,6 @@
+/**
+ * @title Dijkstra
+ */
 #include "template.cpp"
 
 #include <algorithm>

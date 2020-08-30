@@ -1,3 +1,6 @@
+/**
+ * @title 強連結成分分解
+ */
 #include <cassert>
 #include <algorithm>
 #include <vector>
