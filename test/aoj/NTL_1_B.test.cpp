@@ -1,6 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
 #include "../../math/modint.cpp"
 
+using namespace std;
 int main() {
   int m, n;
   cin >> m >> n;
