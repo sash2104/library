@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/prime.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-30 09:05:46+09:00
+    - Last commit date: 2020-08-30 09:13:11+09:00
 
 
 
@@ -129,28 +129,26 @@ struct FastPrimeFactorization {
 
   std::map<ll, int> calc(ll a) {
     std::map<ll, int> ret;
-    {
-      // 高速に計算できない部分は愚直にやる
-      ll tmp = a;
-      while (tmp > n) {
-        for (int i: primes) {
-          if (i > tmp) break;
-          int count = 0;
-          while (tmp % i == 0) { 
-            ++count;
-            tmp /= i;
-          }
-          if (count > 0) ret[i] = count;
-        }
+    // 高速に計算できない部分は愚直にやる
+    ll tmp = a;
+    for (int i: primes) {
+      if (tmp <= n || i > tmp) break;
+      int count = 0;
+      while (tmp % i == 0) { 
+        ++count;
+        tmp /= i;
       }
+      if (count > 0) ret[i] = count;
     }
-    {
-      int tmp = a;
-      while (tmp > 1) {
-        int d = divides[tmp];
-        ++ret[d];
-        tmp /= d;
-      }
+    if (tmp > n) {
+      // nより大きい素数
+      ret[tmp] = 1;
+      return ret;
+    }
+    while (tmp > 1) {
+      int d = divides[tmp];
+      ++ret[d];
+      tmp /= d;
     }
     return ret;
   }
@@ -272,28 +270,26 @@ struct FastPrimeFactorization {
 
   std::map<ll, int> calc(ll a) {
     std::map<ll, int> ret;
-    {
-      // 高速に計算できない部分は愚直にやる
-      ll tmp = a;
-      while (tmp > n) {
-        for (int i: primes) {
-          if (i > tmp) break;
-          int count = 0;
-          while (tmp % i == 0) { 
-            ++count;
-            tmp /= i;
-          }
-          if (count > 0) ret[i] = count;
-        }
+    // 高速に計算できない部分は愚直にやる
+    ll tmp = a;
+    for (int i: primes) {
+      if (tmp <= n || i > tmp) break;
+      int count = 0;
+      while (tmp % i == 0) { 
+        ++count;
+        tmp /= i;
       }
+      if (count > 0) ret[i] = count;
     }
-    {
-      int tmp = a;
-      while (tmp > 1) {
-        int d = divides[tmp];
-        ++ret[d];
-        tmp /= d;
-      }
+    if (tmp > n) {
+      // nより大きい素数
+      ret[tmp] = 1;
+      return ret;
+    }
+    while (tmp > 1) {
+      int d = divides[tmp];
+      ++ret[d];
+      tmp /= d;
     }
     return ret;
   }

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/ALDS_1_1_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-30 09:05:46+09:00
+    - Last commit date: 2020-08-30 09:13:11+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C</a>
@@ -57,7 +57,7 @@ layout: default
 using namespace std;
 
 int main() {
-  PrimeFactorization pf(100000);
+  FastPrimeFactorization pf(100000);
   int n; cin >> n;
   int ans = 0;
   for (int i = 0; i < n; ++i) {
@@ -164,28 +164,26 @@ struct FastPrimeFactorization {
 
   std::map<ll, int> calc(ll a) {
     std::map<ll, int> ret;
-    {
-      // 高速に計算できない部分は愚直にやる
-      ll tmp = a;
-      while (tmp > n) {
-        for (int i: primes) {
-          if (i > tmp) break;
-          int count = 0;
-          while (tmp % i == 0) { 
-            ++count;
-            tmp /= i;
-          }
-          if (count > 0) ret[i] = count;
-        }
+    // 高速に計算できない部分は愚直にやる
+    ll tmp = a;
+    for (int i: primes) {
+      if (tmp <= n || i > tmp) break;
+      int count = 0;
+      while (tmp % i == 0) { 
+        ++count;
+        tmp /= i;
       }
+      if (count > 0) ret[i] = count;
     }
-    {
-      int tmp = a;
-      while (tmp > 1) {
-        int d = divides[tmp];
-        ++ret[d];
-        tmp /= d;
-      }
+    if (tmp > n) {
+      // nより大きい素数
+      ret[tmp] = 1;
+      return ret;
+    }
+    while (tmp > 1) {
+      int d = divides[tmp];
+      ++ret[d];
+      tmp /= d;
     }
     return ret;
   }
@@ -223,7 +221,7 @@ int main() {
 using namespace std;
 
 int main() {
-  PrimeFactorization pf(100000);
+  FastPrimeFactorization pf(100000);
   int n; cin >> n;
   int ans = 0;
   for (int i = 0; i < n; ++i) {
