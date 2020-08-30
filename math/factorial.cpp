@@ -1,11 +1,11 @@
+// @title 階乗、nPr、nCr
 #include <vector>
 #include "modint.cpp"
-using namespace std;
 
 template <int mod>
 struct Factorial {
   using mint = ModInt<mod>;
-  vector<modint> Fact, Finv;
+  std::vector<modint> Fact, Finv;
 public:
   Factorial(int _n): Fact(_n+1), Finv(_n+1) {
       Fact[0]=mint(1); for (int i = 0; i < _n; ++i) Fact[i+1]=Fact[i]*(i+1);
