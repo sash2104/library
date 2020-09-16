@@ -1,176 +1,246 @@
 ---
-layout: default
+data:
+  libraryCategories:
+  - name: datastructure
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: datastructure/binary-indexed-tree.cpp
+      title: BIT (Binary-Indexed-Tree)
+    - icon: ':heavy_check_mark:'
+      path: datastructure/dual-segment-tree.cpp
+      title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
+        \u65B0\u3001\u4E00\u70B9\u53D6\u5F97\u304CO(logN))"
+    - icon: ':heavy_check_mark:'
+      path: datastructure/lazy-segment-tree.cpp
+      title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
+        \u65B0\u3001\u533A\u9593\u53D6\u5F97\u304CO(logN))"
+    - icon: ':warning:'
+      path: datastructure/median-list.hpp
+      title: "\u4E2D\u592E\u5024"
+    - icon: ':warning:'
+      path: datastructure/median-set2.hpp
+      title: datastructure/median-set2.hpp
+    - icon: ':heavy_check_mark:'
+      path: datastructure/segment-tree.cpp
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u66F4\u65B0\u3001\
+        \u533A\u9593\u53D6\u5F97\u304CO(logN))"
+    - icon: ':heavy_check_mark:'
+      path: datastructure/slide-min.cpp
+      title: "\u30B9\u30E9\u30A4\u30C9\u6700\u5C0F\u5024"
+    - icon: ':heavy_check_mark:'
+      path: datastructure/union-find-tree.cpp
+      title: Union-Find
+  - name: external
+    pages:
+    - icon: ':warning:'
+      path: external/fft.cpp
+      title: external/fft.cpp
+  - name: geometry
+    pages:
+    - icon: ':warning:'
+      path: geometry/template.circle.hpp
+      title: "\u5186"
+    - icon: ':heavy_check_mark:'
+      path: geometry/template.hpp
+      title: geometry/template.hpp
+    - icon: ':warning:'
+      path: geometry/triangle.hpp
+      title: "\u4E09\u89D2\u5F62\u306E\u4E94\u5FC3\u306E\u5EA7\u6A19"
+  - name: graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: graph/bin-bfs.cpp
+      title: 01-BFS
+    - icon: ':heavy_check_mark:'
+      path: graph/dijkstra.cpp
+      title: Dijkstra
+    - icon: ':heavy_check_mark:'
+      path: graph/lca.cpp
+      title: "LCA (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
+    - icon: ':heavy_check_mark:'
+      path: graph/max-flow-dinic.hpp
+      title: "\u6700\u5927\u6D41"
+    - icon: ':heavy_check_mark:'
+      path: graph/min-cost-flow.hpp
+      title: "\u6700\u5C0F\u8CBB\u7528\u6D41"
+    - icon: ':heavy_check_mark:'
+      path: graph/mst-kruskal.cpp
+      title: "\u6700\u5C0F\u5168\u57DF\u6728 (\u30AF\u30E9\u30B9\u30AB\u30EB\u6CD5\
+        )"
+    - icon: ':heavy_check_mark:'
+      path: graph/strongly-connected-components.cpp
+      title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    - icon: ':heavy_check_mark:'
+      path: graph/template.cpp
+      title: graph/template.cpp
+    - icon: ':warning:'
+      path: graph/topological-sort.cpp
+      title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: graph/warshall-floyd.cpp
+      title: warshall-floyd
+  - name: math
+    pages:
+    - icon: ':warning:'
+      path: math/divisor.cpp
+      title: "\u7D04\u6570\u5217\u6319"
+    - icon: ':heavy_check_mark:'
+      path: math/euclidean-algorithm.cpp
+      title: "\u6700\u5927\u516C\u7D04\u6570\u30FB\u6700\u5C0F\u516C\u500D\u6570"
+    - icon: ':warning:'
+      path: math/factorial.cpp
+      title: "\u968E\u4E57\u3001nPr\u3001nCr"
+    - icon: ':heavy_check_mark:'
+      path: math/matrix.cpp
+      title: "\u884C\u5217"
+    - icon: ':heavy_check_mark:'
+      path: math/modint.cpp
+      title: mod int
+    - icon: ':heavy_check_mark:'
+      path: math/prime.cpp
+      title: "\u7D20\u6570\u5224\u5B9A\u3001\u7D20\u56E0\u6570\u5206\u89E3"
+  - name: monoid
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: monoid/add.hpp
+      title: monoid/add.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoid/add_count.hpp
+      title: monoid/add_count.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoid/fill.hpp
+      title: monoid/fill.hpp
+    - icon: ':warning:'
+      path: monoid/max.hpp
+      title: monoid/max.hpp
+    - icon: ':heavy_check_mark:'
+      path: monoid/min.hpp
+      title: monoid/min.hpp
+  - name: string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: string/rolling-hash.hpp
+      title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
+  - name: test/aoj
+    pages:
+    - icon: ':warning:'
+      path: test/aoj/notest.0010.cpp
+      title: test/aoj/notest.0010.cpp
+    - icon: ':warning:'
+      path: test/aoj/notest.1562.cpp
+      title: test/aoj/notest.1562.cpp
+    - icon: ':warning:'
+      path: test/aoj/notest.GRL_4_B.cpp
+      title: test/aoj/notest.GRL_4_B.cpp
+  - name: test/atcoder
+    pages:
+    - icon: ':warning:'
+      path: test/atcoder/abc036-c.cpp
+      title: test/atcoder/abc036-c.cpp
+    - icon: ':warning:'
+      path: test/atcoder/abc129-f.cpp
+      title: test/atcoder/abc129-f.cpp
+    - icon: ':warning:'
+      path: test/atcoder/atc001-c.cpp
+      title: test/atcoder/atc001-c.cpp
+  - name: util
+    pages:
+    - icon: ':warning:'
+      path: util/compress.hpp
+      title: "\u5EA7\u6A19\u5727\u7E2E"
+  - name: util/marathon
+    pages:
+    - icon: ':warning:'
+      path: util/marathon/simulated_annealing.cpp
+      title: util/marathon/simulated_annealing.cpp
+    - icon: ':warning:'
+      path: util/marathon/template.hpp
+      title: util/marathon/template.hpp
+  verificationCategories:
+  - name: test/aoj
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ALDS_1_11_C.test.cpp
+      title: test/aoj/ALDS_1_11_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ALDS_1_14_B.test.cpp
+      title: test/aoj/ALDS_1_14_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ALDS_1_1_C.test.cpp
+      title: test/aoj/ALDS_1_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_1_A.test.cpp
+      title: test/aoj/CGL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_1_B.test.cpp
+      title: test/aoj/CGL_1_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_1_C.test.cpp
+      title: test/aoj/CGL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_1_A.test.cpp
+      title: test/aoj/DSL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_A.test.cpp
+      title: test/aoj/DSL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_B.bit.test.cpp
+      title: test/aoj/DSL_2_B.bit.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_B.segtree.test.cpp
+      title: test/aoj/DSL_2_B.segtree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_D.test.cpp
+      title: test/aoj/DSL_2_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_E.test.cpp
+      title: test/aoj/DSL_2_E.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_F.test.cpp
+      title: test/aoj/DSL_2_F.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_G.test.cpp
+      title: test/aoj/DSL_2_G.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_H.test.cpp
+      title: test/aoj/DSL_2_H.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_3_D.test.cpp
+      title: test/aoj/DSL_3_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_1_A.test.cpp
+      title: test/aoj/GRL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_1_C.test.cpp
+      title: test/aoj/GRL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_2_A.test.cpp
+      title: test/aoj/GRL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_3_C.test.cpp
+      title: test/aoj/GRL_3_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_5_C.test.cpp
+      title: test/aoj/GRL_5_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_6_A.test.cpp
+      title: test/aoj/GRL_6_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_6_B.test.cpp
+      title: test/aoj/GRL_6_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ITP1_7_D.test.cpp
+      title: test/aoj/ITP1_7_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/NTL_1_B.test.cpp
+      title: test/aoj/NTL_1_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/NTL_1_C.test.cpp
+      title: test/aoj/NTL_1_C.test.cpp
+  - name: test/example
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/example/example.test.cpp
+      title: test/example/example.test.cpp
+layout: toppage
 ---
-
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: { equationNumbers: { autoNumber: "AMS" }},
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { matchFontHeight: false },
-    displayAlign: "left",
-    displayIndent: "2em"
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-balloon-js@1.1.2/jquery.balloon.min.js" integrity="sha256-ZEYs9VrgAeNuPvs15E39OsyOJaIkXEEt10fzxJ20+2I=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/copy-button.js"></script>
-<link rel="stylesheet" href="assets/css/copy-button.css" />
-
-
-# {{ site.title }}
-
-[![Actions Status]({{ site.github.repository_url }}/workflows/verify/badge.svg)]({{ site.github.repository_url }}/actions)
-<a href="{{ site.github.repository_url }}"><img src="https://img.shields.io/github/last-commit/{{ site.github.owner_name }}/{{ site.github.repository_name }}" /></a>
-
-{% if site.github.project_tagline %}{{ site.github.project_tagline }}{% else %}This documentation is automatically generated by <a href="https://github.com/online-judge-tools/verification-helper">online-judge-tools/verification-helper</a>.{% endif %}
-
-## Library Files
-
-<div id="8dc87745f885a4cc532acd7b15b8b5fe"></div>
-
-### datastructure
-
-* :heavy_check_mark: <a href="library/datastructure/binary-indexed-tree.cpp.html">BIT (Binary-Indexed-Tree)</a>
-* :heavy_check_mark: <a href="library/datastructure/dual-segment-tree.cpp.html">双対セグメント木 (区間更新、一点取得がO(logN))</a>
-* :heavy_check_mark: <a href="library/datastructure/lazy-segment-tree.cpp.html">遅延セグメント木 (区間更新、区間取得がO(logN))</a>
-* :warning: <a href="library/datastructure/median-list.hpp.html">中央値</a>
-* :warning: <a href="library/datastructure/median-set2.hpp.html">datastructure/median-set2.hpp</a>
-* :heavy_check_mark: <a href="library/datastructure/segment-tree.cpp.html">セグメント木 (一点更新、区間取得がO(logN))</a>
-* :heavy_check_mark: <a href="library/datastructure/slide-min.cpp.html">スライド最小値</a>
-* :heavy_check_mark: <a href="library/datastructure/union-find-tree.cpp.html">Union-Find</a>
-
-
-<div id="6a21b6995a068148bbb65c8f949b3fb2"></div>
-
-### external
-
-* :warning: <a href="library/external/fft.cpp.html">external/fft.cpp</a>
-
-
-<div id="ed7daeb157cd9b31e53896ad3c771a26"></div>
-
-### geometry
-
-* :warning: <a href="library/geometry/template.circle.hpp.html">円</a>
-* :heavy_check_mark: <a href="library/geometry/template.hpp.html">geometry/template.hpp</a>
-* :warning: <a href="library/geometry/triangle.hpp.html">三角形の五心の座標</a>
-
-
-<div id="f8b0b924ebd7046dbfa85a856e4682c8"></div>
-
-### graph
-
-* :heavy_check_mark: <a href="library/graph/bin-bfs.cpp.html">01-BFS</a>
-* :heavy_check_mark: <a href="library/graph/dijkstra.cpp.html">Dijkstra</a>
-* :heavy_check_mark: <a href="library/graph/lca.cpp.html">LCA (最小共通祖先)</a>
-* :heavy_check_mark: <a href="library/graph/max-flow-dinic.hpp.html">最大流</a>
-* :heavy_check_mark: <a href="library/graph/min-cost-flow.hpp.html">最小費用流</a>
-* :heavy_check_mark: <a href="library/graph/mst-kruskal.cpp.html">最小全域木 (クラスカル法)</a>
-* :heavy_check_mark: <a href="library/graph/strongly-connected-components.cpp.html">強連結成分分解</a>
-* :heavy_check_mark: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
-* :warning: <a href="library/graph/topological-sort.cpp.html">トポロジカルソート</a>
-* :heavy_check_mark: <a href="library/graph/warshall-floyd.cpp.html">warshall-floyd</a>
-
-
-<div id="7e676e9e663beb40fd133f5ee24487c2"></div>
-
-### math
-
-* :warning: <a href="library/math/divisor.cpp.html">約数列挙</a>
-* :heavy_check_mark: <a href="library/math/euclidean-algorithm.cpp.html">最大公約数・最小公倍数</a>
-* :warning: <a href="library/math/factorial.cpp.html">階乗、nPr、nCr</a>
-* :heavy_check_mark: <a href="library/math/matrix.cpp.html">行列</a>
-* :heavy_check_mark: <a href="library/math/modint.cpp.html">mod int</a>
-* :heavy_check_mark: <a href="library/math/prime.cpp.html">素数判定、素因数分解</a>
-
-
-<div id="c3437aaac8e99d51d51e80f390e49b05"></div>
-
-### monoid
-
-* :heavy_check_mark: <a href="library/monoid/add.hpp.html">monoid/add.hpp</a>
-* :heavy_check_mark: <a href="library/monoid/add_count.hpp.html">monoid/add_count.hpp</a>
-* :heavy_check_mark: <a href="library/monoid/fill.hpp.html">monoid/fill.hpp</a>
-* :warning: <a href="library/monoid/max.hpp.html">monoid/max.hpp</a>
-* :heavy_check_mark: <a href="library/monoid/min.hpp.html">monoid/min.hpp</a>
-
-
-<div id="b45cffe084dd3d20d928bee85e7b0f21"></div>
-
-### string
-
-* :heavy_check_mark: <a href="library/string/rolling-hash.hpp.html">ローリングハッシュ</a>
-
-
-<div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>
-
-### test/aoj
-
-* :warning: <a href="library/test/aoj/notest.0010.cpp.html">test/aoj/notest.0010.cpp</a>
-* :warning: <a href="library/test/aoj/notest.1562.cpp.html">test/aoj/notest.1562.cpp</a>
-* :warning: <a href="library/test/aoj/notest.GRL_4_B.cpp.html">test/aoj/notest.GRL_4_B.cpp</a>
-
-
-<div id="e8ba03245cc911ba95395348d53122a0"></div>
-
-### test/atcoder
-
-* :warning: <a href="library/test/atcoder/abc036-c.cpp.html">test/atcoder/abc036-c.cpp</a>
-* :warning: <a href="library/test/atcoder/abc129-f.cpp.html">test/atcoder/abc129-f.cpp</a>
-* :warning: <a href="library/test/atcoder/atc001-c.cpp.html">test/atcoder/atc001-c.cpp</a>
-
-
-<div id="05c7e24700502a079cdd88012b5a76d3"></div>
-
-### util
-
-* :warning: <a href="library/util/compress.hpp.html">座標圧縮</a>
-
-
-<div id="6cc910c4eb495362d5e64f63c07ca62e"></div>
-
-### util/marathon
-
-* :warning: <a href="library/util/marathon/simulated_annealing.cpp.html">util/marathon/simulated_annealing.cpp</a>
-* :warning: <a href="library/util/marathon/template.hpp.html">util/marathon/template.hpp</a>
-
-
-## Verify Files
-
-* :heavy_check_mark: <a href="verify/test/aoj/ALDS_1_11_C.test.cpp.html">test/aoj/ALDS_1_11_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/ALDS_1_14_B.test.cpp.html">test/aoj/ALDS_1_14_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/ALDS_1_1_C.test.cpp.html">test/aoj/ALDS_1_1_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_A.test.cpp.html">test/aoj/CGL_1_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_B.test.cpp.html">test/aoj/CGL_1_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_C.test.cpp.html">test/aoj/CGL_1_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_1_A.test.cpp.html">test/aoj/DSL_1_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_A.test.cpp.html">test/aoj/DSL_2_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_B.bit.test.cpp.html">test/aoj/DSL_2_B.bit.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_B.segtree.test.cpp.html">test/aoj/DSL_2_B.segtree.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_D.test.cpp.html">test/aoj/DSL_2_D.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_E.test.cpp.html">test/aoj/DSL_2_E.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_F.test.cpp.html">test/aoj/DSL_2_F.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_G.test.cpp.html">test/aoj/DSL_2_G.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_2_H.test.cpp.html">test/aoj/DSL_2_H.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/DSL_3_D.test.cpp.html">test/aoj/DSL_3_D.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/GRL_1_A.test.cpp.html">test/aoj/GRL_1_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/GRL_1_C.test.cpp.html">test/aoj/GRL_1_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/GRL_2_A.test.cpp.html">test/aoj/GRL_2_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/GRL_3_C.test.cpp.html">test/aoj/GRL_3_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/GRL_5_C.test.cpp.html">test/aoj/GRL_5_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/GRL_6_A.test.cpp.html">test/aoj/GRL_6_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/GRL_6_B.test.cpp.html">test/aoj/GRL_6_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/ITP1_7_D.test.cpp.html">test/aoj/ITP1_7_D.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/NTL_1_B.test.cpp.html">test/aoj/NTL_1_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/NTL_1_C.test.cpp.html">test/aoj/NTL_1_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/example/example.test.cpp.html">test/example/example.test.cpp</a>
-
-
