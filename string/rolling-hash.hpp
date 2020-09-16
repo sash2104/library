@@ -1,7 +1,7 @@
 // @title ローリングハッシュ
-#include <vector>
-#include <string>
 #include <iostream>
+#include <string>
+#include <vector>
 
 using ull = unsigned long long;
 struct RollingHash {
