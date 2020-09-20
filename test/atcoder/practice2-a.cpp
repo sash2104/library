@@ -1,4 +1,4 @@
-// @title AtCoder Libraryのサンプル
+// @title ac-library (disjoint set union)
 // @see https://atcoder.jp/contests/practice2/tasks/practice2_a
 
 #include <iostream>

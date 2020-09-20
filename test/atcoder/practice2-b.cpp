@@ -1,4 +1,4 @@
-// @title AtCoder Libraryのサンプル
+// @title ac-library (fenwick tree)
 // @see https://atcoder.jp/contests/practice2/tasks/practice2_b
 
 #include <iostream>
