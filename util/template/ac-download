@@ -22,4 +22,5 @@ do
     download_url="${urlbase}_$problem"
     mkdir -p $problem_dir
     oj download $download_url -d $problem_dir
+    sleep 1
 done
