@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: datastructure/lazy-segment-tree.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\
-      \u3001\u533A\u9593\u53D6\u5F97\u304CO(logN))"
+      \u3001\u533A\u9593\u53D6\u5F97)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -18,18 +18,17 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
-      \u66F4\u65B0\u3001\u4E00\u70B9\u53D6\u5F97\u304CO(logN))"
+      \u66F4\u65B0\u3001\u4E00\u70B9\u53D6\u5F97)"
     links: []
   bundledCode: "#line 1 \"datastructure/dual-segment-tree.cpp\"\n/**\n * @title \u53CC\
     \u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\u3001\u4E00\
-    \u70B9\u53D6\u5F97\u304CO(logN))\n * @brief \u533A\u9593\u66F4\u65B0\u3001\u4E00\
-    \u70B9\u53D6\u5F97\u304CO(logN)\u3067\u3067\u304D\u308B\u3084\u3064\n *   \u5B9A\
-    \u6570\u500D\u306F\u60AA\u305D\u3046\u3060\u304C\u3001\u4F3C\u305F\u30B3\u30FC\
-    \u30C9\u3092\u305F\u304F\u3055\u3093\u7BA1\u7406\u3057\u305F\u304F\u306A\u3044\
-    \u306E\u3067LazySegmentTree\u3092\u4F7F\u3044\u56DE\u3059\n *  \n */ \n#include\
-    \ <cassert>\n#line 1 \"datastructure/lazy-segment-tree.cpp\"\n/**\n * @title \u9045\
-    \u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\u3001\u533A\
-    \u9593\u53D6\u5F97\u304CO(logN))\n *  \n */ \n#line 6 \"datastructure/lazy-segment-tree.cpp\"\
+    \u70B9\u53D6\u5F97)\n * @brief \u533A\u9593\u66F4\u65B0\u3001\u4E00\u70B9\u53D6\
+    \u5F97\u304C\u3067\u304D\u308B\u3084\u3064\n *   \u5B9A\u6570\u500D\u306F\u60AA\
+    \u305D\u3046\u3060\u304C\u3001\u4F3C\u305F\u30B3\u30FC\u30C9\u3092\u305F\u304F\
+    \u3055\u3093\u7BA1\u7406\u3057\u305F\u304F\u306A\u3044\u306E\u3067LazySegmentTree\u3092\
+    \u4F7F\u3044\u56DE\u3059\n *  \n */ \n#include <cassert>\n#line 1 \"datastructure/lazy-segment-tree.cpp\"\
+    \n/**\n * @title \u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
+    \u66F4\u65B0\u3001\u533A\u9593\u53D6\u5F97)\n *  \n */ \n#line 6 \"datastructure/lazy-segment-tree.cpp\"\
     \n#include <functional>\n#include <vector>\n\n// FIXME: coding style\u3092\u7D71\
     \u4E00\u3059\u308B\n// FIXME: \u8981\u7D20\u306B\u4F5C\u7528\u7D20\u3092\u9069\
     \u7528\u3059\u308B\u95A2\u6570\u3067\u3042\u308BG\u3092class\u5316\u3059\u308B\
@@ -74,16 +73,16 @@ data:
     \u8A8D\u3081\u308B\n    return lst.query(a, b);\n  }\n  operator_t operator[](const\
     \ int &k) { return lst[k]; }\n};\n"
   code: "/**\n * @title \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
-    \u66F4\u65B0\u3001\u4E00\u70B9\u53D6\u5F97\u304CO(logN))\n * @brief \u533A\u9593\
-    \u66F4\u65B0\u3001\u4E00\u70B9\u53D6\u5F97\u304CO(logN)\u3067\u3067\u304D\u308B\
-    \u3084\u3064\n *   \u5B9A\u6570\u500D\u306F\u60AA\u305D\u3046\u3060\u304C\u3001\
-    \u4F3C\u305F\u30B3\u30FC\u30C9\u3092\u305F\u304F\u3055\u3093\u7BA1\u7406\u3057\
-    \u305F\u304F\u306A\u3044\u306E\u3067LazySegmentTree\u3092\u4F7F\u3044\u56DE\u3059\
-    \n *  \n */ \n#include <cassert>\n#include \"lazy-segment-tree.cpp\"\n\ntemplate\
-    \ <class OperatorMonoid>\nstruct DualSegmentTree {\n  typedef typename OperatorMonoid::value_t\
-    \ operator_t;\n  LazySegmentTree<OperatorMonoid, OperatorMonoid> lst;\n  DualSegmentTree()\
-    \ : lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b);\
-    \ }) {}\n  void build(const std::vector<operator_t> &v) { lst.build(v); }\n  void\
+    \u66F4\u65B0\u3001\u4E00\u70B9\u53D6\u5F97)\n * @brief \u533A\u9593\u66F4\u65B0\
+    \u3001\u4E00\u70B9\u53D6\u5F97\u304C\u3067\u304D\u308B\u3084\u3064\n *   \u5B9A\
+    \u6570\u500D\u306F\u60AA\u305D\u3046\u3060\u304C\u3001\u4F3C\u305F\u30B3\u30FC\
+    \u30C9\u3092\u305F\u304F\u3055\u3093\u7BA1\u7406\u3057\u305F\u304F\u306A\u3044\
+    \u306E\u3067LazySegmentTree\u3092\u4F7F\u3044\u56DE\u3059\n *  \n */ \n#include\
+    \ <cassert>\n#include \"lazy-segment-tree.cpp\"\n\ntemplate <class OperatorMonoid>\n\
+    struct DualSegmentTree {\n  typedef typename OperatorMonoid::value_t operator_t;\n\
+    \  LazySegmentTree<OperatorMonoid, OperatorMonoid> lst;\n  DualSegmentTree() :\
+    \ lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b); })\
+    \ {}\n  void build(const std::vector<operator_t> &v) { lst.build(v); }\n  void\
     \ update(int a, int b, operator_t x) { lst.update(a, b, x); }\n  operator_t query(int\
     \ a, int b) {\n    assert(a+1 == b); // \u4E00\u70B9\u53D6\u5F97\u306E\u307F\u3092\
     \u8A8D\u3081\u308B\n    return lst.query(a, b);\n  }\n  operator_t operator[](const\
@@ -93,7 +92,7 @@ data:
   isVerificationFile: false
   path: datastructure/dual-segment-tree.cpp
   requiredBy: []
-  timestamp: '2020-08-30 21:34:24+09:00'
+  timestamp: '2020-09-26 14:56:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_D.test.cpp
@@ -104,5 +103,5 @@ redirect_from:
 - /library/datastructure/dual-segment-tree.cpp
 - /library/datastructure/dual-segment-tree.cpp.html
 title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\
-  \u3001\u4E00\u70B9\u53D6\u5F97\u304CO(logN))"
+  \u3001\u4E00\u70B9\u53D6\u5F97)"
 ---

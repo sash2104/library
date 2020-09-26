@@ -5,7 +5,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: datastructure/dual-segment-tree.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\
-      \u3001\u4E00\u70B9\u53D6\u5F97\u304CO(logN))"
+      \u3001\u4E00\u70B9\u53D6\u5F97)"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_H.test.cpp
@@ -27,15 +27,15 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
-      \u66F4\u65B0\u3001\u533A\u9593\u53D6\u5F97\u304CO(logN))"
+      \u66F4\u65B0\u3001\u533A\u9593\u53D6\u5F97)"
     links: []
   bundledCode: "#line 1 \"datastructure/lazy-segment-tree.cpp\"\n/**\n * @title \u9045\
     \u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\u3001\u533A\
-    \u9593\u53D6\u5F97\u304CO(logN))\n *  \n */ \n#include <cassert>\n#include <functional>\n\
-    #include <vector>\n\n// FIXME: coding style\u3092\u7D71\u4E00\u3059\u308B\n//\
-    \ FIXME: \u8981\u7D20\u306B\u4F5C\u7528\u7D20\u3092\u9069\u7528\u3059\u308B\u95A2\
-    \u6570\u3067\u3042\u308BG\u3092class\u5316\u3059\u308B\ntemplate <class Monoid,\
-    \ class OperatorMonoid>\nstruct LazySegmentTree {\n  typedef typename Monoid::value_t\
+    \u9593\u53D6\u5F97)\n *  \n */ \n#include <cassert>\n#include <functional>\n#include\
+    \ <vector>\n\n// FIXME: coding style\u3092\u7D71\u4E00\u3059\u308B\n// FIXME:\
+    \ \u8981\u7D20\u306B\u4F5C\u7528\u7D20\u3092\u9069\u7528\u3059\u308B\u95A2\u6570\
+    \u3067\u3042\u308BG\u3092class\u5316\u3059\u308B\ntemplate <class Monoid, class\
+    \ OperatorMonoid>\nstruct LazySegmentTree {\n  typedef typename Monoid::value_t\
     \ value_t;\n  typedef typename OperatorMonoid::value_t operator_t;\n  const Monoid\
     \ monoid;\n  const OperatorMonoid op_monoid;\n  using G = std::function< value_t(value_t,\
     \ operator_t) >;\n  const G g;\n  int n; // n_\u4EE5\u4E0A\u306E\u6700\u5C0F\u306E\
@@ -68,12 +68,12 @@ data:
     \ vr);\n  }\n\n  value_t operator[](const int &k) {\n    return query(k, k + 1);\n\
     \  }\n};\n"
   code: "/**\n * @title \u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
-    \u66F4\u65B0\u3001\u533A\u9593\u53D6\u5F97\u304CO(logN))\n *  \n */ \n#include\
-    \ <cassert>\n#include <functional>\n#include <vector>\n\n// FIXME: coding style\u3092\
-    \u7D71\u4E00\u3059\u308B\n// FIXME: \u8981\u7D20\u306B\u4F5C\u7528\u7D20\u3092\
-    \u9069\u7528\u3059\u308B\u95A2\u6570\u3067\u3042\u308BG\u3092class\u5316\u3059\
-    \u308B\ntemplate <class Monoid, class OperatorMonoid>\nstruct LazySegmentTree\
-    \ {\n  typedef typename Monoid::value_t value_t;\n  typedef typename OperatorMonoid::value_t\
+    \u66F4\u65B0\u3001\u533A\u9593\u53D6\u5F97)\n *  \n */ \n#include <cassert>\n\
+    #include <functional>\n#include <vector>\n\n// FIXME: coding style\u3092\u7D71\
+    \u4E00\u3059\u308B\n// FIXME: \u8981\u7D20\u306B\u4F5C\u7528\u7D20\u3092\u9069\
+    \u7528\u3059\u308B\u95A2\u6570\u3067\u3042\u308BG\u3092class\u5316\u3059\u308B\
+    \ntemplate <class Monoid, class OperatorMonoid>\nstruct LazySegmentTree {\n  typedef\
+    \ typename Monoid::value_t value_t;\n  typedef typename OperatorMonoid::value_t\
     \ operator_t;\n  const Monoid monoid;\n  const OperatorMonoid op_monoid;\n  using\
     \ G = std::function< value_t(value_t, operator_t) >;\n  const G g;\n  int n; //\
     \ n_\u4EE5\u4E0A\u306E\u6700\u5C0F\u306E2\u51AA\n  int height; // \u6728\u306E\
@@ -109,7 +109,7 @@ data:
   path: datastructure/lazy-segment-tree.cpp
   requiredBy:
   - datastructure/dual-segment-tree.cpp
-  timestamp: '2020-08-30 21:34:24+09:00'
+  timestamp: '2020-09-26 14:56:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_H.test.cpp
@@ -123,5 +123,5 @@ redirect_from:
 - /library/datastructure/lazy-segment-tree.cpp
 - /library/datastructure/lazy-segment-tree.cpp.html
 title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\
-  \u3001\u533A\u9593\u53D6\u5F97\u304CO(logN))"
+  \u3001\u533A\u9593\u53D6\u5F97)"
 ---

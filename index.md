@@ -9,11 +9,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: datastructure/dual-segment-tree.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
-        \u65B0\u3001\u4E00\u70B9\u53D6\u5F97\u304CO(logN))"
+        \u65B0\u3001\u4E00\u70B9\u53D6\u5F97)"
     - icon: ':heavy_check_mark:'
       path: datastructure/lazy-segment-tree.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
-        \u65B0\u3001\u533A\u9593\u53D6\u5F97\u304CO(logN))"
+        \u65B0\u3001\u533A\u9593\u53D6\u5F97)"
     - icon: ':warning:'
       path: datastructure/median-list.hpp
       title: "\u4E2D\u592E\u5024"
@@ -23,7 +23,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: datastructure/segment-tree.cpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u66F4\u65B0\u3001\
-        \u533A\u9593\u53D6\u5F97\u304CO(logN))"
+        \u533A\u9593\u53D6\u5F97)"
     - icon: ':heavy_check_mark:'
       path: datastructure/slide-min.cpp
       title: "\u30B9\u30E9\u30A4\u30C9\u6700\u5C0F\u5024"
