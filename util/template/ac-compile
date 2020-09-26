@@ -8,4 +8,4 @@ fi
 problem=$1
 set -x
 
-g++ -std=c++14 -O2 $problem.cpp -I /usr/local/include/ac-library -o $problem
+g++ -std=c++14 -O2 $problem/main.cpp -I /usr/local/include/ac-library -o $problem/a.out

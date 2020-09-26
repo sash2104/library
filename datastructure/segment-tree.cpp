@@ -1,5 +1,5 @@
 /**
- * @title セグメント木 (一点更新、区間取得がO(logN))
+ * @title セグメント木 (一点更新、区間取得)
  * 
  */
 #include <cassert>
