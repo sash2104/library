@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
-#include <atcoder/dsu.hpp>
+#include <atcoder/dsu>
 
 #include <iostream>
 using namespace std;
