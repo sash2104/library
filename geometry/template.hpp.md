@@ -3,14 +3,14 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: test/aoj/notest.0010.cpp
-    title: test/aoj/notest.0010.cpp
+    path: geometry/template.circle.hpp
+    title: "\u5186"
   - icon: ':warning:'
     path: geometry/triangle.hpp
     title: "\u4E09\u89D2\u5F62\u306E\u4E94\u5FC3\u306E\u5EA7\u6A19"
   - icon: ':warning:'
-    path: geometry/template.circle.hpp
-    title: "\u5186"
+    path: test/aoj/notest.0010.cpp
+    title: test/aoj/notest.0010.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_1_A.test.cpp
@@ -24,7 +24,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1033
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_1_A

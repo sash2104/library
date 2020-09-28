@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://atcoder.jp/contests/chokudai004/submissions/9724794
   bundledCode: "#line 1 \"util/marathon/simulated_annealing.cpp\"\n// \u5229\u7528\

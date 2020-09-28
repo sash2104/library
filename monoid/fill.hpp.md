@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoid/fill.hpp\"\n#include <utility>\n\nnamespace monoid\
     \ {\ntemplate <class T>\nstruct fill {\n  typedef std::pair<bool, T> value_t;\n\

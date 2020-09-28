@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"util/marathon/template.hpp\"\n#include <cmath>\n#include\
     \ <iostream>\n\n// #define DEBUG\n\nnamespace logger {\ninline void json_() {}\n\

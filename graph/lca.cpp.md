@@ -12,7 +12,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "LCA (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
     links: []
   bundledCode: "#line 1 \"graph/lca.cpp\"\n/**\n * @title LCA (\u6700\u5C0F\u5171\u901A\

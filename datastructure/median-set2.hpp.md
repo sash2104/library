@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://wiki.kimiyuki.net/%E4%B8%AD%E5%A4%AE%E5%80%A4
   bundledCode: "#line 2 \"datastructure/median-set2.hpp\"\n\n#include <cassert>\n\

@@ -237,6 +237,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/NTL_1_C.test.cpp
       title: test/aoj/NTL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ac-library.dsu.test.cpp
+      title: test/aoj/ac-library.dsu.test.cpp
   - name: test/example
     pages:
     - icon: ':heavy_check_mark:'

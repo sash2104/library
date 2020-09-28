@@ -12,7 +12,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     links: []
   bundledCode: "#line 1 \"graph/strongly-connected-components.cpp\"\n/**\n * @title\

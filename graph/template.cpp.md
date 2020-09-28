@@ -2,53 +2,52 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
-    path: test/aoj/notest.GRL_4_B.cpp
-    title: test/aoj/notest.GRL_4_B.cpp
   - icon: ':heavy_check_mark:'
-    path: graph/mst-kruskal.cpp
-    title: "\u6700\u5C0F\u5168\u57DF\u6728 (\u30AF\u30E9\u30B9\u30AB\u30EB\u6CD5)"
-  - icon: ':heavy_check_mark:'
-    path: graph/lca.cpp
-    title: "LCA (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
+    path: graph/bin-bfs.cpp
+    title: 01-BFS
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.cpp
     title: Dijkstra
   - icon: ':heavy_check_mark:'
-    path: graph/warshall-floyd.cpp
-    title: warshall-floyd
+    path: graph/lca.cpp
+    title: "LCA (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
+  - icon: ':heavy_check_mark:'
+    path: graph/mst-kruskal.cpp
+    title: "\u6700\u5C0F\u5168\u57DF\u6728 (\u30AF\u30E9\u30B9\u30AB\u30EB\u6CD5)"
+  - icon: ':heavy_check_mark:'
+    path: graph/strongly-connected-components.cpp
+    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':warning:'
     path: graph/topological-sort.cpp
     title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - icon: ':heavy_check_mark:'
-    path: graph/strongly-connected-components.cpp
-    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
-    path: graph/bin-bfs.cpp
-    title: 01-BFS
+    path: graph/warshall-floyd.cpp
+    title: warshall-floyd
+  - icon: ':warning:'
+    path: test/aoj/notest.GRL_4_B.cpp
+    title: test/aoj/notest.GRL_4_B.cpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/GRL_1_C.test.cpp
-    title: test/aoj/GRL_1_C.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/GRL_3_C.test.cpp
-    title: test/aoj/GRL_3_C.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/GRL_2_A.test.cpp
-    title: test/aoj/GRL_2_A.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/GRL_5_C.test.cpp
-    title: test/aoj/GRL_5_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/aoj/ALDS_1_11_C.test.cpp
     title: test/aoj/ALDS_1_11_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL_1_A.test.cpp
     title: test/aoj/GRL_1_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_1_C.test.cpp
+    title: test/aoj/GRL_1_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_2_A.test.cpp
+    title: test/aoj/GRL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_3_C.test.cpp
+    title: test/aoj/GRL_3_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_5_C.test.cpp
+    title: test/aoj/GRL_5_C.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/template.cpp\"\n#include <vector>\n\ntemplate< typename\
     \ T >\nstruct Edge {\n  int from, to;\n  T cost;\n  Edge() {}\n  Edge(int f, int\

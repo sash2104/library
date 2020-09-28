@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: test/atcoder/abc129-f.cpp
-    title: test/atcoder/abc129-f.cpp
-  - icon: ':warning:'
     path: math/factorial.cpp
     title: "\u968E\u4E57\u3001nPr\u3001nCr"
+  - icon: ':warning:'
+    path: test/atcoder/abc129-f.cpp
+    title: test/atcoder/abc129-f.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/NTL_1_B.test.cpp
@@ -15,7 +15,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: mod int
     links: []
   bundledCode: "#line 1 \"math/modint.cpp\"\n// @title mod int\n#include <iostream>\n\

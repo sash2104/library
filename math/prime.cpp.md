@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u7D20\u6570\u5224\u5B9A\u3001\u7D20\u56E0\u6570\u5206\u89E3"
     links: []
   bundledCode: "#line 1 \"math/prime.cpp\"\n// @title \u7D20\u6570\u5224\u5B9A\u3001\

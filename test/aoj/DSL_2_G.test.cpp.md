@@ -2,15 +2,15 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: monoid/add_count.hpp
-    title: monoid/add_count.hpp
+    path: datastructure/lazy-segment-tree.cpp
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\
+      \u3001\u533A\u9593\u53D6\u5F97)"
   - icon: ':heavy_check_mark:'
     path: monoid/add.hpp
     title: monoid/add.hpp
   - icon: ':heavy_check_mark:'
-    path: datastructure/lazy-segment-tree.cpp
-    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\
-      \u3001\u533A\u9593\u53D6\u5F97)"
+    path: monoid/add_count.hpp
+    title: monoid/add_count.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

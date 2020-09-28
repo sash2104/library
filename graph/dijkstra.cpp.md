@@ -12,7 +12,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Dijkstra
     links: []
   bundledCode: "#line 1 \"graph/dijkstra.cpp\"\n/**\n * @title Dijkstra\n */\n#line\

@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/DSL_2_B.segtree.test.cpp
-    title: test/aoj/DSL_2_B.segtree.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_A.test.cpp
     title: test/aoj/DSL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL_2_B.segtree.test.cpp
+    title: test/aoj/DSL_2_B.segtree.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u66F4\u65B0\
       \u3001\u533A\u9593\u53D6\u5F97)"
     links: []

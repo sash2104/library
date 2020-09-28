@@ -2,14 +2,14 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: datastructure/union-find-tree.cpp
+    title: Union-Find
+  - icon: ':heavy_check_mark:'
     path: graph/mst-kruskal.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 (\u30AF\u30E9\u30B9\u30AB\u30EB\u6CD5)"
   - icon: ':heavy_check_mark:'
     path: graph/template.cpp
     title: graph/template.cpp
-  - icon: ':heavy_check_mark:'
-    path: datastructure/union-find-tree.cpp
-    title: Union-Find
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

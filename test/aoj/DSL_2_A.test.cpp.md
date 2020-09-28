@@ -2,12 +2,12 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: monoid/min.hpp
-    title: monoid/min.hpp
-  - icon: ':heavy_check_mark:'
     path: datastructure/segment-tree.cpp
     title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u66F4\u65B0\u3001\u533A\
       \u9593\u53D6\u5F97)"
+  - icon: ':heavy_check_mark:'
+    path: monoid/min.hpp
+    title: monoid/min.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

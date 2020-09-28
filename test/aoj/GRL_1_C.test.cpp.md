@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: graph/warshall-floyd.cpp
-    title: warshall-floyd
-  - icon: ':heavy_check_mark:'
     path: graph/template.cpp
     title: graph/template.cpp
+  - icon: ':heavy_check_mark:'
+    path: graph/warshall-floyd.cpp
+    title: warshall-floyd
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

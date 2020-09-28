@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u7D04\u6570\u5217\u6319"
     links: []
   bundledCode: "#line 1 \"math/divisor.cpp\"\n// @title \u7D04\u6570\u5217\u6319\n\

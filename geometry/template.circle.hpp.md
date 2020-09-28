@@ -6,16 +6,15 @@ data:
     title: geometry/template.hpp
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: test/aoj/notest.0010.cpp
-    title: test/aoj/notest.0010.cpp
-  - icon: ':warning:'
     path: geometry/triangle.hpp
     title: "\u4E09\u89D2\u5F62\u306E\u4E94\u5FC3\u306E\u5EA7\u6A19"
+  - icon: ':warning:'
+    path: test/aoj/notest.0010.cpp
+    title: test/aoj/notest.0010.cpp
   _extendedVerifiedWith: []
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u5186"
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_7_A&lang=jp
@@ -25,7 +24,7 @@ data:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_7_G
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=CGL_7_H
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 70, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
     , line 191, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 310, in update\n    raise BundleErrorAt(path, i + 1, \"#pragma once found\

@@ -15,7 +15,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: Union-Find
     links: []
   bundledCode: "#line 1 \"datastructure/union-find-tree.cpp\"\n/**\n * @title Union-Find\n\

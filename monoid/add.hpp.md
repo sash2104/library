@@ -7,18 +7,17 @@ data:
     path: test/aoj/DSL_2_B.segtree.test.cpp
     title: test/aoj/DSL_2_B.segtree.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj/DSL_2_H.test.cpp
-    title: test/aoj/DSL_2_H.test.cpp
+    path: test/aoj/DSL_2_E.test.cpp
+    title: test/aoj/DSL_2_E.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_G.test.cpp
     title: test/aoj/DSL_2_G.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj/DSL_2_E.test.cpp
-    title: test/aoj/DSL_2_E.test.cpp
+    path: test/aoj/DSL_2_H.test.cpp
+    title: test/aoj/DSL_2_H.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoid/add.hpp\"\n\nnamespace monoid {\ntemplate <class\
     \ T>\nstruct add {\n  typedef T value_t;\n  T identity() const { return T(); }\n\

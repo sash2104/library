@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"test/atcoder/atc001-c.cpp\"\n#include <vector>\n#line 1\
     \ \"external/fft.cpp\"\n/*!\n * original: https://www.creativ.xyz/fast-fourier-transform/\n\

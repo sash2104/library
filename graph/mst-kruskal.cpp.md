@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: graph/template.cpp
-    title: graph/template.cpp
-  - icon: ':heavy_check_mark:'
     path: datastructure/union-find-tree.cpp
     title: Union-Find
+  - icon: ':heavy_check_mark:'
+    path: graph/template.cpp
+    title: graph/template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -15,7 +15,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u6700\u5C0F\u5168\u57DF\u6728 (\u30AF\u30E9\u30B9\u30AB\u30EB\
       \u6CD5)"
     links: []

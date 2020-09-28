@@ -2,25 +2,23 @@
 data:
   _extendedDependsOn:
   - icon: ':warning:'
-    path: geometry/triangle.hpp
-    title: "\u4E09\u89D2\u5F62\u306E\u4E94\u5FC3\u306E\u5EA7\u6A19"
-  - icon: ':warning:'
     path: geometry/template.circle.hpp
     title: "\u5186"
   - icon: ':heavy_check_mark:'
     path: geometry/template.hpp
     title: geometry/template.hpp
+  - icon: ':warning:'
+    path: geometry/triangle.hpp
+    title: "\u4E09\u89D2\u5F62\u306E\u4E94\u5FC3\u306E\u5EA7\u6A19"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0010
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0010
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 70, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir).decode()\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
     , line 191, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 399, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\

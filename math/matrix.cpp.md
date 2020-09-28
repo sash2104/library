@@ -12,7 +12,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u884C\u5217"
     links: []
   bundledCode: "#line 1 \"math/matrix.cpp\"\n// @title \u884C\u5217\n#include <cassert>\n\

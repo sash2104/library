@@ -12,7 +12,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: 01-BFS
     links: []
   bundledCode: "#line 1 \"graph/bin-bfs.cpp\"\n// @title 01-BFS\n#line 1 \"graph/template.cpp\"\

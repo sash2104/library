@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u30B9\u30E9\u30A4\u30C9\u6700\u5C0F\u5024"
     links: []
   bundledCode: "#line 1 \"datastructure/slide-min.cpp\"\n/**\n * @title \u30B9\u30E9\

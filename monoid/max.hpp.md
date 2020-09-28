@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoid/max.hpp\"\n#include <algorithm>\n#include <limits>\n\
     \nnamespace monoid {\ntemplate <class T>\nstruct max {\n  typedef T value_t;\n\

@@ -12,7 +12,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: warshall-floyd
     links: []
   bundledCode: "#line 1 \"graph/warshall-floyd.cpp\"\n/**\n * @title warshall-floyd\n\

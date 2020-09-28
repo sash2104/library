@@ -2,17 +2,16 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: math/modint.cpp
-    title: mod int
-  - icon: ':heavy_check_mark:'
     path: math/matrix.cpp
     title: "\u884C\u5217"
+  - icon: ':heavy_check_mark:'
+    path: math/modint.cpp
+    title: mod int
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"test/atcoder/abc129-f.cpp\"\n#include <cassert>\n#include\
     \ <cmath>\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\n//\

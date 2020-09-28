@@ -9,8 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562
   bundledCode: "#line 1 \"test/aoj/notest.1562.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562\"\

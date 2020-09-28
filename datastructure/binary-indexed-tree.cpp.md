@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: BIT (Binary-Indexed-Tree)
     links:
     - http://hos.ac/slides/20140319_bit.pdf

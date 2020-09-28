@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoid/add_count.hpp\"\n#include <algorithm>\n#include <utility>\n\
     #include <limits>\n\nnamespace monoid {\ntemplate <class T>\nstruct add_count\

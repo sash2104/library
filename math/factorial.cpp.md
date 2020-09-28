@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     document_title: "\u968E\u4E57\u3001nPr\u3001nCr"
     links: []
   bundledCode: "#line 1 \"math/factorial.cpp\"\n// @title \u968E\u4E57\u3001nPr\u3001\

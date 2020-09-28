@@ -4,18 +4,17 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/DSL_2_H.test.cpp
-    title: test/aoj/DSL_2_H.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_A.test.cpp
     title: test/aoj/DSL_2_A.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_F.test.cpp
     title: test/aoj/DSL_2_F.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL_2_H.test.cpp
+    title: test/aoj/DSL_2_H.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"monoid/min.hpp\"\n#include <algorithm>\n#include <limits>\n\
     \nnamespace monoid {\ntemplate <class T>\nstruct min {\n  typedef T value_t;\n\
