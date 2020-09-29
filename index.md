@@ -1,6 +1,14 @@
 ---
 data:
   libraryCategories:
+  - name: atcoder/segtree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: atcoder/segtree/add.hpp
+      title: atcoder/segtree/add.hpp
+    - icon: ':heavy_check_mark:'
+      path: atcoder/segtree/min.hpp
+      title: atcoder/segtree/min.hpp
   - name: datastructure
     pages:
     - icon: ':heavy_check_mark:'
@@ -157,6 +165,17 @@ data:
       path: util/marathon/template.hpp
       title: util/marathon/template.hpp
   verificationCategories:
+  - name: test/ac-library
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/ac-library/dsu.test.cpp
+      title: Disjoint Set Union (ac-library)
+    - icon: ':heavy_check_mark:'
+      path: test/ac-library/segtree.min.test.cpp
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u3001min (ac-library)"
+    - icon: ':heavy_check_mark:'
+      path: test/ac-library/segtree.sum.test.cpp
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u3001sum (ac-library)"
   - name: test/aoj
     pages:
     - icon: ':heavy_check_mark:'
@@ -237,9 +256,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/NTL_1_C.test.cpp
       title: test/aoj/NTL_1_C.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/aoj/ac-library.dsu.test.cpp
-      title: test/aoj/ac-library.dsu.test.cpp
   - name: test/example
     pages:
     - icon: ':heavy_check_mark:'
