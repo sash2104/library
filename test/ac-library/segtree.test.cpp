@@ -4,6 +4,7 @@
 #include "../../atcoder/segtree/min.hpp"
 using namespace std;
 
+// @title セグメント木、min (ac-library)
 int main() {
   int n, q; cin >> n >> q;
   segtree::min::type<int> seg(n);
