@@ -38,6 +38,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: datastructure/union-find-tree.cpp
       title: Union-Find
+  - name: datastructure/wavelet
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: datastructure/wavelet/succinct-indexable-dictionary.hpp
+      title: datastructure/wavelet/succinct-indexable-dictionary.hpp
   - name: external
     pages:
     - icon: ':warning:'
@@ -256,6 +261,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/NTL_1_C.test.cpp
       title: test/aoj/NTL_1_C.test.cpp
+  - name: test/datastructure/wavelet
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/datastructure/wavelet/succinct-indexable-dictionary.test.cpp
+      title: "\u5B8C\u5099\u8F9E\u66F8\u306E\u30C6\u30B9\u30C8"
   - name: test/example
     pages:
     - icon: ':heavy_check_mark:'

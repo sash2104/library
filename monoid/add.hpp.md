@@ -33,9 +33,9 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_B.segtree.test.cpp
-  - test/aoj/DSL_2_H.test.cpp
   - test/aoj/DSL_2_G.test.cpp
   - test/aoj/DSL_2_E.test.cpp
+  - test/aoj/DSL_2_H.test.cpp
 documentation_of: monoid/add.hpp
 layout: document
 redirect_from:

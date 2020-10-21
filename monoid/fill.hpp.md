@@ -29,8 +29,8 @@ data:
   timestamp: '2020-01-01 01:17:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL_2_D.test.cpp
   - test/aoj/DSL_2_F.test.cpp
+  - test/aoj/DSL_2_D.test.cpp
 documentation_of: monoid/fill.hpp
 layout: document
 redirect_from:

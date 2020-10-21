@@ -94,8 +94,8 @@ data:
   timestamp: '2020-09-26 14:56:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL_2_D.test.cpp
   - test/aoj/DSL_2_E.test.cpp
+  - test/aoj/DSL_2_D.test.cpp
 documentation_of: datastructure/dual-segment-tree.cpp
 layout: document
 redirect_from:
