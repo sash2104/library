@@ -1,3 +1,5 @@
+// @title 完備辞書
+// https://misteer.hatenablog.com/entry/bit-vector
 #pragma once
 
 #include <vector>
@@ -56,7 +58,7 @@ struct SuccinctIndexableDictionary {
     }
 
     // [0, pos) にあるb(0 or 1)の数を返す
-    int rank(bool b, int pos) {
+    int rank(bool b, int pos) const {
         return (b ? rank(pos) : pos - rank(pos));
     }
 
