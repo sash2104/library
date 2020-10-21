@@ -42,7 +42,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: datastructure/wavelet/succinct-indexable-dictionary.hpp
-      title: datastructure/wavelet/succinct-indexable-dictionary.hpp
+      title: "\u5B8C\u5099\u8F9E\u66F8"
   - name: external
     pages:
     - icon: ':warning:'
@@ -265,7 +265,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: test/datastructure/wavelet/succinct-indexable-dictionary.test.cpp
-      title: "\u5B8C\u5099\u8F9E\u66F8\u306E\u30C6\u30B9\u30C8"
+      title: "\u5B8C\u5099\u8F9E\u66F8\u306E\u7C21\u6613\u7684\u306A\u30C6\u30B9\u30C8"
   - name: test/example
     pages:
     - icon: ':heavy_check_mark:'
