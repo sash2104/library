@@ -15,6 +15,9 @@ data:
       path: datastructure/binary-indexed-tree.cpp
       title: BIT (Binary-Indexed-Tree)
     - icon: ':heavy_check_mark:'
+      path: datastructure/doubling.hpp
+      title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
+    - icon: ':heavy_check_mark:'
       path: datastructure/dual-segment-tree.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
         \u65B0\u3001\u4E00\u70B9\u53D6\u5F97)"
@@ -261,6 +264,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/NTL_1_C.test.cpp
       title: test/aoj/NTL_1_C.test.cpp
+  - name: test/datastructure
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/datastructure/doubling.test.cpp
+      title: "\u30C0\u30D6\u30EA\u30F3\u30B0\u306E\u7C21\u6613\u7684\u306A\u30C6\u30B9\
+        \u30C8"
   - name: test/datastructure/wavelet
     pages:
     - icon: ':heavy_check_mark:'
