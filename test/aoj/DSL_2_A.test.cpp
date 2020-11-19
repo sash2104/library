@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A"
+// @title セグメント木 (一点更新・区間最小)
 
 #include "../../monoid/min.hpp"
 #include "../../datastructure/segment-tree.cpp"

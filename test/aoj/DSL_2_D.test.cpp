@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D"
+// @title 双対セグメント木 (区間変更・一点取得)
 
 #include "../../monoid/fill.hpp"
 #include "../../datastructure/dual-segment-tree.cpp"

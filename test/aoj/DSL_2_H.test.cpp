@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H"
+// @title 遅延セグメント木 (区間加算・区間最小)
 
 #include "../../monoid/add.hpp"
 #include "../../monoid/min.hpp"

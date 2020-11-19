@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G"
+// @title 遅延セグメント木 (区間加算・区間和)
 
 #include "../../monoid/add_count.hpp"
 #include "../../monoid/add.hpp"

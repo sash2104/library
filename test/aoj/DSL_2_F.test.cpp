@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
+// @title 遅延セグメント木 (区間更新・区間最小)
 
 #include "../../monoid/min.hpp"
 #include "../../monoid/fill.hpp"

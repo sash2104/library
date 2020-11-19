@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
+// @title セグメント木 (一点加算・区間和)
 
 #include "../../monoid/add.hpp"
 #include "../../datastructure/segment-tree.cpp"
