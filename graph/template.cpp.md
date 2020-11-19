@@ -73,21 +73,21 @@ data:
   path: graph/template.cpp
   requiredBy:
   - test/aoj/notest.GRL_4_B.cpp
-  - graph/lca.cpp
-  - graph/mst-kruskal.cpp
-  - graph/dijkstra.cpp
-  - graph/warshall-floyd.cpp
-  - graph/strongly-connected-components.cpp
   - graph/topological-sort.cpp
+  - graph/mst-kruskal.cpp
+  - graph/warshall-floyd.cpp
+  - graph/dijkstra.cpp
+  - graph/strongly-connected-components.cpp
+  - graph/lca.cpp
   - graph/bin-bfs.cpp
   timestamp: '2020-01-01 21:05:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/GRL_5_C.test.cpp
-  - test/aoj/GRL_3_C.test.cpp
+  - test/aoj/GRL_1_C.test.cpp
   - test/aoj/ALDS_1_11_C.test.cpp
   - test/aoj/GRL_2_A.test.cpp
-  - test/aoj/GRL_1_C.test.cpp
+  - test/aoj/GRL_3_C.test.cpp
   - test/aoj/GRL_1_A.test.cpp
 documentation_of: graph/template.cpp
 layout: document

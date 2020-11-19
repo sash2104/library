@@ -19,21 +19,24 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E
+    document_title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
+      \u52A0\u7B97\u30FB\u4E00\u70B9\u53D6\u5F97)"
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E
   bundledCode: "#line 1 \"test/aoj/DSL_2_E.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E\"\
-    \n\n#line 2 \"monoid/add.hpp\"\n\nnamespace monoid {\ntemplate <class T>\nstruct\
-    \ add {\n  typedef T value_t;\n  T identity() const { return T(); }\n  T merge(T\
-    \ a, T b) const { return a+b; }\n};\n} // namespace monoid\n#line 1 \"datastructure/dual-segment-tree.cpp\"\
-    \n/**\n * @title \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
-    \u66F4\u65B0\u3001\u4E00\u70B9\u53D6\u5F97)\n * @brief \u533A\u9593\u66F4\u65B0\
-    \u3001\u4E00\u70B9\u53D6\u5F97\u304C\u3067\u304D\u308B\u3084\u3064\n *   \u5B9A\
-    \u6570\u500D\u306F\u60AA\u305D\u3046\u3060\u304C\u3001\u4F3C\u305F\u30B3\u30FC\
-    \u30C9\u3092\u305F\u304F\u3055\u3093\u7BA1\u7406\u3057\u305F\u304F\u306A\u3044\
-    \u306E\u3067LazySegmentTree\u3092\u4F7F\u3044\u56DE\u3059\n *  \n */ \n#include\
-    \ <cassert>\n#line 1 \"datastructure/lazy-segment-tree.cpp\"\n/**\n * @title \u9045\
-    \u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\u3001\u533A\
-    \u9593\u53D6\u5F97)\n *  \n */ \n#line 6 \"datastructure/lazy-segment-tree.cpp\"\
+    \n// @title \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\
+    \u7B97\u30FB\u4E00\u70B9\u53D6\u5F97)\n\n#line 2 \"monoid/add.hpp\"\n\nnamespace\
+    \ monoid {\ntemplate <class T>\nstruct add {\n  typedef T value_t;\n  T identity()\
+    \ const { return T(); }\n  T merge(T a, T b) const { return a+b; }\n};\n} // namespace\
+    \ monoid\n#line 1 \"datastructure/dual-segment-tree.cpp\"\n/**\n * @title \u53CC\
+    \u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\u3001\u4E00\
+    \u70B9\u53D6\u5F97)\n * @brief \u533A\u9593\u66F4\u65B0\u3001\u4E00\u70B9\u53D6\
+    \u5F97\u304C\u3067\u304D\u308B\u3084\u3064\n *   \u5B9A\u6570\u500D\u306F\u60AA\
+    \u305D\u3046\u3060\u304C\u3001\u4F3C\u305F\u30B3\u30FC\u30C9\u3092\u305F\u304F\
+    \u3055\u3093\u7BA1\u7406\u3057\u305F\u304F\u306A\u3044\u306E\u3067LazySegmentTree\u3092\
+    \u4F7F\u3044\u56DE\u3059\n *  \n */ \n#include <cassert>\n#line 1 \"datastructure/lazy-segment-tree.cpp\"\
+    \n/**\n * @title \u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
+    \u66F4\u65B0\u3001\u533A\u9593\u53D6\u5F97)\n *  \n */ \n#line 6 \"datastructure/lazy-segment-tree.cpp\"\
     \n#include <functional>\n#include <vector>\n\n// FIXME: coding style\u3092\u7D71\
     \u4E00\u3059\u308B\n// FIXME: \u8981\u7D20\u306B\u4F5C\u7528\u7D20\u3092\u9069\
     \u7528\u3059\u308B\u95A2\u6570\u3067\u3042\u308BG\u3092class\u5316\u3059\u308B\
@@ -74,9 +77,8 @@ data:
     \ lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b); })\
     \ {}\n  void build(const std::vector<operator_t> &v) { lst.build(v); }\n  void\
     \ update(int a, int b, operator_t x) { lst.update(a, b, x); }\n  operator_t query(int\
-    \ a, int b) {\n    assert(a+1 == b); // \u4E00\u70B9\u53D6\u5F97\u306E\u307F\u3092\
-    \u8A8D\u3081\u308B\n    return lst.query(a, b);\n  }\n  operator_t operator[](const\
-    \ int &k) { return lst[k]; }\n};\n#line 5 \"test/aoj/DSL_2_E.test.cpp\"\n#include\
+    \ a) {\n    return lst.query(a, a+1);\n  }\n  operator_t operator[](const int\
+    \ &k) { return lst[k]; }\n};\n#line 6 \"test/aoj/DSL_2_E.test.cpp\"\n#include\
     \ <iostream>\n\nusing namespace std;\n\nint main() {\n  int n, q; cin >> n >>\
     \ q;\n  DualSegmentTree<monoid::add<int>> st;\n  st.build(vector<int>(n, 0));\n\
     \  for (int i = 0; i < q; ++i) {\n    int c; cin >> c;\n    if (c == 0) {\n  \
@@ -84,13 +86,14 @@ data:
     \  else {\n      int s; cin >> s;\n      cout << st[s-1] << endl;\n    }\n  }\n\
     }\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E\"\
-    \n\n#include \"../../monoid/add.hpp\"\n#include \"../../datastructure/dual-segment-tree.cpp\"\
-    \n#include <iostream>\n\nusing namespace std;\n\nint main() {\n  int n, q; cin\
-    \ >> n >> q;\n  DualSegmentTree<monoid::add<int>> st;\n  st.build(vector<int>(n,\
-    \ 0));\n  for (int i = 0; i < q; ++i) {\n    int c; cin >> c;\n    if (c == 0)\
-    \ {\n      int s, t, x; cin >> s >> t >> x;\n      st.update(s-1, t, x);\n   \
-    \ }\n    else {\n      int s; cin >> s;\n      cout << st[s-1] << endl;\n    }\n\
-    \  }\n}\n"
+    \n// @title \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\
+    \u7B97\u30FB\u4E00\u70B9\u53D6\u5F97)\n\n#include \"../../monoid/add.hpp\"\n#include\
+    \ \"../../datastructure/dual-segment-tree.cpp\"\n#include <iostream>\n\nusing\
+    \ namespace std;\n\nint main() {\n  int n, q; cin >> n >> q;\n  DualSegmentTree<monoid::add<int>>\
+    \ st;\n  st.build(vector<int>(n, 0));\n  for (int i = 0; i < q; ++i) {\n    int\
+    \ c; cin >> c;\n    if (c == 0) {\n      int s, t, x; cin >> s >> t >> x;\n  \
+    \    st.update(s-1, t, x);\n    }\n    else {\n      int s; cin >> s;\n      cout\
+    \ << st[s-1] << endl;\n    }\n  }\n}\n"
   dependsOn:
   - monoid/add.hpp
   - datastructure/dual-segment-tree.cpp
@@ -98,7 +101,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_E.test.cpp
   requiredBy: []
-  timestamp: '2020-09-26 14:56:37+09:00'
+  timestamp: '2020-11-19 20:00:02+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_E.test.cpp
@@ -106,5 +109,6 @@ layout: document
 redirect_from:
 - /verify/test/aoj/DSL_2_E.test.cpp
 - /verify/test/aoj/DSL_2_E.test.cpp.html
-title: test/aoj/DSL_2_E.test.cpp
+title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
+  \u30FB\u4E00\u70B9\u53D6\u5F97)"
 ---

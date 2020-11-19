@@ -25,12 +25,6 @@ data:
       path: datastructure/lazy-segment-tree.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
         \u65B0\u3001\u533A\u9593\u53D6\u5F97)"
-    - icon: ':warning:'
-      path: datastructure/median-list.hpp
-      title: "\u4E2D\u592E\u5024"
-    - icon: ':warning:'
-      path: datastructure/median-set2.hpp
-      title: datastructure/median-set2.hpp
     - icon: ':heavy_check_mark:'
       path: datastructure/segment-tree.cpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u66F4\u65B0\u3001\
@@ -209,28 +203,35 @@ data:
       title: test/aoj/DSL_1_A.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_A.test.cpp
-      title: test/aoj/DSL_2_A.test.cpp
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u66F4\u65B0\u30FB\
+        \u533A\u9593\u6700\u5C0F)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_B.bit.test.cpp
-      title: test/aoj/DSL_2_B.bit.test.cpp
+      title: "BIT\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_B.segtree.test.cpp
-      title: test/aoj/DSL_2_B.segtree.test.cpp
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u52A0\u7B97\u30FB\
+        \u533A\u9593\u548C)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_D.test.cpp
-      title: test/aoj/DSL_2_D.test.cpp
+      title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u5909\
+        \u66F4\u30FB\u4E00\u70B9\u53D6\u5F97)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_E.test.cpp
-      title: test/aoj/DSL_2_E.test.cpp
+      title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\
+        \u7B97\u30FB\u4E00\u70B9\u53D6\u5F97)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_F.test.cpp
-      title: test/aoj/DSL_2_F.test.cpp
+      title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
+        \u65B0\u30FB\u533A\u9593\u6700\u5C0F)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_G.test.cpp
-      title: test/aoj/DSL_2_G.test.cpp
+      title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\
+        \u7B97\u30FB\u533A\u9593\u548C)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_H.test.cpp
-      title: test/aoj/DSL_2_H.test.cpp
+      title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\
+        \u7B97\u30FB\u533A\u9593\u6700\u5C0F)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_3_D.test.cpp
       title: test/aoj/DSL_3_D.test.cpp

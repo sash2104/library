@@ -5,10 +5,12 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_A.test.cpp
-    title: test/aoj/DSL_2_A.test.cpp
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u66F4\u65B0\u30FB\u533A\
+      \u9593\u6700\u5C0F)"
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_B.segtree.test.cpp
-    title: test/aoj/DSL_2_B.segtree.test.cpp
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u52A0\u7B97\u30FB\u533A\
+      \u9593\u548C)"
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

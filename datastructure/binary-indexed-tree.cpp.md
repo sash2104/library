@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_B.bit.test.cpp
-    title: test/aoj/DSL_2_B.bit.test.cpp
+    title: "BIT\u306E\u30C6\u30B9\u30C8"
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

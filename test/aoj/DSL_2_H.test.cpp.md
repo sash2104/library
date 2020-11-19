@@ -18,21 +18,25 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
+    document_title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
+      \u52A0\u7B97\u30FB\u533A\u9593\u6700\u5C0F)"
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
   bundledCode: "#line 1 \"test/aoj/DSL_2_H.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
-    \n\n#line 2 \"monoid/add.hpp\"\n\nnamespace monoid {\ntemplate <class T>\nstruct\
-    \ add {\n  typedef T value_t;\n  T identity() const { return T(); }\n  T merge(T\
-    \ a, T b) const { return a+b; }\n};\n} // namespace monoid\n#line 2 \"monoid/min.hpp\"\
-    \n#include <algorithm>\n#include <limits>\n\nnamespace monoid {\ntemplate <class\
-    \ T>\nstruct min {\n  typedef T value_t;\n  T identity() const { return std::numeric_limits<T>::max();}\n\
-    \  T merge(T a, T b) const { return std::min(a, b); }\n};\n} // namespace monoid\n\
-    #line 1 \"datastructure/lazy-segment-tree.cpp\"\n/**\n * @title \u9045\u5EF6\u30BB\
-    \u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\u3001\u533A\u9593\u53D6\
-    \u5F97)\n *  \n */ \n#include <cassert>\n#include <functional>\n#include <vector>\n\
-    \n// FIXME: coding style\u3092\u7D71\u4E00\u3059\u308B\n// FIXME: \u8981\u7D20\
-    \u306B\u4F5C\u7528\u7D20\u3092\u9069\u7528\u3059\u308B\u95A2\u6570\u3067\u3042\
-    \u308BG\u3092class\u5316\u3059\u308B\ntemplate <class Monoid, class OperatorMonoid>\n\
+    \n// @title \u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\
+    \u7B97\u30FB\u533A\u9593\u6700\u5C0F)\n\n#line 2 \"monoid/add.hpp\"\n\nnamespace\
+    \ monoid {\ntemplate <class T>\nstruct add {\n  typedef T value_t;\n  T identity()\
+    \ const { return T(); }\n  T merge(T a, T b) const { return a+b; }\n};\n} // namespace\
+    \ monoid\n#line 2 \"monoid/min.hpp\"\n#include <algorithm>\n#include <limits>\n\
+    \nnamespace monoid {\ntemplate <class T>\nstruct min {\n  typedef T value_t;\n\
+    \  T identity() const { return std::numeric_limits<T>::max();}\n  T merge(T a,\
+    \ T b) const { return std::min(a, b); }\n};\n} // namespace monoid\n#line 1 \"\
+    datastructure/lazy-segment-tree.cpp\"\n/**\n * @title \u9045\u5EF6\u30BB\u30B0\
+    \u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\u65B0\u3001\u533A\u9593\u53D6\u5F97\
+    )\n *  \n */ \n#include <cassert>\n#include <functional>\n#include <vector>\n\n\
+    // FIXME: coding style\u3092\u7D71\u4E00\u3059\u308B\n// FIXME: \u8981\u7D20\u306B\
+    \u4F5C\u7528\u7D20\u3092\u9069\u7528\u3059\u308B\u95A2\u6570\u3067\u3042\u308B\
+    G\u3092class\u5316\u3059\u308B\ntemplate <class Monoid, class OperatorMonoid>\n\
     struct LazySegmentTree {\n  typedef typename Monoid::value_t value_t;\n  typedef\
     \ typename OperatorMonoid::value_t operator_t;\n  const Monoid monoid;\n  const\
     \ OperatorMonoid op_monoid;\n  using G = std::function< value_t(value_t, operator_t)\
@@ -64,7 +68,7 @@ data:
     \ 1; l < r; l >>= 1, r >>= 1) {\n      if(l & 1) vl = monoid.merge(vl, reflect(l++));\n\
     \      if(r & 1) vr = monoid.merge(reflect(--r), vr);\n    }\n    return monoid.merge(vl,\
     \ vr);\n  }\n\n  value_t operator[](const int &k) {\n    return query(k, k + 1);\n\
-    \  }\n};\n#line 6 \"test/aoj/DSL_2_H.test.cpp\"\n\n#include <iostream>\nusing\
+    \  }\n};\n#line 7 \"test/aoj/DSL_2_H.test.cpp\"\n\n#include <iostream>\nusing\
     \ namespace std;\n\nint main() {\n  int n, q; cin >> n >> q;\n  auto g=[](int\
     \ a,int b){return a+b;};\n  LazySegmentTree<monoid::min<int>, monoid::add<int>>\
     \ st(g);\n  st.build(vector<int>(n,0));\n  for (int i = 0; i < q; ++i) {\n   \
@@ -72,14 +76,15 @@ data:
     \      st.update(s, t+1, x);\n    }\n    else {\n      int s, t; cin >> s >> t;\n\
     \      cout << st.query(s, t+1) << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
-    \n\n#include \"../../monoid/add.hpp\"\n#include \"../../monoid/min.hpp\"\n#include\
-    \ \"../../datastructure/lazy-segment-tree.cpp\"\n\n#include <iostream>\nusing\
-    \ namespace std;\n\nint main() {\n  int n, q; cin >> n >> q;\n  auto g=[](int\
-    \ a,int b){return a+b;};\n  LazySegmentTree<monoid::min<int>, monoid::add<int>>\
-    \ st(g);\n  st.build(vector<int>(n,0));\n  for (int i = 0; i < q; ++i) {\n   \
-    \ int c; cin >> c;\n    if (c == 0) {\n      int s, t, x; cin >> s >> t >> x;\n\
-    \      st.update(s, t+1, x);\n    }\n    else {\n      int s, t; cin >> s >> t;\n\
-    \      cout << st.query(s, t+1) << endl;\n    }\n  }\n}\n"
+    \n// @title \u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\
+    \u7B97\u30FB\u533A\u9593\u6700\u5C0F)\n\n#include \"../../monoid/add.hpp\"\n#include\
+    \ \"../../monoid/min.hpp\"\n#include \"../../datastructure/lazy-segment-tree.cpp\"\
+    \n\n#include <iostream>\nusing namespace std;\n\nint main() {\n  int n, q; cin\
+    \ >> n >> q;\n  auto g=[](int a,int b){return a+b;};\n  LazySegmentTree<monoid::min<int>,\
+    \ monoid::add<int>> st(g);\n  st.build(vector<int>(n,0));\n  for (int i = 0; i\
+    \ < q; ++i) {\n    int c; cin >> c;\n    if (c == 0) {\n      int s, t, x; cin\
+    \ >> s >> t >> x;\n      st.update(s, t+1, x);\n    }\n    else {\n      int s,\
+    \ t; cin >> s >> t;\n      cout << st.query(s, t+1) << endl;\n    }\n  }\n}\n"
   dependsOn:
   - monoid/add.hpp
   - monoid/min.hpp
@@ -87,7 +92,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_H.test.cpp
   requiredBy: []
-  timestamp: '2020-09-26 14:56:37+09:00'
+  timestamp: '2020-11-19 20:00:02+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_H.test.cpp
@@ -95,5 +100,6 @@ layout: document
 redirect_from:
 - /verify/test/aoj/DSL_2_H.test.cpp
 - /verify/test/aoj/DSL_2_H.test.cpp.html
-title: test/aoj/DSL_2_H.test.cpp
+title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
+  \u30FB\u533A\u9593\u6700\u5C0F)"
 ---

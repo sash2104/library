@@ -5,16 +5,20 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_B.segtree.test.cpp
-    title: test/aoj/DSL_2_B.segtree.test.cpp
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u4E00\u70B9\u52A0\u7B97\u30FB\u533A\
+      \u9593\u548C)"
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_E.test.cpp
-    title: test/aoj/DSL_2_E.test.cpp
+    title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
+      \u30FB\u4E00\u70B9\u53D6\u5F97)"
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_G.test.cpp
-    title: test/aoj/DSL_2_G.test.cpp
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
+      \u30FB\u533A\u9593\u548C)"
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_H.test.cpp
-    title: test/aoj/DSL_2_H.test.cpp
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
+      \u30FB\u533A\u9593\u6700\u5C0F)"
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -32,10 +36,10 @@ data:
   timestamp: '2020-01-01 14:13:16+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL_2_B.segtree.test.cpp
   - test/aoj/DSL_2_G.test.cpp
-  - test/aoj/DSL_2_E.test.cpp
   - test/aoj/DSL_2_H.test.cpp
+  - test/aoj/DSL_2_B.segtree.test.cpp
+  - test/aoj/DSL_2_E.test.cpp
 documentation_of: monoid/add.hpp
 layout: document
 redirect_from:

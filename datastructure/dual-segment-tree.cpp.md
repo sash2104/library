@@ -9,10 +9,12 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_D.test.cpp
-    title: test/aoj/DSL_2_D.test.cpp
+    title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u5909\u66F4\
+      \u30FB\u4E00\u70B9\u53D6\u5F97)"
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_E.test.cpp
-    title: test/aoj/DSL_2_E.test.cpp
+    title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
+      \u30FB\u4E00\u70B9\u53D6\u5F97)"
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -68,9 +70,8 @@ data:
     \ lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b); })\
     \ {}\n  void build(const std::vector<operator_t> &v) { lst.build(v); }\n  void\
     \ update(int a, int b, operator_t x) { lst.update(a, b, x); }\n  operator_t query(int\
-    \ a, int b) {\n    assert(a+1 == b); // \u4E00\u70B9\u53D6\u5F97\u306E\u307F\u3092\
-    \u8A8D\u3081\u308B\n    return lst.query(a, b);\n  }\n  operator_t operator[](const\
-    \ int &k) { return lst[k]; }\n};\n"
+    \ a) {\n    return lst.query(a, a+1);\n  }\n  operator_t operator[](const int\
+    \ &k) { return lst[k]; }\n};\n"
   code: "/**\n * @title \u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\
     \u66F4\u65B0\u3001\u4E00\u70B9\u53D6\u5F97)\n * @brief \u533A\u9593\u66F4\u65B0\
     \u3001\u4E00\u70B9\u53D6\u5F97\u304C\u3067\u304D\u308B\u3084\u3064\n *   \u5B9A\
@@ -83,19 +84,18 @@ data:
     \ lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b); })\
     \ {}\n  void build(const std::vector<operator_t> &v) { lst.build(v); }\n  void\
     \ update(int a, int b, operator_t x) { lst.update(a, b, x); }\n  operator_t query(int\
-    \ a, int b) {\n    assert(a+1 == b); // \u4E00\u70B9\u53D6\u5F97\u306E\u307F\u3092\
-    \u8A8D\u3081\u308B\n    return lst.query(a, b);\n  }\n  operator_t operator[](const\
-    \ int &k) { return lst[k]; }\n};\n"
+    \ a) {\n    return lst.query(a, a+1);\n  }\n  operator_t operator[](const int\
+    \ &k) { return lst[k]; }\n};\n"
   dependsOn:
   - datastructure/lazy-segment-tree.cpp
   isVerificationFile: false
   path: datastructure/dual-segment-tree.cpp
   requiredBy: []
-  timestamp: '2020-09-26 14:56:37+09:00'
+  timestamp: '2020-11-19 20:00:02+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL_2_E.test.cpp
   - test/aoj/DSL_2_D.test.cpp
+  - test/aoj/DSL_2_E.test.cpp
 documentation_of: datastructure/dual-segment-tree.cpp
 layout: document
 redirect_from:
