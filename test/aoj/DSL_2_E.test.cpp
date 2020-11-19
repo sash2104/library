@@ -1,4 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E"
+// @title 双対セグメント木 (区間加算・一点取得)
 
 #include "../../monoid/add.hpp"
 #include "../../datastructure/dual-segment-tree.cpp"

@@ -14,9 +14,8 @@ struct DualSegmentTree {
   DualSegmentTree() : lst([](operator_t a, operator_t b) { return OperatorMonoid().merge(a, b); }) {}
   void build(const std::vector<operator_t> &v) { lst.build(v); }
   void update(int a, int b, operator_t x) { lst.update(a, b, x); }
-  operator_t query(int a, int b) {
-    assert(a+1 == b); // 一点取得のみを認める
-    return lst.query(a, b);
+  operator_t query(int a) {
+    return lst.query(a, a+1);
   }
   operator_t operator[](const int &k) { return lst[k]; }
 };
