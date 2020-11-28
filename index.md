@@ -87,6 +87,9 @@ data:
       path: graph/topological-sort.cpp
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
     - icon: ':heavy_check_mark:'
+      path: graph/tree-diameter.cpp
+      title: "\u6728\u306E\u76F4\u5F84"
+    - icon: ':heavy_check_mark:'
       path: graph/warshall-floyd.cpp
       title: warshall-floyd
   - name: math
@@ -247,6 +250,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/GRL_3_C.test.cpp
       title: test/aoj/GRL_3_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_5_A.test.cpp
+      title: "\u6728\u306E\u76F4\u5F84\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: test/aoj/GRL_5_C.test.cpp
       title: test/aoj/GRL_5_C.test.cpp
