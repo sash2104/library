@@ -8,6 +8,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.cpp
     title: Dijkstra
+  - icon: ':warning:'
+    path: graph/grid-graph.cpp
+    title: "\u30B0\u30EA\u30C3\u30C9\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
     path: graph/lca.cpp
     title: "LCA (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
@@ -83,6 +86,7 @@ data:
   - graph/mst-kruskal.cpp
   - graph/warshall-floyd.cpp
   - graph/dijkstra.cpp
+  - graph/grid-graph.cpp
   - graph/tree-diameter.cpp
   - graph/strongly-connected-components.cpp
   - graph/lca.cpp
