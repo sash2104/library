@@ -27,7 +27,7 @@ int main() {
   ReRooting<int, monoid::max<int>> rerooting(N, f);
   for(int i = 1; i < N; i++) {
     int x, y, z; cin >> x >> y >> z;
-    rerooting.add_edge(x, y);
+    rerooting.add_edge(x, y, z);
   }
   auto ret = rerooting.solve();
   for (int i = 0; i < N; ++i) {

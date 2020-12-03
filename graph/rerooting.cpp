@@ -4,6 +4,7 @@
  * https://github.com/noshi91/blog/blob/master/codes/rerooting.cpp
  * 
  */
+#include <cassert>
 #include <functional>
 #include <stack>
 #include <vector>
@@ -13,39 +14,37 @@
 
 template <typename Cost, class Monoid>
 struct ReRooting {
-  struct Edge { 
-    int from, to;
+  struct Node {
+    int to, rev;
     Cost cost;
   };
   typedef typename Monoid::value_t T;
   int n; // node数
   const Monoid monoid;
 
-  std::vector<std::vector<int>> adjacents;
-  std::vector<std::vector<int>> adjacentIds;
-
   std::vector<T> Res;
   std::vector<std::vector<T>> DP;
+  std::vector<std::vector<Node>> g;
 
   using F = std::function<T(T, int)>;
-  F f; //T f(T value, int nodeID) { } で定義される頂点の追加関数
+  F f; //T f(T value, int nodeId) { } で定義される頂点の追加関数
 
-  void add_edge(int u, int v) {
-      adjacentIds[u].push_back(adjacents[v].size());
-      adjacentIds[v].push_back(adjacents[u].size());
-      adjacents[u].push_back(v);
-      adjacents[v].push_back(u);
+  void add_edge(int u, int v, const Cost &c) {
+    g[u].emplace_back((Node) {v, (int) g[v].size(), c});
+    g[v].emplace_back((Node) {u, (int) g[u].size() - 1, c});
   }
-  ReRooting(int n, F f) : n(n), monoid(), f(f), adjacents(n), adjacentIds(n) {}
+
+  ReRooting(int n, F f) : n(n), monoid(), g(n), f(f) {}
   std::vector<T> solve() {
     DP = std::vector<std::vector<T>>(n);
     Res = std::vector<T>(n);
 
-    for (int i = 0; i < adjacents.size(); i++) {
-      DP[i] = std::vector<T>(adjacents[i].size());
+    for (int i = 0; i < n; i++) {
+      DP[i] = std::vector<T>(g[i].size());
     }
     if (n == 1) {
-      Res[0] = f(monoid.identity(), 0);
+      std::cerr << "頂点数1の場合は自力で計算すること" << std::endl;
+      assert(false);
     }
     else { init(); }
     return Res;
@@ -63,49 +62,49 @@ struct ReRooting {
     parents[0] = -1;
     // 行きがけ順を記録する
     while (stack.size() > 0) {
-      int node = stack.top();
+      int nodeId = stack.top();
       stack.pop();
-      order[index++] = node;
-      for (int adjacent: adjacents[node]) {
-        if (adjacent == parents[node])
+      order[index++] = nodeId;
+      for (auto &node: g[nodeId]) {
+        if (node.to == parents[nodeId])
           continue;
-        stack.push(adjacent);
-        parents[adjacent] = node;
+        stack.push(node.to);
+        parents[node.to] = nodeId;
       }
     }
 
     //帰りがけ順で部分木の値を求めていく
     for (int i = order.size() - 1; i >= 1; i--) {
-      int node = order[i];
-      int parent = parents[node];
+      int nodeId = order[i];
+      int parent = parents[nodeId];
       T accum = monoid.identity();
       int parentId = -1;
-      for (int j = 0; j < adjacents[node].size(); j++) {
-        if (adjacents[node][j] == parent) {
+      for (int j = 0; j < g[nodeId].size(); j++) {
+        if (g[nodeId][j].to == parent) {
           parentId = j;
           continue;
         }
-        accum = monoid.merge(accum, DP[node][j]);
+        accum = monoid.merge(accum, DP[nodeId][j]);
       }
-      int childId = adjacentIds[node][parentId];
-      DP[parent][childId] = f(accum, node);
+      int childId = g[nodeId][parentId].rev;
+      DP[parent][childId] = f(accum, nodeId);
     }
 
     //行きがけ順で頂点の値を確定させていく
     for (int i = 0; i < order.size(); i++) {
-      int node = order[i];
+      int nodeId = order[i];
       T accum = monoid.identity();
-      std::vector<T> rdp(adjacents[node].size());
+      std::vector<T> rdp(g[nodeId].size());
       rdp[rdp.size() - 1] = monoid.identity();
       for (int j = rdp.size() - 1; j >= 1; j--) {
-        rdp[j - 1] = monoid.merge(DP[node][j], rdp[j]);
+        rdp[j - 1] = monoid.merge(DP[nodeId][j], rdp[j]);
       }
       for (int j = 0; j < rdp.size(); j++) {
-        DP[adjacents[node][j]][adjacentIds[node][j]] =
-          f(monoid.merge(accum, rdp[j]), node);
-        accum = monoid.merge(accum, DP[node][j]);
+        auto &node = g[nodeId][j];
+        DP[node.to][node.rev] = f(monoid.merge(accum, rdp[j]), nodeId);
+        accum = monoid.merge(accum, DP[nodeId][j]);
       }
-      Res[node] = f(accum, node);
+      Res[nodeId] = f(accum, nodeId);
     }
   }
 };
