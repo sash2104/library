@@ -117,10 +117,10 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_G.test.cpp
-  - test/aoj/DSL_2_D.test.cpp
-  - test/aoj/DSL_2_H.test.cpp
-  - test/aoj/DSL_2_F.test.cpp
   - test/aoj/DSL_2_E.test.cpp
+  - test/aoj/DSL_2_D.test.cpp
+  - test/aoj/DSL_2_F.test.cpp
+  - test/aoj/DSL_2_H.test.cpp
 documentation_of: datastructure/lazy-segment-tree.cpp
 layout: document
 redirect_from:

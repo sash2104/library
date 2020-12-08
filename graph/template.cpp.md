@@ -18,6 +18,9 @@ data:
     path: graph/mst-kruskal.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 (\u30AF\u30E9\u30B9\u30AB\u30EB\u6CD5)"
   - icon: ':heavy_check_mark:'
+    path: graph/rerooting.cpp
+    title: "\u5168\u65B9\u4F4D\u6728DP (ReRooting)"
+  - icon: ':heavy_check_mark:'
     path: graph/strongly-connected-components.cpp
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':warning:'
@@ -48,6 +51,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL_3_C.test.cpp
     title: test/aoj/GRL_3_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_5_A.rerooting.test.cpp
+    title: "\u6728\u306E\u76F4\u5F84 (ReRooting)"
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL_5_A.test.cpp
     title: "\u6728\u306E\u76F4\u5F84\u306E\u30C6\u30B9\u30C8"
@@ -81,26 +87,28 @@ data:
   isVerificationFile: false
   path: graph/template.cpp
   requiredBy:
-  - test/aoj/notest.GRL_4_B.cpp
-  - graph/topological-sort.cpp
+  - graph/rerooting.cpp
   - graph/mst-kruskal.cpp
-  - graph/warshall-floyd.cpp
-  - graph/dijkstra.cpp
-  - graph/grid-graph.cpp
   - graph/tree-diameter.cpp
-  - graph/strongly-connected-components.cpp
+  - graph/grid-graph.cpp
+  - graph/dijkstra.cpp
+  - graph/topological-sort.cpp
   - graph/lca.cpp
+  - graph/strongly-connected-components.cpp
   - graph/bin-bfs.cpp
+  - graph/warshall-floyd.cpp
+  - test/aoj/notest.GRL_4_B.cpp
   timestamp: '2020-01-01 21:05:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/GRL_5_C.test.cpp
-  - test/aoj/GRL_1_C.test.cpp
-  - test/aoj/ALDS_1_11_C.test.cpp
+  - test/aoj/GRL_5_A.rerooting.test.cpp
   - test/aoj/GRL_2_A.test.cpp
-  - test/aoj/GRL_3_C.test.cpp
-  - test/aoj/GRL_1_A.test.cpp
   - test/aoj/GRL_5_A.test.cpp
+  - test/aoj/GRL_1_C.test.cpp
+  - test/aoj/GRL_3_C.test.cpp
+  - test/aoj/GRL_5_C.test.cpp
+  - test/aoj/GRL_1_A.test.cpp
+  - test/aoj/ALDS_1_11_C.test.cpp
 documentation_of: graph/template.cpp
 layout: document
 redirect_from:

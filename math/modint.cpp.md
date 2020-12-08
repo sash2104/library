@@ -62,8 +62,8 @@ data:
   isVerificationFile: false
   path: math/modint.cpp
   requiredBy:
-  - test/atcoder/abc129-f.cpp
   - math/factorial.cpp
+  - test/atcoder/abc129-f.cpp
   timestamp: '2020-08-30 22:26:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

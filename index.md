@@ -81,6 +81,9 @@ data:
       title: "\u6700\u5C0F\u5168\u57DF\u6728 (\u30AF\u30E9\u30B9\u30AB\u30EB\u6CD5\
         )"
     - icon: ':heavy_check_mark:'
+      path: graph/rerooting.cpp
+      title: "\u5168\u65B9\u4F4D\u6728DP (ReRooting)"
+    - icon: ':heavy_check_mark:'
       path: graph/strongly-connected-components.cpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -126,7 +129,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: monoid/fill.hpp
       title: monoid/fill.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: monoid/max.hpp
       title: monoid/max.hpp
     - icon: ':heavy_check_mark:'
@@ -253,6 +256,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/GRL_3_C.test.cpp
       title: test/aoj/GRL_3_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_5_A.rerooting.test.cpp
+      title: "\u6728\u306E\u76F4\u5F84 (ReRooting)"
     - icon: ':heavy_check_mark:'
       path: test/aoj/GRL_5_A.test.cpp
       title: "\u6728\u306E\u76F4\u5F84\u306E\u30C6\u30B9\u30C8"

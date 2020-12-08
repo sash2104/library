@@ -27,7 +27,7 @@ data:
     \u7B97\u30FB\u533A\u9593\u6700\u5C0F)\n\n#line 2 \"monoid/add.hpp\"\n\nnamespace\
     \ monoid {\ntemplate <class T>\nstruct add {\n  typedef T value_t;\n  T identity()\
     \ const { return T(); }\n  T merge(T a, T b) const { return a+b; }\n};\n} // namespace\
-    \ monoid\n#line 2 \"monoid/min.hpp\"\n#include <algorithm>\n#include <limits>\n\
+    \ monoid\n#line 1 \"monoid/min.hpp\"\n#include <algorithm>\n#include <limits>\n\
     \nnamespace monoid {\ntemplate <class T>\nstruct min {\n  typedef T value_t;\n\
     \  T identity() const { return std::numeric_limits<T>::max();}\n  T merge(T a,\
     \ T b) const { return std::min(a, b); }\n};\n} // namespace monoid\n#line 1 \"\
@@ -92,7 +92,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_H.test.cpp
   requiredBy: []
-  timestamp: '2020-11-19 20:00:02+09:00'
+  timestamp: '2020-12-08 22:06:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_H.test.cpp

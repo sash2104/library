@@ -42,8 +42,8 @@ data:
   timestamp: '2020-08-30 21:34:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL_1_A.test.cpp
   - test/aoj/GRL_2_A.test.cpp
+  - test/aoj/DSL_1_A.test.cpp
 documentation_of: datastructure/union-find-tree.cpp
 layout: document
 redirect_from:

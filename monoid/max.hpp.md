@@ -2,26 +2,29 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_5_A.rerooting.test.cpp
+    title: "\u6728\u306E\u76F4\u5F84 (ReRooting)"
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"monoid/max.hpp\"\n#include <algorithm>\n#include <limits>\n\
+  bundledCode: "#line 1 \"monoid/max.hpp\"\n#include <algorithm>\n#include <limits>\n\
     \nnamespace monoid {\ntemplate <class T>\nstruct max {\n  typedef T value_t;\n\
     \  T identity() const { return std::numeric_limits<T>::min();}\n  T merge(T a,\
     \ T b) const { return std::max(a, b); }\n};\n} // namespace monoid\n"
-  code: "#pragma once\n#include <algorithm>\n#include <limits>\n\nnamespace monoid\
-    \ {\ntemplate <class T>\nstruct max {\n  typedef T value_t;\n  T identity() const\
-    \ { return std::numeric_limits<T>::min();}\n  T merge(T a, T b) const { return\
-    \ std::max(a, b); }\n};\n} // namespace monoid\n"
+  code: "#include <algorithm>\n#include <limits>\n\nnamespace monoid {\ntemplate <class\
+    \ T>\nstruct max {\n  typedef T value_t;\n  T identity() const { return std::numeric_limits<T>::min();}\n\
+    \  T merge(T a, T b) const { return std::max(a, b); }\n};\n} // namespace monoid\n"
   dependsOn: []
   isVerificationFile: false
   path: monoid/max.hpp
   requiredBy: []
-  timestamp: '2020-03-08 10:49:15+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2020-12-08 22:06:37+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/GRL_5_A.rerooting.test.cpp
 documentation_of: monoid/max.hpp
 layout: document
 redirect_from:

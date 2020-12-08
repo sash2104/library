@@ -87,8 +87,8 @@ data:
   isVerificationFile: false
   path: geometry/template.circle.hpp
   requiredBy:
-  - test/aoj/notest.0010.cpp
   - geometry/triangle.hpp
+  - test/aoj/notest.0010.cpp
   timestamp: '2020-08-30 21:41:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

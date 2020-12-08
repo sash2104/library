@@ -24,7 +24,7 @@ data:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
   bundledCode: "#line 1 \"test/aoj/DSL_2_F.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F\"\
     \n// @title \u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u66F4\
-    \u65B0\u30FB\u533A\u9593\u6700\u5C0F)\n\n#line 2 \"monoid/min.hpp\"\n#include\
+    \u65B0\u30FB\u533A\u9593\u6700\u5C0F)\n\n#line 1 \"monoid/min.hpp\"\n#include\
     \ <algorithm>\n#include <limits>\n\nnamespace monoid {\ntemplate <class T>\nstruct\
     \ min {\n  typedef T value_t;\n  T identity() const { return std::numeric_limits<T>::max();}\n\
     \  T merge(T a, T b) const { return std::min(a, b); }\n};\n} // namespace monoid\n\
@@ -96,7 +96,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_F.test.cpp
   requiredBy: []
-  timestamp: '2020-11-19 20:00:02+09:00'
+  timestamp: '2020-12-08 22:06:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_F.test.cpp
