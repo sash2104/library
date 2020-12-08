@@ -26,27 +26,28 @@ struct ReRooting {
   std::vector<std::vector<T>> DP;
   std::vector<std::vector<Node>> g;
 
-  using F = std::function<T(T, int)>;
-  F f; //T f(T value, int nodeId) { } で定義される頂点の追加関数
+  using F = std::function<T(T, Cost)>;
+  F f; //T f(T value, Cost cost) { } で定義される頂点の追加関数
 
   void add_edge(int u, int v, const Cost &c) {
     g[u].emplace_back((Node) {v, (int) g[v].size(), c});
     g[v].emplace_back((Node) {u, (int) g[u].size() - 1, c});
   }
+  void add_edge(int u, int v, const Cost &c1, const Cost &c2) {
+    g[u].emplace_back((Node) {v, (int) g[v].size(), c1});
+    g[v].emplace_back((Node) {u, (int) g[u].size() - 1, c2});
+  }
 
   ReRooting(int n, F f) : n(n), monoid(), g(n), f(f) {}
   std::vector<T> solve() {
     DP = std::vector<std::vector<T>>(n);
-    Res = std::vector<T>(n);
+    Res = std::vector<T>(n, monoid.identity());
+    if (n == 1) { return Res; }
 
     for (int i = 0; i < n; i++) {
       DP[i] = std::vector<T>(g[i].size());
     }
-    if (n == 1) {
-      std::cerr << "頂点数1の場合は自力で計算すること" << std::endl;
-      assert(false);
-    }
-    else { init(); }
+    init();
     return Res;
   }
 
@@ -87,24 +88,26 @@ struct ReRooting {
         accum = monoid.merge(accum, DP[nodeId][j]);
       }
       int childId = g[nodeId][parentId].rev;
-      DP[parent][childId] = f(accum, nodeId);
+      DP[parent][childId] = f(accum, g[parent][childId].cost);
+      // std::cerr << parent << "->" << childId << " " << DP[parent][childId] << std::endl;
     }
 
     //行きがけ順で頂点の値を確定させていく
     for (int i = 0; i < order.size(); i++) {
       int nodeId = order[i];
       T accum = monoid.identity();
-      std::vector<T> rdp(g[nodeId].size());
-      rdp[rdp.size() - 1] = monoid.identity();
-      for (int j = rdp.size() - 1; j >= 1; j--) {
+      int numChild = g[nodeId].size();
+      std::vector<T> rdp(numChild);
+      rdp[numChild-1] = monoid.identity();
+      for (int j = numChild-1; j >= 1; j--) {
         rdp[j - 1] = monoid.merge(DP[nodeId][j], rdp[j]);
       }
-      for (int j = 0; j < rdp.size(); j++) {
+      for (int j = 0; j < numChild; j++) {
         auto &node = g[nodeId][j];
-        DP[node.to][node.rev] = f(monoid.merge(accum, rdp[j]), nodeId);
+        DP[node.to][node.rev] = f(monoid.merge(accum, rdp[j]), g[node.to][node.rev].cost);
         accum = monoid.merge(accum, DP[nodeId][j]);
       }
-      Res[nodeId] = f(accum, nodeId);
+      Res[nodeId] = accum;
     }
   }
 };
