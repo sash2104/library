@@ -19,6 +19,10 @@ int main() {
     int x, y, z; cin >> x >> y >> z;
     rerooting.add_edge(x, y, z);
   }
+  if (N == 1) {
+    cout << 0 << endl;
+    return 0;
+  }
   auto ret = rerooting.solve();
   int ans = 0;
   for (int i = 0; i < N; ++i) {
