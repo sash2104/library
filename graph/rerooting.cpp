@@ -42,7 +42,10 @@ struct ReRooting {
   std::vector<T> solve() {
     DP = std::vector<std::vector<T>>(n);
     Res = std::vector<T>(n, monoid.identity());
-    if (n == 1) { return Res; }
+    if (n == 1) { // FIXME: n = 1も同様に扱える様にする
+      std::cerr << "n=1は自分で求めること" << std::endl;
+      assert(false);
+    }
 
     for (int i = 0; i < n; i++) {
       DP[i] = std::vector<T>(g[i].size());
@@ -107,6 +110,7 @@ struct ReRooting {
         DP[node.to][node.rev] = f(monoid.merge(accum, rdp[j]), g[node.to][node.rev].cost);
         accum = monoid.merge(accum, DP[nodeId][j]);
       }
+      // FIXME: ここ、monoid.identity()の値を気をつけないとchild数が0の場合にバグる気がする
       Res[nodeId] = accum;
     }
   }
