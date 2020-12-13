@@ -167,6 +167,9 @@ data:
     - icon: ':warning:'
       path: util/compress.hpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
+    - icon: ':heavy_check_mark:'
+      path: util/lis.hpp
+      title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217 (LIS)"
   - name: util/marathon
     pages:
     - icon: ':warning:'
@@ -207,6 +210,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/CGL_1_C.test.cpp
       title: test/aoj/CGL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DPL_1_D.test.cpp
+      title: "LIS\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_1_A.test.cpp
       title: test/aoj/DSL_1_A.test.cpp
