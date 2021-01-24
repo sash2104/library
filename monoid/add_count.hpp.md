@@ -7,6 +7,7 @@ data:
     path: test/aoj/DSL_2_G.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
       \u30FB\u533A\u9593\u548C)"
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

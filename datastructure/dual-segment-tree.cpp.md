@@ -15,6 +15,7 @@ data:
     path: test/aoj/DSL_2_E.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
       \u30FB\u4E00\u70B9\u53D6\u5F97)"
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -94,8 +95,8 @@ data:
   timestamp: '2020-11-19 20:00:02+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL_2_E.test.cpp
   - test/aoj/DSL_2_D.test.cpp
+  - test/aoj/DSL_2_E.test.cpp
 documentation_of: datastructure/dual-segment-tree.cpp
 layout: document
 redirect_from:

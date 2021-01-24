@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DPL_1_D.test.cpp
     title: "LIS\u306E\u30C6\u30B9\u30C8"
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

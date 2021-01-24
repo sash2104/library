@@ -60,6 +60,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL_5_C.test.cpp
     title: test/aoj/GRL_5_C.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -87,28 +88,28 @@ data:
   isVerificationFile: false
   path: graph/template.cpp
   requiredBy:
+  - graph/bin-bfs.cpp
+  - graph/lca.cpp
   - graph/rerooting.cpp
+  - graph/warshall-floyd.cpp
+  - graph/grid-graph.cpp
+  - graph/topological-sort.cpp
+  - graph/dijkstra.cpp
   - graph/mst-kruskal.cpp
   - graph/tree-diameter.cpp
-  - graph/grid-graph.cpp
-  - graph/dijkstra.cpp
-  - graph/topological-sort.cpp
-  - graph/lca.cpp
   - graph/strongly-connected-components.cpp
-  - graph/bin-bfs.cpp
-  - graph/warshall-floyd.cpp
   - test/aoj/notest.GRL_4_B.cpp
   timestamp: '2020-01-01 21:05:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/GRL_5_A.rerooting.test.cpp
-  - test/aoj/GRL_2_A.test.cpp
-  - test/aoj/GRL_5_A.test.cpp
-  - test/aoj/GRL_1_C.test.cpp
-  - test/aoj/GRL_3_C.test.cpp
-  - test/aoj/GRL_5_C.test.cpp
   - test/aoj/GRL_1_A.test.cpp
+  - test/aoj/GRL_5_A.test.cpp
+  - test/aoj/GRL_3_C.test.cpp
   - test/aoj/ALDS_1_11_C.test.cpp
+  - test/aoj/GRL_2_A.test.cpp
+  - test/aoj/GRL_1_C.test.cpp
+  - test/aoj/GRL_5_C.test.cpp
 documentation_of: graph/template.cpp
 layout: document
 redirect_from:

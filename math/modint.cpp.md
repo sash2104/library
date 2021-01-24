@@ -12,6 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/NTL_1_B.test.cpp
     title: test/aoj/NTL_1_B.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -62,8 +63,8 @@ data:
   isVerificationFile: false
   path: math/modint.cpp
   requiredBy:
-  - math/factorial.cpp
   - test/atcoder/abc129-f.cpp
+  - math/factorial.cpp
   timestamp: '2020-08-30 22:26:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

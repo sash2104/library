@@ -6,6 +6,7 @@ data:
     title: "\u6700\u5927\u516C\u7D04\u6570\u30FB\u6700\u5C0F\u516C\u500D\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

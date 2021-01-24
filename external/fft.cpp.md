@@ -6,6 +6,7 @@ data:
     path: test/atcoder/atc001-c.cpp
     title: test/atcoder/atc001-c.cpp
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:

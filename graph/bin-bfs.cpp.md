@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/ALDS_1_11_C.test.cpp
     title: test/aoj/ALDS_1_11_C.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

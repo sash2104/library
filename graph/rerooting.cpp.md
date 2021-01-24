@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL_5_A.rerooting.test.cpp
     title: "\u6728\u306E\u76F4\u5F84 (ReRooting)"
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

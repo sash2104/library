@@ -109,6 +109,9 @@ data:
     - icon: ':warning:'
       path: math/factorial.cpp
       title: "\u968E\u4E57\u3001nPr\u3001nCr"
+    - icon: ':warning:'
+      path: math/kitamasa.cpp
+      title: "kitamasa\u6CD5"
     - icon: ':heavy_check_mark:'
       path: math/matrix.cpp
       title: "\u884C\u5217"

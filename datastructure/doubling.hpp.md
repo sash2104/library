@@ -7,6 +7,7 @@ data:
     path: test/datastructure/doubling.test.cpp
     title: "\u30C0\u30D6\u30EA\u30F3\u30B0\u306E\u7C21\u6613\u7684\u306A\u30C6\u30B9\
       \u30C8"
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

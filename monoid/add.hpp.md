@@ -19,6 +19,7 @@ data:
     path: test/aoj/DSL_2_H.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u533A\u9593\u52A0\u7B97\
       \u30FB\u533A\u9593\u6700\u5C0F)"
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -37,9 +38,9 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_G.test.cpp
+  - test/aoj/DSL_2_H.test.cpp
   - test/aoj/DSL_2_B.segtree.test.cpp
   - test/aoj/DSL_2_E.test.cpp
-  - test/aoj/DSL_2_H.test.cpp
 documentation_of: monoid/add.hpp
 layout: document
 redirect_from:

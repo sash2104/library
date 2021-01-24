@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/ac-library/segtree.sum.test.cpp
     title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u3001sum (ac-library)"
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

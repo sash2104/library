@@ -6,6 +6,7 @@ data:
     title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217 (LIS)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

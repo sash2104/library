@@ -6,6 +6,7 @@ data:
     path: util/marathon/simulated_annealing.cpp
     title: util/marathon/simulated_annealing.cpp
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:

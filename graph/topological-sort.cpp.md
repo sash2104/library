@@ -9,6 +9,7 @@ data:
     path: test/aoj/notest.GRL_4_B.cpp
     title: test/aoj/notest.GRL_4_B.cpp
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
