@@ -78,7 +78,7 @@ struct Matrix {
   Matrix operator*(const Matrix &B) const { return (Matrix(*this) *= B); }
   Matrix operator^(const long long k) const { return (Matrix(*this) ^= k); }
 
-  friend ostream &operator<<(ostream &os, Matrix &p) {
+  friend std::ostream &operator<<(std::ostream &os, Matrix &p) {
     for(int i = 0; i < p.H; i++) {
       for(int j = 0; j < p.W; j++) {
         os << p[i][j] << (j + 1 == p.W ? "\n" : " ");
