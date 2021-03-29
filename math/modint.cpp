@@ -35,6 +35,9 @@ struct ModInt {
   static int get_mod() { return mod; }
 };
 
+constexpr int MOD10 = 1000000007;
+constexpr int MOD99 =  998244353;
 #ifndef MUTABLE
-using modint = ModInt<1000000007>;
+using modint = ModInt<MOD10>;
+using modint99 = ModInt<MOD99>;
 #endif
