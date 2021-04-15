@@ -1,7 +1,7 @@
 // @brief 木の直径のテスト
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_A"
 
-#include "../../graph/tree-diameter.cpp"
+#include "../../graph/tree-diameter.hpp"
 
 using namespace std;
 #include <iostream>

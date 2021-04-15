@@ -1,3 +1,5 @@
+#ifndef __GRAPH__GRID__GRAPH
+#define __GRAPH__GRID__GRAPH
 /**
  * @brief グリッドグラフ
  * 使用例: https://atcoder.jp/contests/abc020/submissions/18517344
@@ -62,3 +64,5 @@ int find_pos(const grid_t& grid, char c) {
     return -1;
 }
 } // namespace grid_graph
+
+#endif // __GRAPH__GRID__GRAPH

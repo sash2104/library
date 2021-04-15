@@ -1,6 +1,6 @@
-/**
- * @title トポロジカルソート 
- */
+#ifndef __GRAPH__TOPOLOGICAL__SORT
+#define __GRAPH__TOPOLOGICAL__SORT
+// @title トポロジカルソート 
 #include <vector>
 #include <stack>
 #include "template.hpp"
@@ -33,3 +33,5 @@ std::vector<int> topologicalSort(const G &g) {
 
   return order;
 }
+
+#endif // __GRAPH__TOPOLOGICAL__SORT

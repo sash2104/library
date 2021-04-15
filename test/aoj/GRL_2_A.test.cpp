@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A"
-#include "../../graph/mst-kruskal.cpp"
+#include "../../graph/mst-kruskal.hpp"
 
 #include <iostream>
 using namespace std;

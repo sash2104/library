@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
-#include "../../graph/warshall-floyd.cpp"
+#include "../../graph/warshall-floyd.hpp"
 
 #include <iostream>
 using namespace std;

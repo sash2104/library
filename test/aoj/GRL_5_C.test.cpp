@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C"
 
-#include "../../graph/lca.cpp"
+#include "../../graph/lca.hpp"
 #include <iostream>
 using namespace std;
 

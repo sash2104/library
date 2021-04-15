@@ -1,6 +1,6 @@
-/**
- * @title LCA (最小共通祖先)
- */
+#ifndef __GRAPH__LCA
+#define __GRAPH__LCA
+// @title LCA (最小共通祖先)
 #include "template.hpp"
 
 #include <cassert>
@@ -66,3 +66,5 @@ struct LCA {
     return parent[0][v1];
   }
 };
+
+#endif // __GRAPH__LCA

@@ -1,6 +1,6 @@
-/**
- * @brief 木の直径
- */
+#ifndef __GRAPH__TREE_DIAMETER
+#define __GRAPH__TREE_DIAMETER
+// @title 木の直径
 
 #include <utility>
 #include "template.hpp"
@@ -27,3 +27,5 @@ T tree_diameter(const Graph<T> &g) {
   auto q = tree_diameter_::dfs(g, p.second, -1);
   return (q.first);
 }
+
+#endif // __GRAPH__TREE_DIAMETER

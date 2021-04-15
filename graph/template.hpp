@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __GRAPH__TEMPLATE
+#define __GRAPH__TEMPLATE
 
 #include <vector>
 
@@ -19,3 +20,5 @@ template< typename T >
 using Edges = std::vector< Edge< T > >;
 template< typename T >
 using Graph = std::vector< Edges< T > >;
+
+#endif // __GRAPH_TEMPLATE

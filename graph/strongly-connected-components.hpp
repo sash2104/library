@@ -1,6 +1,6 @@
-/**
- * @title 強連結成分分解
- */
+#ifndef __GRAPH__SCC
+#define __GRAPH__SCC
+// @title 強連結成分分解
 #include <cassert>
 #include <algorithm>
 #include <vector>
@@ -72,3 +72,5 @@ struct stronglyConnectedComponents {
     }
   }
 };
+
+#endif // __GRAPH__SCC

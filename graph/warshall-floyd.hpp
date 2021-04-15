@@ -1,6 +1,6 @@
-/**
- * @title warshall-floyd
- */
+#ifndef __GRAPH__WARSHALL__FLOYD
+#define __GRAPH__WARSHALL__FLOYD
+// @title warshall-floyd
 #include "template.hpp"
 
 #include <limits>
@@ -36,3 +36,5 @@ struct WarshallFloyd {
     return false;
   }
 };
+
+#endif // __GRAPH__WARSHALL__FLOYD
