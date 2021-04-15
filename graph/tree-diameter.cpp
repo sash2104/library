@@ -3,7 +3,7 @@
  */
 
 #include <utility>
-#include "template.cpp"
+#include "template.hpp"
 
 namespace tree_diameter_
 {

@@ -1,7 +1,7 @@
 /**
  * @title Dijkstra
  */
-#include "template.cpp"
+#include "template.hpp"
 
 #include <algorithm>
 #include <functional>

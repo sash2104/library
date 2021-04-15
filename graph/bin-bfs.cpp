@@ -1,5 +1,5 @@
 // @title 01-BFS
-#include "template.cpp"
+#include "template.hpp"
 
 #include <algorithm>
 #include <functional>

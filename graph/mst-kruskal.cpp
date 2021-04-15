@@ -2,7 +2,7 @@
  * @title 最小全域木 (クラスカル法)
  */
 #include <algorithm>
-#include "template.cpp"
+#include "template.hpp"
 #include "../datastructure/union-find-tree.cpp"
 
 template< typename T >

@@ -1,7 +1,7 @@
 /**
  * @title LCA (最小共通祖先)
  */
-#include "template.cpp"
+#include "template.hpp"
 
 #include <cassert>
 #include <cmath>

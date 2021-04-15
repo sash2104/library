@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "template.cpp"
+#include "template.hpp"
 using namespace std;
 
 template< typename T >

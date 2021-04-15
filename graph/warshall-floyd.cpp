@@ -1,7 +1,7 @@
 /**
  * @title warshall-floyd
  */
-#include "template.cpp"
+#include "template.hpp"
 
 #include <limits>
 #include <vector>

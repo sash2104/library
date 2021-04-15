@@ -3,7 +3,7 @@
  */
 #include <vector>
 #include <stack>
-#include "template.cpp"
+#include "template.hpp"
 
 template< typename G >
 std::vector<int> topologicalSort(const G &g) {

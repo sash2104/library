@@ -10,7 +10,7 @@
 #include <vector>
 #include <iostream>
 
-#include "template.cpp"
+#include "template.hpp"
 
 template <typename Cost, class Monoid>
 struct ReRooting {

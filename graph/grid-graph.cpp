@@ -3,7 +3,7 @@
  * 使用例: https://atcoder.jp/contests/abc020/submissions/18517344
  * 
  */
-#include "template.cpp"
+#include "template.hpp"
 #include <cassert>
 #include <string>
 #include <vector>
