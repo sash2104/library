@@ -2,6 +2,7 @@
 "test/ac-library/dsu.test.cpp": "2020-09-29 21:53:00 +0900",
 "test/ac-library/segtree.min.test.cpp": "2020-09-29 21:53:00 +0900",
 "test/ac-library/segtree.sum.test.cpp": "2020-09-29 22:26:43 +0900",
+"test/aoj/ALDS_1_11_C.bfs.test.cpp": "2021-04-15 21:21:35 +0900",
 "test/aoj/ALDS_1_11_C.test.cpp": "2021-04-15 20:09:58 +0900",
 "test/aoj/ALDS_1_14_B.test.cpp": "2020-09-16 20:29:05 +0900",
 "test/aoj/ALDS_1_1_C.test.cpp": "2021-04-15 20:33:39 +0900",
