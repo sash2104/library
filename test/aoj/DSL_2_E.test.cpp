@@ -2,7 +2,7 @@
 // @title 双対セグメント木 (区間加算・一点取得)
 
 #include "../../monoid/add.hpp"
-#include "../../datastructure/dual-segment-tree.cpp"
+#include "../../datastructure/dual-segment-tree.hpp"
 #include <iostream>
 
 using namespace std;

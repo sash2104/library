@@ -2,8 +2,8 @@
  * @title 最小全域木 (クラスカル法)
  */
 #include <algorithm>
-#include "template.cpp"
-#include "../datastructure/union-find-tree.cpp"
+#include "template.hpp"
+#include "../datastructure/union-find-tree.hpp"
 
 template< typename T >
 T kruscal(int V, Edges< T > &edges) {

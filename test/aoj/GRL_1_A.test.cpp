@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A"
-#include "../../graph/dijkstra.cpp"
+#include "../../graph/dijkstra.hpp"
 
 #include <iostream>
 using namespace std;

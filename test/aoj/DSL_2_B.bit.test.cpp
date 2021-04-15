@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 // @title BITのテスト
 
-#include "../../datastructure/binary-indexed-tree.cpp"
+#include "../../datastructure/binary-indexed-tree.hpp"
 
 #include <iostream>
 using namespace std;

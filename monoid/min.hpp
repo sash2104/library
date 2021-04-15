@@ -1,3 +1,5 @@
+#ifndef _MONOID_MIN
+#define _MONOID_MIN
 #include <algorithm>
 #include <limits>
 
@@ -9,3 +11,5 @@ struct min {
   T merge(T a, T b) const { return std::min(a, b); }
 };
 } // namespace monoid
+
+#endif // _MONOID_MIN

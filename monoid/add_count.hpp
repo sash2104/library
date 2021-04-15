@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __MONOID__ADD__COUNT
+#define __MONOID__ADD__COUNT
 #include <algorithm>
 #include <utility>
 #include <limits>
@@ -11,3 +12,5 @@ struct add_count {
   value_t merge(value_t a, value_t b) const { return std::make_pair(a.first+b.first, a.second+b.second); }
 };
 } // namespace monoid
+
+#endif // __MONOID__ADD__COUNT

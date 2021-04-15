@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_C"
 
-#include "../../math/euclidean-algorithm.cpp"
+#include "../../math/euclidean-algorithm.hpp"
 #include <iostream>
 
 using namespace std;

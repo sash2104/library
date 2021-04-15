@@ -1,6 +1,7 @@
+#ifndef _DATASTRUCTURE_LAZY_SEGMENT_TREE
+#define _DATASTRUCTURE_LAZY_SEGMENT_TREE
 /**
  * @title 遅延セグメント木 (区間更新、区間取得)
- *  
  */ 
 #include <cassert>
 #include <functional>
@@ -91,3 +92,5 @@ struct LazySegmentTree {
     return query(k, k + 1);
   }
 };
+
+#endif // _DATASTRUCTURE_LAZY_SEGMENT_TREE

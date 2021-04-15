@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C"
 
 #define call_from_test
-#include "../../math/prime.cpp"
+#include "../../math/prime.hpp"
 #undef call_from_test
 
 #include <iostream>

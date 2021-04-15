@@ -1,3 +1,5 @@
+#ifndef _DATASTRUCTURE_SEGMENT_TREE
+#define _DATASTRUCTURE_SEGMENT_TREE
 /**
  * @title セグメント木 (一点更新、区間取得)
  * 
@@ -42,3 +44,5 @@ struct SegmentTree {
     return query(k, k + 1);
   }
 };
+
+#endif // _DATASTRUCTURE_SEGMENT_TREE

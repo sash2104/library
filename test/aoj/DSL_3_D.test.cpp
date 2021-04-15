@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_3_D"
 
 #define call_from_test
-#include "../../datastructure/slide-min.cpp"
+#include "../../datastructure/slide-min.hpp"
 #undef call_from_test
 
 #include <iostream>

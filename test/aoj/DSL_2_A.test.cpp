@@ -2,7 +2,7 @@
 // @title セグメント木 (一点更新・区間最小)
 
 #include "../../monoid/min.hpp"
-#include "../../datastructure/segment-tree.cpp"
+#include "../../datastructure/segment-tree.hpp"
 
 #include <iostream>
 using namespace std;

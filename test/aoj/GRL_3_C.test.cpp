@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
 
-#include "../../graph/strongly-connected-components.cpp"
+#include "../../graph/strongly-connected-components.hpp"
 #include <iostream>
 using namespace std;
 

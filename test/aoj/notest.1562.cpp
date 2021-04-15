@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1562"
-#include "../../math/divisor.cpp"
+#include "../../math/divisor.hpp"
 
 
 int main() {

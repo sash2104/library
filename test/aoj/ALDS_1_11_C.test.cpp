@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C"
 
-#include "../../graph/bin-bfs.cpp"
+#include "../../graph/bin-bfs.hpp"
 #include <iostream>
 using namespace std; 
 

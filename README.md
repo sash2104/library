@@ -12,6 +12,21 @@ C++14 or lator
 Unlicense  
 ただし、externalディレクトリ以下にあるファイルはファイル冒頭のコメントの指示に従ってください
 
+# Memo
+```
+$ cmake -B build && cd build && sudo make install
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/local/kyopro/datastructure
+-- Installing: /usr/local/kyopro/datastructure/segment-tree.hpp
+-- Installing: /usr/local/kyopro/datastructure/slide-min.hpp
+-- Installing: /usr/local/kyopro/datastructure/doubling.hpp
+-- Installing: /usr/local/kyopro/datastructure/union-find-tree.hpp
+-- Installing: /usr/local/kyopro/datastructure/lazy-segment-tree.hpp
+-- Installing: /usr/local/kyopro/datastructure/binary-indexed-tree.hpp
+...
+```
+
 # Emoji-prefix
 - :memo: when writing docs
 - :bug: when fixing a bug

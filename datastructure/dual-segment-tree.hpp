@@ -1,3 +1,5 @@
+#ifndef _DATASTRUCTURE_DUAL_SEGMENT_TREE
+#define _DATASTRUCTURE_DUAL_SEGMENT_TREE
 /**
  * @title 双対セグメント木 (区間更新、一点取得)
  * @brief 区間更新、一点取得ができるやつ
@@ -5,7 +7,7 @@
  *  
  */ 
 #include <cassert>
-#include "lazy-segment-tree.cpp"
+#include "lazy-segment-tree.hpp"
 
 template <class OperatorMonoid>
 struct DualSegmentTree {
@@ -19,3 +21,5 @@ struct DualSegmentTree {
   }
   operator_t operator[](const int &k) { return lst[k]; }
 };
+
+#endif // _DATASTRUCTURE_DUAL_SEGMENT_TREE
