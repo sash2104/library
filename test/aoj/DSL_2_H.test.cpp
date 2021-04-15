@@ -3,7 +3,7 @@
 
 #include "../../monoid/add.hpp"
 #include "../../monoid/min.hpp"
-#include "../../datastructure/lazy-segment-tree.cpp"
+#include "../../datastructure/lazy-segment-tree.hpp"
 
 #include <iostream>
 using namespace std;

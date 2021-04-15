@@ -1,3 +1,5 @@
+#ifndef _MONOID_MAX
+#define _MONOID_MAX
 #include <algorithm>
 #include <limits>
 
@@ -9,3 +11,5 @@ struct max {
   T merge(T a, T b) const { return std::max(a, b); }
 };
 } // namespace monoid
+
+#endif // _MONOID_MAX

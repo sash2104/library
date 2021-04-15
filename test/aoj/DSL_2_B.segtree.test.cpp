@@ -2,7 +2,7 @@
 // @title セグメント木 (一点加算・区間和)
 
 #include "../../monoid/add.hpp"
-#include "../../datastructure/segment-tree.cpp"
+#include "../../datastructure/segment-tree.hpp"
 
 #include <iostream>
 using namespace std;

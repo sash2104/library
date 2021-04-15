@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
-#include "../../datastructure/union-find-tree.cpp"
+#include "../../datastructure/union-find-tree.hpp"
 
 #include <iostream>
 using namespace std;

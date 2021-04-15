@@ -3,7 +3,7 @@
 
 #include "../../monoid/add_count.hpp"
 #include "../../monoid/add.hpp"
-#include "../../datastructure/lazy-segment-tree.cpp"
+#include "../../datastructure/lazy-segment-tree.hpp"
 
 #include <iostream>
 #include <vector>

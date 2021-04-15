@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MONOID_FILL
+#define _MONOID_FILL
 #include <utility>
 
 namespace monoid {
@@ -9,3 +10,5 @@ struct fill {
   value_t merge(value_t a, value_t b) const { return b.first ? b : a; }
 };
 } // namespace monoid
+
+#endif // _MONOID_FILL
