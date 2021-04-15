@@ -8,4 +8,5 @@ fi
 problem=$1
 set -x
 
-g++ -std=c++14 -O2 $problem/main.cpp -I /usr/local/include/ac-library -o $problem/a.out
+g++ -std=c++14 -O2 $problem/main.cpp -I /usr/local/include/ac-library -I /usr/local/kyopro -o $problem/a.out
+oj-bundle -I /usr/local/kyopro $problem/main.cpp > $problem/submit.cpp
