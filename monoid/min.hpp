@@ -12,4 +12,4 @@ struct min {
 };
 } // namespace monoid
 
-#endif _MONOID_MIN
+#endif // _MONOID_MIN

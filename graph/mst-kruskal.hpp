@@ -3,7 +3,7 @@
  */
 #include <algorithm>
 #include "template.hpp"
-#include "../datastructure/union-find-tree.cpp"
+#include "../datastructure/union-find-tree.hpp"
 
 template< typename T >
 T kruscal(int V, Edges< T > &edges) {

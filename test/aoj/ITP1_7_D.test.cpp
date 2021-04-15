@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_D"
-#include "../../math/matrix.cpp"
+#include "../../math/matrix.hpp"
 #include <iostream>
 using namespace std;
 
