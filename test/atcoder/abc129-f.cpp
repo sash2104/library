@@ -7,8 +7,8 @@
 // modを可変にする
 #define MUTABLE
 
-#include "../../math/modint.cpp"
-#include "../../math/matrix.cpp"
+#include "../../math/modint.hpp"
+#include "../../math/matrix.hpp"
 
 using namespace std;
 typedef long long ll;
