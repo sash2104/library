@@ -18,11 +18,13 @@ struct Dijkstra {
   Graph<T> g;
   std::vector<T> dist; // 始点からの距離
   std::vector<bool> visit; // すでに探索済みの点か
-  Dijkstra(Graph<T> &g): INF(std::numeric_limits<T>::max()/2), V(g.size()), g(g), dist(V), visit(V) {}
-  Dijkstra(Graph<T> &g, int V): INF(std::numeric_limits<T>::max()/2), V(V), g(g), dist(V), visit(V) {}
+  std::vector<int> prev; // 移動経路
+  Dijkstra(Graph<T> &g): INF(std::numeric_limits<T>::max()/2), V(g.size()), g(g), dist(V), visit(V), prev(V) {}
+  Dijkstra(Graph<T> &g, int V): INF(std::numeric_limits<T>::max()/2), V(V), g(g), dist(V), visit(V), prev(V) {}
   void init(int s) {
     std::fill(dist.begin(), dist.end(), INF);
     std::fill(visit.begin(), visit.end(), false);
+    std::fill(prev.begin(), prev.end(), -1);
     dist[s] = T(); // 始点の距離を0で初期化
     std::priority_queue<P, std::vector<P>, std::greater<P>> pq;
     pq.push({dist[s], s});
@@ -36,10 +38,22 @@ struct Dijkstra {
         T d = node.first + e.cost;
         if (d >= dist[e.to]) continue;
         dist[e.to] = d;
+        prev[e.to] = from;
         pq.push({d, e.to});
       }
     }
   }
+
+  // 移動経路を取得
+  std::vector<int> get_path(int t) {
+    std::vector<int> path;
+    for(; t != -1;t=prev[t]){
+        path.push_back(t);
+    }
+    reverse(path.begin(), path.end());
+    return path;
+  }
+
 };
 
 #endif // __GRAPH__DIJKSTRA
