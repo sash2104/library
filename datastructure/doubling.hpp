@@ -1,10 +1,10 @@
-#pragma once
 #ifndef _DATASTRUCTURE_DOUBLING_
 #define _DATASTRUCTURE_DOUBLING_
 /**
  * @title ダブリング
  * @brief 要素数Mのある要素に対するN個先の要素取得を前処理 $O(M\log N)$、取得$O(\log N)$で行う
  * @see http://satanic0258.hatenablog.com/entry/2017/02/23/222647
+ * @see https://atcoder.jp/contests/typical90/submissions/24345528
  */
 #include <vector>
 
