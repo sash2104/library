@@ -1,4 +1,6 @@
 #pragma once
+#ifndef _DATASTRUCTURE_DOUBLING_
+#define _DATASTRUCTURE_DOUBLING_
 /**
  * @title ダブリング
  * @brief 要素数Mのある要素に対するN個先の要素取得を前処理 $O(M\log N)$、取得$O(\log N)$で行う
@@ -7,14 +9,25 @@
 #include <vector>
 
 struct Doubling {
-    int K; // 辿る深さの最大値。最大でQ個先まで見る場合`2^K > Q`を満たすようにKを決める
     int N; // 要素数 
+    // 辿る深さの最大値。最大でQ個先まで見る場合`2^K > Q`を満たすようにKを決める
+    // Qがlong longの範囲であれば、K = 63とする
+    // FIXME: K >= 64だと、getの(q>>k)がoverflowして取得する値がおかしくなる
+    int K;
     const int EMPTY;
     // table[k][i]でi番目の要素の「2^k個先の要素」を指す
     // i番目の要素に対して「2^k個先の要素」が存在しないときは
     // `table[k][i] = EMPTY` となる
     std::vector<std::vector<int>> table;
-    Doubling(int k, const std::vector<int>& next): K(k), N(next.size()), EMPTY(-1) {
+
+    Doubling(const std::vector<int>& next, int k): N(next.size()), K(k), EMPTY(-1) {
+        init(next);
+    }
+    Doubling(const std::vector<int>& next): N(next.size()), K(63), EMPTY(-1) {
+        init(next);
+    }
+
+    void init(const std::vector<int>& next) {
         table.push_back(next);
         for (int k = 0; k < K; ++k) { 
             table.push_back(std::vector<int>(N));
@@ -29,9 +42,11 @@ struct Doubling {
                 }
             }
         }
+
     }
 
     // p番目の要素のq個先の要素
+    // NOTE: 大きい数で答えが合わなかったら、overflowを疑う
     int get(int p, unsigned long long q) const {
         for (int k = K-1; k >= 0; --k) {
             if (p == EMPTY) break;
@@ -43,3 +58,5 @@ struct Doubling {
         return p;
     }
 };
+
+#endif // _DATASTRUCTURE_DOUBLING_

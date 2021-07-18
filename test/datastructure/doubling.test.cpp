@@ -8,7 +8,7 @@ using namespace std;
 
 void test_get() {
     vector<int> next = {2,3,1,0};
-    Doubling doubling(100, next);
+    Doubling doubling(next);
     // 愚直解と一致することの確認
     vector<int> expected = next;
     for (int q = 1; q < 10000; ++q) { 
