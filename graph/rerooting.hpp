@@ -2,6 +2,7 @@
  * @brief 全方位木DP (ReRooting)
  * https://qiita.com/keymoon/items/2a52f1b0fb7ef67fb89e
  * https://github.com/noshi91/blog/blob/master/codes/rerooting.cpp
+ * 使用例: https://atcoder.jp/contests/typical90/submissions/24443488
  * 
  */
 #include <cassert>
