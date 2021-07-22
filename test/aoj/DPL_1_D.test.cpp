@@ -11,6 +11,6 @@ int main() {
   for (int i = 0; i < n; ++i) {
       cin >> la[i];
   }
-  auto lis = longest_increasing_subsequence(la, true);
-  cout << lis.size() << endl;
+  vector<int> len;
+  cout << longest_increasing_subsequence(la, true, len) << endl;
 }
