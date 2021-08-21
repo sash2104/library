@@ -1,4 +1,4 @@
-// @title ダブリングの簡易的なテスト
+// @title ハンガリアン法の簡易的なテスト
 // dummy problem
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include <cassert>
