@@ -26,17 +26,3 @@ Install the project...
 -- Installing: /usr/local/kyopro/datastructure/binary-indexed-tree.hpp
 ...
 ```
-
-# Emoji-prefix
-- :memo: when writing docs
-- :bug: when fixing a bug
-- :+1: when improving features
-- :tada: when adding features
-- :construction: work in progress
-- :recycle: when refactoring code
-- :shower: when removing code or files
-- :green_heart: when updating tests
-- :shirt: when removing linter warnings or fixing style guides
-- :rocket: when improving performance
-- :up: when upgrading dependencies
-- :cop: when dealing with security
