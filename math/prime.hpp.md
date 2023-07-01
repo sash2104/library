@@ -108,7 +108,7 @@ data:
   isVerificationFile: false
   path: math/prime.hpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-04-15 20:33:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/ALDS_1_1_C.test.cpp

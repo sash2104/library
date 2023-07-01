@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: string/rolling-hash.hpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2020-09-16 20:29:05+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/ALDS_1_14_B.test.cpp

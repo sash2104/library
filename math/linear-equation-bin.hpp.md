@@ -70,7 +70,7 @@ data:
   isVerificationFile: false
   path: math/linear-equation-bin.hpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-08-01 20:13:48+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/linear-equation-bin.hpp

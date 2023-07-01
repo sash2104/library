@@ -71,7 +71,7 @@ data:
   isVerificationFile: false
   path: atcoder/segtree/add.hpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2020-09-29 22:26:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/ac-library/segtree.sum.test.cpp

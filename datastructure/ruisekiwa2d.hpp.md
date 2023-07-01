@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: datastructure/ruisekiwa2d.hpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-07-04 19:48:12+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: datastructure/ruisekiwa2d.hpp

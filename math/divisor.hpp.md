@@ -27,7 +27,7 @@ data:
   path: math/divisor.hpp
   requiredBy:
   - test/aoj/notest.1562.cpp
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-04-15 20:33:39+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/divisor.hpp

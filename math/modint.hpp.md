@@ -67,7 +67,7 @@ data:
   requiredBy:
   - math/factorial.hpp
   - test/atcoder/abc129-f.cpp
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-04-15 20:33:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/NTL_1_B.test.cpp

@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: test/aoj/GRL_5_A.test.cpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-08-01 23:46:19+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/GRL_5_A.test.cpp

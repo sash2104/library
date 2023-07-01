@@ -55,7 +55,7 @@ data:
   isVerificationFile: true
   path: test/aoj/ALDS_1_14_B.test.cpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2020-09-16 20:29:05+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/ALDS_1_14_B.test.cpp

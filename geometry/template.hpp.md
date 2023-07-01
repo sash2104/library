@@ -323,15 +323,15 @@ data:
   isVerificationFile: false
   path: geometry/template.hpp
   requiredBy:
-  - test/aoj/notest.0010.cpp
-  - geometry/template.circle.hpp
   - geometry/triangle.hpp
-  timestamp: '2022-07-31 09:27:58+09:00'
+  - geometry/template.circle.hpp
+  - test/aoj/notest.0010.cpp
+  timestamp: '2020-03-04 21:04:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/CGL_1_B.test.cpp
   - test/aoj/CGL_1_A.test.cpp
   - test/aoj/CGL_1_C.test.cpp
-  - test/aoj/CGL_1_B.test.cpp
 documentation_of: geometry/template.hpp
 layout: document
 redirect_from:

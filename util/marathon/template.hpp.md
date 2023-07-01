@@ -152,7 +152,7 @@ data:
   path: util/marathon/template.hpp
   requiredBy:
   - util/marathon/simulated_annealing.cpp
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2022-07-24 18:14:06+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: util/marathon/template.hpp

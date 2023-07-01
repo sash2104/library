@@ -78,7 +78,7 @@ data:
   isVerificationFile: true
   path: test/math/hungarian.test.cpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-08-21 21:41:57+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/math/hungarian.test.cpp

@@ -80,7 +80,7 @@ data:
   isVerificationFile: true
   path: test/datastructure/doubling.test.cpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-07-18 14:38:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/datastructure/doubling.test.cpp

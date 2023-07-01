@@ -103,30 +103,30 @@ data:
   isVerificationFile: false
   path: graph/template.hpp
   requiredBy:
-  - graph/mst-kruskal.hpp
-  - graph/bin-bfs.hpp
+  - graph/dijkstra.hpp
+  - graph/lca.hpp
+  - graph/rerooting.hpp
   - graph/topological-sort.hpp
   - graph/warshall-floyd.hpp
-  - graph/rerooting.hpp
   - graph/grid-graph.hpp
-  - graph/lca.hpp
-  - graph/dijkstra.hpp
+  - graph/bin-bfs.hpp
+  - graph/tree-diameter.hpp
   - graph/bfs.hpp
   - graph/strongly-connected-components.hpp
-  - graph/tree-diameter.hpp
+  - graph/mst-kruskal.hpp
   - test/aoj/notest.GRL_4_B.cpp
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-08-01 23:46:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/ALDS_1_11_C.bfs.test.cpp
-  - test/aoj/GRL_5_A.rerooting.test.cpp
-  - test/aoj/GRL_2_A.test.cpp
-  - test/aoj/ALDS_1_11_C.test.cpp
-  - test/aoj/GRL_1_A.test.cpp
   - test/aoj/GRL_5_C.test.cpp
   - test/aoj/GRL_3_C.test.cpp
-  - test/aoj/GRL_5_A.test.cpp
+  - test/aoj/GRL_1_A.test.cpp
+  - test/aoj/ALDS_1_11_C.test.cpp
+  - test/aoj/GRL_5_A.rerooting.test.cpp
+  - test/aoj/GRL_2_A.test.cpp
   - test/aoj/GRL_1_C.test.cpp
+  - test/aoj/ALDS_1_11_C.bfs.test.cpp
+  - test/aoj/GRL_5_A.test.cpp
 documentation_of: graph/template.hpp
 layout: document
 redirect_from:

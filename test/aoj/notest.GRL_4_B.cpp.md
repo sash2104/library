@@ -69,7 +69,7 @@ data:
   isVerificationFile: false
   path: test/aoj/notest.GRL_4_B.cpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2022-07-24 22:27:49+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: test/aoj/notest.GRL_4_B.cpp

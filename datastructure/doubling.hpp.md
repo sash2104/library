@@ -96,7 +96,7 @@ data:
   isVerificationFile: false
   path: datastructure/doubling.hpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-07-18 14:38:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/datastructure/doubling.test.cpp

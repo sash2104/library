@@ -68,7 +68,7 @@ data:
   path: graph/topological-sort.hpp
   requiredBy:
   - test/aoj/notest.GRL_4_B.cpp
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-08-01 23:46:19+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/topological-sort.hpp

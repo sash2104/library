@@ -40,7 +40,7 @@ data:
   path: datastructure/union-find-tree.hpp
   requiredBy:
   - graph/mst-kruskal.hpp
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2021-04-15 20:24:09+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_1_A.test.cpp

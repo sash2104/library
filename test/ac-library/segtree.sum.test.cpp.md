@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/ac-library/segtree.sum.test.cpp
   requiredBy: []
-  timestamp: '2022-07-31 09:27:58+09:00'
+  timestamp: '2020-09-29 22:26:43+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/ac-library/segtree.sum.test.cpp
