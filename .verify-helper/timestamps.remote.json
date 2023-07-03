@@ -35,5 +35,6 @@
 "test/datastructure/doubling.test.cpp": "2021-07-18 14:38:47 +0900",
 "test/datastructure/wavelet/succinct-indexable-dictionary.test.cpp": "2020-10-22 07:27:45 +0900",
 "test/example/example.test.cpp": "2019-12-20 23:46:07 +0900",
+"test/marathon/pos.test.cpp": "2023-07-03 12:06:23 +0000",
 "test/math/hungarian.test.cpp": "2021-08-21 21:41:57 +0900"
 }
