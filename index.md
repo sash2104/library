@@ -187,6 +187,9 @@ data:
       title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217 (LIS)"
   - name: util/marathon
     pages:
+    - icon: ':heavy_check_mark:'
+      path: util/marathon/pos.hpp
+      title: util/marathon/pos.hpp
     - icon: ':warning:'
       path: util/marathon/simulated_annealing.cpp
       title: util/marathon/simulated_annealing.cpp
@@ -320,6 +323,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/example/example.test.cpp
       title: test/example/example.test.cpp
+  - name: test/marathon
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/marathon/pos.test.cpp
+      title: "Pos\u30AF\u30E9\u30B9\u306E\u7C21\u6613\u7684\u306A\u30C6\u30B9\u30C8"
   - name: test/math
     pages:
     - icon: ':heavy_check_mark:'
